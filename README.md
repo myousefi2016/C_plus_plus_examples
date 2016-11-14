@@ -1,4 +1,4 @@
-# C_plus_plus_examples
+# The C++ Examples
 
 <center><IMG src="http://davidcanino.github.io/img/logo-sun.jpg" border="0" width="180" height="97"></center><p>
 

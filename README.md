@@ -2,7 +2,7 @@
 
 <center><IMG src="http://davidcanino.github.io/img/logo-sun.jpg" border="0" width="180" height="97"></center><p>
 
-This repository contains several examples of increasing complexity and difficulty, that may form an elementary tutorial about the understanding of the beautiful C++ programming language.
+This repository contains several examples of increasing complexity and difficulty, that may form an elementary tutorial about the understanding of the beautiful C++ programming language. Several examples will be based on the new C++11 and C++-14 capabilities.
 
 All examples in this repository are tested with the <A href="http://gcc.gnu.org/">GCC</A> under the Ubuntu Linux 16.0.4 (LTS), as well as the <A href="http://developer.apple.com/xcode/">XCode</A> (based on the <A href="http://clang.llvm.org/">CLANG</A>) under the MacOsX 11.* El-Capitan, and the <A href="http://www.visualstudio.com/">Visual Studio (Community Edition 2015)</A> under the MS Windows 10.
 

@@ -3,9 +3,9 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), November 2016
- #
- # main.cpp - the 'main' file for the test 'Example-002'.
+ * Created by David Canino (canino.david@gmail.com), December 2016
+ *
+ * main.cpp - the 'main' file for the test 'Example-002'.
  **************************************************************************************/
 
 #include <cstdio>
@@ -18,4 +18,3 @@ int main(int argc,char **argv)
     puts("\n\tThis is the example 'Example-002' in the C++ language\n");
     return EXIT_SUCCESS;
 }
-

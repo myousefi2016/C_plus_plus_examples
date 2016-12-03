@@ -13,7 +13,7 @@
 using namespace std;
 
 /// The main function for the <i>Example-004</i> unit test.
-int main(int argc,char **argv)
+int main(void)
 {
     int a[]={-4,5,-44,-5,33,12,55};
     

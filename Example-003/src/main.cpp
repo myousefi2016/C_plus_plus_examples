@@ -12,6 +12,7 @@
 #include <cstdlib>
 using namespace std;
 
+/// The main function for the <i>Example-003</i> unit test.
 int main(int argc,char **argv)
 {
     /* This is the example 'Example-003', which is the echo testing for the shell parameters! */

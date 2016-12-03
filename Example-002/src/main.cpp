@@ -12,7 +12,8 @@
 #include <cstdlib>
 using namespace std;
 
-int main(int argc,char **argv)
+/// The main function for the <i>Example-002</i> unit test.
+int main(void)
 {
     /* This is the example 'Example-002', near to be the classic 'Hello World!" example! */
     puts("\n\tThis is the example 'Example-002' in the C++ language\n");

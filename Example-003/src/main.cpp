@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), November 2016
+ * Created by David Canino (canino.david@gmail.com), December 2016
  #
  # main.cpp - the 'main' file for the test 'Example-003'.
  **************************************************************************************/
@@ -15,7 +15,7 @@ using namespace std;
 int main(int argc,char **argv)
 {
     /* This is the example 'Example-003', which is the echo testing for the shell parameters! */
-    cout<<endl<<"This is the example 'Example-003' in the C++ language"<<endl<<endl;
+    cout<<endl<<"\tThis is the example 'Example-003' in the C++ language"<<endl<<endl;
     cout.flush();
     if(argc==0)
     {

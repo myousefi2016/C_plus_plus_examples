@@ -4,7 +4,7 @@
 #
 # GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
 #
-# David Canino, November 2016
+# David Canino, December 2016
 #
 # CMakeLists.txt - the CMake directives for building the test 'Example-001'
 ##################################################################################
@@ -16,7 +16,7 @@ if (APPLE OR CMAKE_HOST_APPLE)
 elseif (UNIX OR CMAKE_HOST_UNIX)
 	add_executable(Example-001 ../src/main.cpp)
 elseif (WIN32 OR CMAKE_HOST_WIN32)
-	add_executable(Example-001 ..\src/main.cpp)
+	add_executable(Example-001 ..\src\main.cpp)
 else ()
 	message(FATAL_ERROR "The current platform is not supported")
 endif ()

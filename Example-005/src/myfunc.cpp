@@ -5,7 +5,7 @@
  *
  * Created by David Canino (canino.david@gmail.com), December 2016
  *
- * myfunc.cpp - the source file, implementing the auxiliary functions for the test 'Example-005'.
+ * myfunc.cpp - the source file, implementing the auxiliary function for the test 'Example-005'.
  ********************************************************************************************************/
  
 #include "myfunc.h"

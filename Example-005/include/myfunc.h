@@ -5,7 +5,7 @@
  *
  * Created by David Canino (canino.david@gmail.com), December 2016
  *
- * myfunc.h - the header file, containing the auxiliary functions for the test 'Example-005'.
+ * myfunc.h - the header file, containing the auxiliary function for the test 'Example-005'.
  ********************************************************************************************************/
  
 /* Optional inclusion! */

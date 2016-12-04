@@ -5,7 +5,7 @@
  *
  * Created by David Canino (canino.david@gmail.com), December 2016
  *
- * main.cpp - the source file, implementing the main functions for the test 'Example-005'.
+ * main.cpp - the source file, implementing the main function for the test 'Example-005'.
  ********************************************************************************************************/
 
 #include "myfunc.h"
@@ -18,7 +18,7 @@ int main(void)
 {
 	/* Main operations! */
 	cout<<endl<<"\tThis is the example 'Example-005' in the C++ language"<<endl<<endl;
-    cout.flush();
-    myfunc();
+	cout.flush();
+	myfunc();
 	return EXIT_SUCCESS;
 }

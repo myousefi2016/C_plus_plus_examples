@@ -17,14 +17,14 @@ int main(void)
 {
 	/* Main operations! */
 	cout<<endl<<"\tThis is the example 'Example-006' in the C++ language"<<endl<<endl;
-    	cout.flush();
-    	cout<<"\tStarting the navigation among the labels"<<endl<<endl;
-    	cout<<"\tJumping to the label 'step1' ... ";
-    	cout.flush();
-    	goto step1;
+    cout.flush();
+    cout<<"\tStarting the navigation among the labels"<<endl<<endl;
+    cout<<"\tJumping to the label 'step1' ... ";
+    cout.flush();
+    goto step1;
 
 	/* Label step2 */
-    	step2:
+    step2:
     	
     	cout<<"ok"<<endl;
     	cout<<"\tReached the statement, related to the label 'step2'"<<endl<<endl;

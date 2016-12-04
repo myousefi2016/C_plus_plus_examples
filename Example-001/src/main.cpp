@@ -5,7 +5,7 @@
  *
  * Created by David Canino (canino.david@gmail.com), December 2016
  *
- * main.cpp - the source file, implementing the main functions for the test 'Example-001'.
+ * main.cpp - the source file, implementing the main function for the test 'Example-001'.
  **********************************************************************************************/
 
 #include <iostream>

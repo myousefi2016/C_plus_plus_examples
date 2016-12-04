@@ -20,18 +20,19 @@ int main(void)
 	
 	/* Main operations! */
 	cout<<endl<<"\tThis is the example 'Example-007' in the C++ language"<<endl<<endl;
-    cout.flush();
-    cout<<"\tPlease, insert a positive integer value 'n': ";
-    cin>>n;
-    if(!cin)
-    {
-    	cout<<"\tYou must enter positive integer value!"<<endl<<endl;
-    	return EXIT_FAILURE;
-    }
+    	cout.flush();
+    	cout<<"\tPlease, insert a positive integer value 'n': ";
+    	cin>>n;
+    	if(!cin)
+    	{
+    		cout<<"\tYou must enter positive integer value!"<<endl<<endl;
+    		return EXIT_FAILURE;
+    	}
     
-    /* If you arrive here, everything is ok! */
-    cout<<endl<<"\tYou inserted the positive integer value "<<n<<endl;
-    cout<<"\tThe factorial "<<n<<"! is: "<<factorial(n)<<endl<<endl;
-    cout.flush();
-	return EXIT_SUCCESS;
+    	/* If you arrive here, everything is ok! */
+    	cout<<endl<<"\tYou inserted the positive integer value "<<n<<endl;
+    	cout<<"\tThe factorial "<<n<<"! is: "<<factorial(n)<<endl<<endl;
+    	cout.flush();
+        return EXIT_SUCCESS;
 }
+

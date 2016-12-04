@@ -5,7 +5,7 @@
  *
  * Created by David Canino (canino.david@gmail.com), December 2016
  *
- * main.cpp - the source file, implementing the main functions for the test 'Example-006'.
+ * main.cpp - the source file, implementing the main function for the test 'Example-006'.
  ********************************************************************************************************/
 
 #include <cstdlib>
@@ -17,14 +17,14 @@ int main(void)
 {
 	/* Main operations! */
 	cout<<endl<<"\tThis is the example 'Example-006' in the C++ language"<<endl<<endl;
-    cout.flush();
-    cout<<"\tStarting the navigation among the labels"<<endl<<endl;
-    cout<<"\tJumping to the label 'step1' ... ";
-    cout.flush();
-    goto step1;
-    
-    /* Label step2 */
-    step2:
+    	cout.flush();
+    	cout<<"\tStarting the navigation among the labels"<<endl<<endl;
+    	cout<<"\tJumping to the label 'step1' ... ";
+    	cout.flush();
+    	goto step1;
+
+	/* Label step2 */
+    	step2:
     	
     	cout<<"ok"<<endl;
     	cout<<"\tReached the statement, related to the label 'step2'"<<endl<<endl;
@@ -32,8 +32,8 @@ int main(void)
     	cout.flush();
     	goto final_step;
     
-    /* Label step1 */
-    step1:
+    	/* Label step1 */
+    	step1:
     
     	cout<<"ok"<<endl;
     	cout<<"\tReached the statement, related to the label 'step1'."<<endl<<endl;
@@ -42,13 +42,14 @@ int main(void)
     	goto step2;
     	
    	/* Label 'final_step' */
-    final_step:
+	final_step:
     
     	cout<<"ok"<<endl;
     	cout<<"\tReached the statement, related to the label 'final_step'"<<endl<<endl;
     	cout<<"\tFinished navigation among the labels"<<endl<<endl;
     	cout.flush();
     	
-    /* All is ok! */
+    	/* All is ok! */
 	return EXIT_SUCCESS;
 }
+

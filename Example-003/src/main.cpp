@@ -33,11 +33,11 @@ int main(int argc,char **argv)
     	{
     		if(argc==2) cout<<"\tThere is only one auxiliary (shell) parameter"<<endl<<endl;
     		else cout<<"\tThere are "<<(argc-1)<<" auxiliary (shell) parameters"<<endl<<endl;
-   			for(int k=1;k<argc;k++) { cout<<"\t\tAuxiliary parameter #"<<(k-1)<<": "<<argv[k]<<endl; }
-   			cout<<endl;
-   		}
-   		else { cout<<"\tThere is no auxiliary (shell) parameter"<<endl<<endl; }
-   		cout.flush();
+		for(int k=1;k<argc;k++) { cout<<"\t\tAuxiliary parameter #"<<(k-1)<<": "<<argv[k]<<endl; }
+		cout<<endl;
+	}
+	else { cout<<"\tThere is no auxiliary (shell) parameter"<<endl<<endl; }
+	cout.flush();
     }
     
     /* All is ok! */

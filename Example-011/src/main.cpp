@@ -24,22 +24,22 @@ int main(void)
     	
 	/* Insert the value 'va' */
 	cout<<"\tPlease, insert an integer value 'va': ";
-    	cin>>va;
+    cin>>va;
    	if(!cin)
-    	{
-    		cout<<"\tYou must enter an integer value!"<<endl<<endl;
-    		return EXIT_FAILURE;
-    	}
+    {
+    	cout<<"\tYou must enter an integer value!"<<endl<<endl;
+    	return EXIT_FAILURE;
+    }
 
 	/* Insert the value 'vb' */
 	cout<<"\tYou inserted the integer value 'va': "<<va<<endl<<endl;
-    	cout<<"\tPlease, insert an integer value 'vb': ";
-    	cin>>vb;
+    cout<<"\tPlease, insert an integer value 'vb': ";
+    cin>>vb;
    	if(!cin)
-    	{
-    		cout<<"\tYou must enter an integer value!"<<endl<<endl;
-    		return EXIT_FAILURE;
-    	}
+    {
+    	cout<<"\tYou must enter an integer value!"<<endl<<endl;
+    	return EXIT_FAILURE;
+    }
 
 	/* If we arrive here, everything is ok */
 	cout<<"\tYou inserted the integer value 'vb': "<<vb<<endl<<endl;
@@ -53,4 +53,3 @@ int main(void)
 	cout.flush();
 	return EXIT_SUCCESS;
 }
-

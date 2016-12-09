@@ -1,4 +1,4 @@
-##################################################################################
+﻿##################################################################################
 #
 # Examples in the C++ language (the test 'Example-009’)
 #
@@ -18,8 +18,8 @@ elseif (UNIX OR CMAKE_HOST_UNIX)
 	include_directories(../include)
 	add_executable(Example-009 ../src/myfunctions.cpp ../src/main.cpp)
 elseif (WIN32 OR CMAKE_HOST_WIN32)
-	include_directories(..\include)
-	add_executable(Example-009 ../src/myfunctions.cpp ..\src\main.cpp)
+	include_directories(../include)
+	add_executable(Example-009 ../src/myfunctions.cpp ../src/main.cpp)
 else ()
 	message(FATAL_ERROR "The current platform is not supported")
 endif ()

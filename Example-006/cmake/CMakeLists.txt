@@ -1,4 +1,4 @@
-##################################################################################
+﻿##################################################################################
 #
 # Examples in the C++ language (the test 'Example-006’)
 #
@@ -16,7 +16,7 @@ if (APPLE OR CMAKE_HOST_APPLE)
 elseif (UNIX OR CMAKE_HOST_UNIX)
 	add_executable(Example-006 ../src/main.cpp)
 elseif (WIN32 OR CMAKE_HOST_WIN32)
-	add_executable(Example-006 ..\src\main.cpp)
+	add_executable(Example-006 ../src/main.cpp)
 else ()
 	message(FATAL_ERROR "The current platform is not supported")
 endif ()

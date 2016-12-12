@@ -76,7 +76,7 @@ int main(void)
 	if(std::numeric_limits<bool>::is_modulo) cout<<"\t-) handles overflows with modulo arithmetic"<<endl;
 	else cout<<"\t-) does not handle overflows with modulo arithmetic"<<endl;
 	cout<<"\t-) requires "<<std::numeric_limits<bool>::digits<<" digit"<<endl;
-	cout<<"\t-) requires "<<std::numeric_limits<bool>::digits10<<" base 10-digit"<<endl;
+	cout<<"\t-) requires "<<std::numeric_limits<bool>::digits10<<" base-10 digit"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::radix<<" as the base of the number system for being represented (radix)"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::min_exponent<<" as one more than the smallest negative power of the radix, such that is a valid normalized floating-point value"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::min_exponent10<<" as the smallest negative power of 10, such that is a valid normalized floating-point value"<<endl;
@@ -85,7 +85,7 @@ int main(void)
 	if(std::numeric_limits<bool>::traps) cout<<"has at least one value that, if used as an argument to an arithmetic operation, will generate a trap"<<endl;
 	else cout<<"\t-) has no value, that, if used as an argument to an arithmetic operation, will generate a trap"<<endl;
 	if(std::numeric_limits<bool>::tinyness_before) cout<<"\t-) tests the results of floating-point expressions for underflow before rounding"<<endl;
-	else cout<<"\t-) does not test the results of floating-point expressions for underflow before rounding"<<endl<<endl;
+	else cout<<"\t-) does not test the results of floating-point expressions for underflow before rounding"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::min()<<" as the minimum finite value representable"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::min()<<" as the lowest finite value representable"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::max()<<" as the maximum finite value representable"<<endl;

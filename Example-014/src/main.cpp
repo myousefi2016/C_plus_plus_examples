@@ -8,7 +8,7 @@
  * main.cpp - the source file, implementing the main function for the test 'Example-014'.
  **********************************************************************************************/
 
-#include <climits>
+#include <limits>
 #include <iostream>
 #include <cstdlib>
 using namespace std;

@@ -82,7 +82,7 @@ int main(void)
 	cout<<"\t-) has "<<std::numeric_limits<bool>::min_exponent10<<" as the smallest negative power of 10, such that is a valid normalized floating-point value"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::max_exponent<<" as one more than the largest integer power of the radix, such that is a valid finite floating-point value"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::max_exponent10<<" as the largest integer power of 10, such that is a valid normalized floating-point value"<<endl;
-	if(std::numeric_limits<bool>::traps) cout<<"has at least one value that, if used as an argument to an arithmetic operation, will generate a trap"<<endl;
+	if(std::numeric_limits<bool>::traps) cout<<"\t-) has at least one value that, if used as an argument to an arithmetic operation, will generate a trap"<<endl;
 	else cout<<"\t-) has no value, that, if used as an argument to an arithmetic operation, will generate a trap"<<endl;
 	if(std::numeric_limits<bool>::tinyness_before) cout<<"\t-) tests the results of floating-point expressions for underflow before rounding"<<endl;
 	else cout<<"\t-) does not test the results of floating-point expressions for underflow before rounding"<<endl;

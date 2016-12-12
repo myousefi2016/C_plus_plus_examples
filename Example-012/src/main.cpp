@@ -15,7 +15,7 @@ using namespace std;
 /// The main function for the <i>Example-012</i> unit test.
 int main(void)
 {
-    /* This is the example 'Example-012', near to be the classic 'Hello World!" example! */
+    /* This is the example 'Example-012' unit test, where the ASCII table is analyzed. */
     cout<<endl<<"\tThis is the example 'Example-012' in the C++ language"<<endl<<endl;
     cout.flush();
     for(int num=0;num<128;num++)

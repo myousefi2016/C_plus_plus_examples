@@ -86,10 +86,10 @@ int main(void)
 	else cout<<"\t-) has no value, that, if used as an argument to an arithmetic operation, will generate a trap"<<endl;
 	if(std::numeric_limits<bool>::tinyness_before) cout<<"\t-) tests the results of floating-point expressions for underflow before rounding"<<endl;
 	else cout<<"\t-) does not test the results of floating-point expressions for underflow before rounding"<<endl;
-	cout<<"\t-) has "<<std::numeric_limits<bool>::min()<<" as the minimum finite value representable"<<endl;
-	cout<<"\t-) has "<<std::numeric_limits<bool>::min()<<" as the lowest finite value representable"<<endl;
-	cout<<"\t-) has "<<std::numeric_limits<bool>::max()<<" as the maximum finite value representable"<<endl;
-	cout<<"\t-) has "<<std::numeric_limits<bool>::epsilon()<<" as the machine epsilon, that is, the difference between 1.0 and the next value representable"<<endl;
+	cout<<"\t-) has "<<std::numeric_limits<bool>::min()<<" as the minimum finite value, representable as a 'bool' value"<<endl;
+	cout<<"\t-) has "<<std::numeric_limits<bool>::min()<<" as the lowest finite value, representable as a 'bool' value"<<endl;
+	cout<<"\t-) has "<<std::numeric_limits<bool>::max()<<" as the maximum finite value, representable as a 'bool' value"<<endl;
+	cout<<"\t-) has "<<std::numeric_limits<bool>::epsilon()<<" as the machine epsilon, that is, the difference between 1.0 and the next value, representable as a 'bool' value"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::round_error()<<" as the maximum rounding error"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<bool>::denorm_min()<<" as the minimum positive subnormal value"<<endl<<endl;
 	return EXIT_SUCCESS;

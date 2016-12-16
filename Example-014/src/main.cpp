@@ -75,8 +75,8 @@ int main(void)
 	else cout<<"\t-) does not represent a finite set of values"<<endl;
 	if(std::numeric_limits<char>::is_modulo) cout<<"\t-) handles overflows with modulo arithmetic"<<endl;
 	else cout<<"\t-) does not handle overflows with modulo arithmetic"<<endl;
-	cout<<"\t-) requires "<<std::numeric_limits<char>::digits<<" digit"<<endl;
-	cout<<"\t-) requires "<<std::numeric_limits<char>::digits10<<" base-10 digit"<<endl;
+	cout<<"\t-) requires "<<std::numeric_limits<char>::digits<<" digits"<<endl;
+	cout<<"\t-) requires "<<std::numeric_limits<char>::digits10<<" base-10 digits"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<char>::radix<<" as the base of the number system for being represented (radix)"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<char>::min_exponent<<" as one more than the smallest negative power of the radix, such that is a valid normalized floating-point value"<<endl;
 	cout<<"\t-) has "<<std::numeric_limits<char>::min_exponent10<<" as the smallest negative power of 10, such that is a valid normalized floating-point value"<<endl;

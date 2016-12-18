@@ -10,6 +10,6 @@
 ##################################################################################
 
 cmake_minimum_required(VERSION 2.8.0 FATAL_ERROR)
-project(Example LANGUAGES CXX)
+project(Example-031 LANGUAGES CXX)
 include_directories(../include)
 add_executable(Example-031 ../src/main.cpp)

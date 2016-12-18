@@ -86,10 +86,10 @@ int main(void)
 	else cout<<"\t-) has no value, that, if used as an argument to an arithmetic operation, will generate a trap"<<endl;
 	if(std::numeric_limits<int>::tinyness_before) cout<<"\t-) tests the results of floating-point expressions for underflow before rounding"<<endl;
 	else cout<<"\t-) does not test the results of floating-point expressions for underflow before rounding"<<endl;
-	cout<<"\t-) has "<<(int)std::numeric_limits<int>::min()<<" as the minimum finite value, representable as a 'int' value"<<endl;
-	cout<<"\t-) has "<<(int)std::numeric_limits<int>::min()<<" as the lowest finite value, representable as a 'int' value"<<endl;
-	cout<<"\t-) has "<<(int)std::numeric_limits<int>::max()<<" as the maximum finite value, representable as a 'int' value"<<endl;
-	cout<<"\t-) has "<<(int)std::numeric_limits<int>::epsilon()<<" as the machine epsilon, that is, the difference between 1.0 and the next value, representable as a 'int' value"<<endl;
+	cout<<"\t-) has "<<(int)std::numeric_limits<int>::min()<<" as the minimum finite value, representable as an 'int' value"<<endl;
+	cout<<"\t-) has "<<(int)std::numeric_limits<int>::min()<<" as the lowest finite value, representable as an 'int' value"<<endl;
+	cout<<"\t-) has "<<(int)std::numeric_limits<int>::max()<<" as the maximum finite value, representable as an 'int' value"<<endl;
+	cout<<"\t-) has "<<(int)std::numeric_limits<int>::epsilon()<<" as the machine epsilon, that is, the difference between 1.0 and the next value, representable as an 'int' value"<<endl;
 	cout<<"\t-) has "<<(int)std::numeric_limits<int>::round_error()<<" as the maximum rounding error"<<endl;
 	cout<<"\t-) has "<<(int)std::numeric_limits<int>::denorm_min()<<" as the minimum positive subnormal value"<<endl<<endl;
 	return EXIT_SUCCESS;

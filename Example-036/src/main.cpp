@@ -1,11 +1,11 @@
 /********************************************************************************************************
- * Examples in the C++ language (the test 'Example-035')
+ * Examples in the C++ language (the test 'Example-036')
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
  * Created by David Canino (canino.david@gmail.com), December 2016
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-035'.
+ * main.cpp - the source file, implementing the main function for the test 'Example-036'.
  ********************************************************************************************************/
 
 #include "myheader.h"
@@ -13,13 +13,13 @@
 #include <iostream>
 using namespace std;
 
-/// The main function for the <i>Example-035</i> unit test.
+/// The main function for the <i>Example-036</i> unit test.
 int main(void)
 {
 	int a,b;
 
 	/* Main operations! */
-	cout<<endl<<"\tThis is the example 'Example-035' in the C++ language"<<endl<<endl;
+	cout<<endl<<"\tThis is the example 'Example-036' in the C++ language"<<endl<<endl;
 	cout.flush();
 	cout<<"\tPlease, insert the integer value 'a': ";
 	cin>>a;

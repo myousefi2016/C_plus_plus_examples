@@ -8,4 +8,4 @@ All examples in this repository are tested with the <A href="http://gcc.gnu.org/
 
 Their <A href="http://cmake.org"><i>CMAKE</i></A> building infrastructure is provided, as well as the corresponding <A href="http://www.visualstudio.com/"><i>Visual Studio (Community Edition 2015)</i></A> and the <A href="http://developer.apple.com/xcode/"><i>XCode</i></A> projects.
 
-Each test example will be its guide (currently under progress).
+Each test example will have a brief installation and usage manual (currently under progress).

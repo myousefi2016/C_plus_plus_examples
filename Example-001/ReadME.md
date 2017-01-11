@@ -11,6 +11,12 @@ This test is built by using the <i>classic</i> instructions for building a progr
 cd build
 cmake ..
 make
-</pre><p>This test is executed with:<pre>./Example-001</pre><p>This method is tested with the <A href="http://gcc.gnu.org/">GCC</A> under the Ubuntu Linux 16.0.4 (LTS), as well as with the <A href="http://clang.llvm.org/">CLANG</A> compiler under the MacOsX 11.* El-Capitan, and the <A href="http://www.visualstudio.com/">Visual Studio (Community Edition 2015)</A> under the MS Windows 10.
+</pre><p>As mentioned above, the <i>'Example-001'</i> executable file is created. For instance, this test is executed by running:<pre>./Example-001</pre><p>This building method is tested with the <A href="http://gcc.gnu.org/"><i>GCC</i></A> under the Ubuntu Linux 16.0.4 (LTS), as well as with the <A href="http://clang.llvm.org/"><i>CLANG</i></A> compiler under the MacOsX 11.* El-Capitan, and the <A href="http://www.visualstudio.com/"><i>Visual Studio (Community Edition 2015)</i></A> under the MS Windows 10.
 
-In this latter case, three custom projects are automatically generated, and ready to be open in the <A href="http://www.visualstudio.com/">Visual Studio (Community Edition 2015)</A>. The solution of interest is the <i>'Example-001.sln'</i> solution, which can be open and built in the program.
+In this latter case, three custom projects are automatically generated, and ready to be open in the <A href="http://www.visualstudio.com/"><i>Visual Studio (Community Edition 2015)</i></A>. The solution of interest is the <i>'Example-001.sln'</i> solution, which can be open and built in the program without being modified.
+
+<h4>Instructions for building this test with the <i><A href="http://www.visualstudio.com/">Visual Studio (Community Edition 2015)</A></i></h4>
+
+This test is also built by using the <A href="http://www.visualstudio.com/"><i>Visual Studio (Community Edition 2015)</i></A>. In particular, the <i>'vstudio'</i> folder contains the <i>'Example-001.sln'</i> solution, which can be open and built in the program without being modified.
+
+Note that this solution is independently created from scratch, and is different from the solution, generated automatically by the <i><A href="http://cmake.org">CMake Building Tool</A></i>.

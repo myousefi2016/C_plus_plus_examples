@@ -32,6 +32,8 @@ bool verifyState()
 	if(fetestexcept(FE_OVERFLOW)) { cout<<"\tAn overflow error occurred in an earlier floating-point operation. (Found the 'FE_OVERFLOW' value)."<<endl; ris=false; }
 	if(fetestexcept(FE_UNDERFLOW)) { cout<<"\tAn underflow error occurred in an earlier floating-point operation. (Found the 'FE_UNDERFLOW' value)."<<endl; ris=false; }
 	cout.flush();
+	feclearexcept (FE_ALL_EXCEPT);
+    errno=0;
 	return ris;
 }
 
@@ -53,42 +55,34 @@ int main(void)
     c=(0.0/0.0);
     verifyState();
     cout<<"\tThe result of the operation '0.0 / 0.0' = "<<c<<endl;
-    feclearexcept (FE_ALL_EXCEPT);
-    errno=0;
-cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
+	cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=(1.0/0.0);
     verifyState();
     cout<<"\tThe result of the operation '1.0 / 0.0' = "<<c<<endl;
-    feclearexcept (FE_ALL_EXCEPT);
-	errno=0;    cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
+    cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=sqrt(-1);
     verifyState();
     cout<<"\tThe result of the operation 'sqrt(-1)' = "<<c<<endl;
-    feclearexcept (FE_ALL_EXCEPT);
-   	errno=0; cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
+    cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=1.0/10.0;
     verifyState();
     cout<<"\tThe result of the operation '1.0 / 10.0' = "<<c<<endl;
-    feclearexcept (FE_ALL_EXCEPT);
-   	errno=0; cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
+    cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=DBL_MAX*2.0;
     verifyState();
     cout<<"\tThe result of the operation 'DBL_MAX*2.0' = "<<c<<endl;
-    feclearexcept (FE_ALL_EXCEPT);
-   	errno=0; cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
+    cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=nextafter(DBL_MIN/pow(2.0,52),0.0);
     verifyState();
     cout<<"\tThe result of the operation 'nextafter(DBL_MIN/pow(2.0,52),0.0)' = "<<c<<endl;
-    feclearexcept (FE_ALL_EXCEPT);
-   	errno=0; cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
+    cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     
     /* If we arrive here, all is ok! */
     return EXIT_SUCCESS;
 }
-   

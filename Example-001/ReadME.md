@@ -2,7 +2,7 @@
 
 <H3>The 'Example-001' Test</H3>
 
-This is a very basic example about the use of the C++ programming language. Basically, it is similar to the classic <i>'Hello World'</i> for testing the correctness of the building infrastructure.<p>In particular, this test consists of the <i>'Example-001'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.
+This is a very basic example about the use of the C++ programming language. Basically, it is similar to the classic <i>'Hello World'</i> for testing the correctness of the building infrastructure.<p>In particular, this test consists of the <i>'Example-001'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 
@@ -13,13 +13,13 @@ cmake ..
 make
 </pre><p>As mentioned above, the <i>'Example-001'</i> executable file is created. For instance, this test is executed by running:<pre>./Example-001</pre><p>This building method is tested with the <A href="http://gcc.gnu.org/"><i>GCC</i></A> under the Ubuntu Linux 16.0.4 (LTS), as well as with the <A href="http://clang.llvm.org/"><i>CLANG</i></A> compiler under the MacOsX 11.* El-Capitan (and higher), and the <A href="http://www.visualstudio.com/"><i>Visual Studio (Community Edition 2015)</i></A> under the MS Windows 10.
 
-In this latter case, three custom projects are automatically generated, and ready to be open in the <A href="http://www.visualstudio.com/"><i>Visual Studio (Community Edition 2015)</i></A>. The solution of interest is the <i>'Example-001.sln'</i> solution, which can be open and built in the program without being modified.
+In this latter case, three custom projects are automatically generated, and ready to be open in the <A href="http://www.visualstudio.com/"><i>Visual Studio (Community Edition 2015)</i></A>. The solution of interest is the <i>'Example-001.sln'</i> solution, which can be open and built in the program without being modified.<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://www.visualstudio.com/">Visual Studio (Community Edition 2015)</A></i></h4>
 
 This test is also built by using the <A href="http://www.visualstudio.com/"><i>Visual Studio (Community Edition 2015)</i></A>. In particular, the <i>'vstudio'</i> folder contains the <i>'Example-001.sln'</i> solution, which can be open and built in the program without being modified. It can be built by simply clicking on the <i>'Build'</i> command.
 
-Note that this solution is independently created from scratch, and is different from the solution, which may be generated automatically by the <i><A href="http://cmake.org">CMake Building Tool</A></i>.
+Note that this solution is independently created from scratch, and is different from the solution, which may be generated automatically by the <i><A href="http://cmake.org">CMake Building Tool</A></i>.<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://developer.apple.com/xcode/">XCode</A></i></h4>
 

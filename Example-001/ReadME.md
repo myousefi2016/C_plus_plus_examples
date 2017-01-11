@@ -11,4 +11,6 @@ This test is built by using the <i>classic</i> instructions for building a progr
 cd build
 cmake ..
 make
-</pre><p>This test is executed with:<pre>./Example-001</pre><p>This method is tested with the <A href="http://gcc.gnu.org/">GCC</A> under the Ubuntu Linux 16.0.4 (LTS), as well as with the <A href="http://clang.llvm.org/">CLANG</A> compiler under the MacOsX 11.* El-Capitan, and the <A href="http://www.visualstudio.com/">Visual Studio (Community Edition 2015)</A> under the MS Windows 10. In this latter case, three custom projects are automatically generated, and ready to be open in the <A href="http://www.visualstudio.com/">Visual Studio (Community Edition 2015)</A>. The solution of interest is the <i>'Example-001.sln'</i> solution.
+</pre><p>This test is executed with:<pre>./Example-001</pre><p>This method is tested with the <A href="http://gcc.gnu.org/">GCC</A> under the Ubuntu Linux 16.0.4 (LTS), as well as with the <A href="http://clang.llvm.org/">CLANG</A> compiler under the MacOsX 11.* El-Capitan, and the <A href="http://www.visualstudio.com/">Visual Studio (Community Edition 2015)</A> under the MS Windows 10.
+
+In this latter case, three custom projects are automatically generated, and ready to be open in the <A href="http://www.visualstudio.com/">Visual Studio (Community Edition 2015)</A>. The solution of interest is the <i>'Example-001.sln'</i> solution, which can be open and built in the program.

@@ -16,7 +16,7 @@ using namespace std;
 /// The main function for the <i>Example-037</i> unit test for testing several C++ constructs.
 int main(void)
 {
-	int n;
+	int n = 0;
 	float a[][4]={
 		{ 4.0,4.0,0.0},
 		{ 5,5,0 },

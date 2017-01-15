@@ -90,7 +90,7 @@ int main(void)
     }
     
     /* If we arrive here, all is ok! */
-    cout<<"\tThe partial charge for the medical and the laboratory cares is "<<(medCharges+labCharges)<<" euro"<<endl<<endl;
+    cout<<endl<<"\tThe partial charge for the medical and the laboratory cares is "<<(medCharges+labCharges)<<" euro"<<endl<<endl;
     if(admitted) cout<<"\tThe total charge for receiving the medical attentions is "<<calculateCharge(numOfDays,dailyCharge,medCharges,labCharges)<<" euro"<<endl<<endl;
     else cout<<"\tThe total charge for receiving the medical attentions is "<<calculateCharge(medCharges,labCharges)<<" euro"<<endl<<endl;
 }

@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 using namespace std;
 
 /// The main function for the <i>Example-051</i> unit test.

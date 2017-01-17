@@ -2,7 +2,7 @@
 
 <H3>The 'Example-040' Test</H3>
 
-This is a basic example about the use of the C++ programming language. Basically, this program validates the generation of several pseudo-random <i>'integer'</i>values by using the C-like infrastructure.<p>In particular, this test consists of the <i>'Example-040'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><hr><p>
+This is a basic example about the use of the C++ programming language. Basically, this program validates the generation of several pseudo-random <i>'integer'</i> values by using the C-like infrastructure.<p>In particular, this test consists of the <i>'Example-040'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

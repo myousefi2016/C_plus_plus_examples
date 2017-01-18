@@ -89,12 +89,12 @@ int main(void)
 	out.open("g1.txt");
 	if(!out)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE FILE 'g1.txt'. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"\tCANNOT OPEN THE 'g1.txt' FILE. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
 	
-	/* The file 'g1.txt' is open! */
+	/* The 'g1.txt' file is open! */
 	out<<g1;
 	out.close();
 	cout<<"ok"<<endl<<endl<<"\tCreating another generator 'g3' ... ";
@@ -106,16 +106,16 @@ int main(void)
 	else cout<<"\tThe generators 'g1' and 'g3' do not coincide (wrt the operator '==')"<<endl;
 	if(g1!=g3) cout<<"\tThe generators 'g1' and 'g3' do not coincide (wrt the operator '!=')"<<endl<<endl;
 	else cout<<"\tThe generators 'g1' and 'g3' coincide (wrt the operator '!=')"<<endl<<endl;
-	cout<<"\tSaving the internal state of the generator 'g1' (from the file 'g1.txt') into the generator 'g3' (wrt the operator '>>') ... ";
+	cout<<"\tSaving the internal state of the generator 'g1' (from the 'g1.txt' file) into the generator 'g3' (wrt the operator '>>') ... ";
 	in.open("g1.txt");
 	if(!in)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE FILE 'g1.txt'. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"\tCANNOT OPEN THE 'g1.txt' FILE. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
 	
-	/* Saving everything from the file 'g1.txt' into the generator 'g3'. */
+	/* Saving everything from the 'g1.txt' file into the generator 'g3'. */
 	in>>g3;
 	in.close();
 	cout<<"ok"<<endl;

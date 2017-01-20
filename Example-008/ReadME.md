@@ -5,7 +5,7 @@
 This is a basic example about the use of the C++ programming language. Basically, this program validates the implementation of several functions, defined on a separate header file.<p>In particular, this test consists of the <i>'Example-008'</i> executable file, based on several components, that are distributed in several files:<ul>
 <li>the <i>'main'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li>
 <li>the <i>custom</i> functions of interest are defined in the <i>'myfunctions.h'</i> C++ header file (in the <i>'include'</i> folder)</li>
-<li>the implementation for the <i>custom</i> functions are interest are stored in the <i>'myfunctions.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li></ul><p>Several methods for its building are provided, and take into the account the source code organization (described above).<p><hr><p>
+<li>the implementations for the <i>custom</i> functions are interest are stored in the <i>'myfunctions.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li></ul><p>Several methods for its building are provided, and take into the account the source code organization (described above).<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

@@ -54,7 +54,7 @@ int main(void)
 	seasons[1] = "fall";
 	seasons[2] = "winter";
 	seasons[3] = "spring";
-	cout<<"ok"<<endl;
+	cout<<"ok"<<endl<<endl;
 	cout.flush();
 	cout<<"\tPointer to the array of interest: "<<seasons<<endl;
 	print(seasons,4);
@@ -62,27 +62,8 @@ int main(void)
 	/* Automatic initialization for an array, containing the names for the week days! */
 	cout<<"\tInitializing automatically an array, containing the names for the week days ... ";
     string weekdays[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-    cout<<"ok"<<endl;
+    cout<<"ok"<<endl<<endl;
     print(weekdays,7);
-    
     return EXIT_SUCCESS;
 }
- 
 
-
-
-	//array declarations
-	/* 
-	 */
-
-	//declare and initialize the array
-	//
-
-	//change the value of an array
-	//s
-//
-//	cout<<seasons<<endl;
-//	cout<<seasons[0]<<endl;
-//	cout<<seasons[1]<<endl;
-//	cout<<seasons[2]<<endl;
-//	cout<<seasons[3]<<endl;

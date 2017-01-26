@@ -15,7 +15,11 @@
 #include <cstdlib>
 #include <float.h>
 using namespace std;
-#pragma STDC FENV_ACCESS ON
+#if defined(_MSC_VER)
+	#pragma fenv_access (on)
+#else
+	#pragma STDC FENV_ACCESS ON
+#endif
 
 /// This function verifies whether an error occurred while performing several floating-point operations in the system.
 bool verifyState()

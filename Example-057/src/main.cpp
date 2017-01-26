@@ -15,7 +15,11 @@
 #include <cstdlib>
 using namespace std;
 #define PI 3.14159265
-#pragma STDC FENV_ACCESS ON
+#if defined(_MSC_VER)
+	#pragma fenv_access (on)
+#else
+	#pragma STDC FENV_ACCESS ON
+#endif
 
 /// This function verifies whether an error occurred while performing several floating-point operations in the system.
 bool verifyState()
@@ -105,7 +109,7 @@ int main(void)
 	feclearexcept (FE_ALL_EXCEPT);
 	param2 = atan(result)*180.0/PI;
     cout<<"\tThe arc tangent of "<<result<<" is "<<param2<<" degree(s) (see the 'atan()' function)"<<endl;
-	cout<<"\tRecall that the 'atan()' function returns a radiant value, belonging to [-PI/2,PI/2] (thus to [-90,90] degrees), with its multiplicity.";
+	cout<<"\tRecall that the 'atan()' function returns a radiant value, belonging to (-PI/2,PI/2), thus to (-90,90) degrees, with its multiplicity.";
 	cout.flush();
 	b=verifyState();
 	cout<<endl<<"\t==========================================================================================================================================="<<endl<<endl;
@@ -115,7 +119,7 @@ int main(void)
 	feclearexcept (FE_ALL_EXCEPT);
 	param2 = atan2(result,1.0)*180.0/PI;
 	cout<<"\tThe arc tangent of "<<result<<" is "<<param2<<" degree(s) (see the 'atan2()' function)"<<endl;
-	cout<<"\tRecall that the 'atan2()' function returns a radiant value, belonging to [-PI/2,PI/2] (thus to [-90,90] degrees), with its multiplicity.";
+	cout<<"\tRecall that the 'atan2()' function returns a radiant value, belonging to (-PI/2,PI/2), thus to (-90,90) degrees), with its multiplicity.";
 	cout.flush();
 	b=verifyState();
 	cout<<endl<<"\t==========================================================================================================================================="<<endl<<endl;

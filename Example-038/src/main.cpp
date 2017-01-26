@@ -33,7 +33,7 @@ int main(void)
 	}
 	
 	/* Inserting the first 2D point (x2,y2) */
-	cout<<"\tPlease, insert the coordinates 'x2' and 'y2' for the first Euclidean 2D point '(x2,y2)': ";
+	cout<<"\tPlease, insert the coordinates 'x2' and 'y2' for the second Euclidean 2D point '(x2,y2)': ";
 	cin>>x2>>y2;
 	if(!cin)
 	{

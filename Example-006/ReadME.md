@@ -2,7 +2,7 @@
 
 <H3>The 'Example-006' Test</H3>
 
-This is a basic example about the use of the C++ programming language. Basically, this program validates the creation of several labels, and the navigation through these labels in a not standard manner (<i>code jumping</i>).<p>In particular, this test consists of the <i>'Example-006'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><hr><p>
+This basic example about the use of the C++ programming language validates the creation of several labels, and the navigation through these labels in a not standard manner (<i>code jumping</i>).<p>In particular, this test consists of the <i>'Example-006'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

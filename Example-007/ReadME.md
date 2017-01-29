@@ -2,10 +2,10 @@
 
 <H3>The 'Example-007' Test</H3>
 
-This is a basic example about the use of the C++ programming language. Basically, this program validates the implementation of a recursive function for computing the factorial of an integer value. This recursive function is defined on a separate header file.<p>In particular, this test consists of the <i>'Example-007'</i> executable file, based on several components, that are distributed in several files:<ul>
-<li>the <i>'main'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li>
-<li>the <i>custom</i> and recursive function <i>'factorial()'</i> is defined in the <i>'recursive_factorial.h'</i> C++ header file (in the <i>'include'</i> folder)</li>
-<li>the implementation of the <i>custom</i> and recursive function <i>'factorial()'</i> is stored in the <i>'recursive_factorial.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li></ul><p>Several methods for its building are provided, and take into the account the source code organization (described above).<p><hr><p>
+This basic example about the use of the C++ programming language validates the implementation of a recursive function for computing the factorial of an integer value. This recursive function is defined on a separate header file.<p>In particular, this test consists of the <i>'Example-007'</i> executable file, based on several components, that are distributed in several files:<ul>
+<li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li>
+<li>the <i>'factorial()'</i> recursive function is defined in the <i>'recursive_factorial.h'</i> C++ header file (in the <i>'include'</i> folder)</li>
+<li>the implementation of the <i>'factorial()'</i> recursive function is stored in the <i>'recursive_factorial.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li></ul><p>Several methods for building this program are provided, and take into the account the source code organization (described above).<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

@@ -2,7 +2,7 @@
 
 <H3>The 'Example-002' Test</H3>
 
-This is a very basic example about the use of the C++ programming language. Basically, it is similar to the classic <i>'Hello World'</i> for testing the correctness of the building infrastructure. In this case, the C function <i>'puts()'</i> is exploited.<p>In particular, this test consists of the <i>'Example-002'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><hr><p>
+This is a very basic example about the use of the C++ programming language, and is similar to the classic <i>'Hello World'</i> for testing the correctness of the building infrastructure. In this case, the C function <i>'puts()'</i> is exploited.<p>In particular, this test consists of the <i>'Example-002'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

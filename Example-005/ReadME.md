@@ -5,7 +5,7 @@
 This basic example about the use of the C++ programming language shows how exploiting a custom function, defined on a separate header file. Broadly speaking, this is an example of the <i>separate (modular) compiling</i> techniques for exploiting a (third-party) module.<p>In particular, this test consists of the <i>'Example-005'</i> executable file, based on several components, that are distributed in several files:<ul>
 <li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li>
 <li>the <i>'myfunc()'</i> function is defined in the <i>'myfunc.h'</i> C++ header file (in the <i>'include'</i> folder)</li>
-<li>the implementation of the <i>'myfunc()'</i> function is stored in the <i>'myfunc.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li></ul><p>Several methods for building this program are provided, and take into the account the source code organization (described above).<p><hr><p>
+<li>the implementation of the <i>'myfunc()'</i> function is stored in the <i>'myfunc.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li></ul><p>Several methods for building this test are provided, and take into the account its source code organization (described above).<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

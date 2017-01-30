@@ -2,7 +2,7 @@
 
 <H3>The 'Example-012' Test</H3>
 
-This is a very basic example about the use of the C++ programming language, and generates the ASCII table between the ASCII characters and their numeric values.<p>In particular, this test consists of the <i>'Example-012'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><hr><p>
+This basic example about the use of the C++ programming language generates the ASCII table between the ASCII characters and their numeric values.<p>In particular, this test consists of the <i>'Example-012'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for building this test are provided.<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

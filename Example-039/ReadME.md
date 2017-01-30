@@ -2,7 +2,7 @@
 
 <H3>The 'Example-039' Test</H3>
 
-This is a basic example about the use of the C++ programming language. Basically, this program is a very basic videogame, where the user must guess a pseudo-random number, generated automatically by using the <i>'srand()'</i> and the <i>'rand()'</i> functions.<p>In particular, this test consists of the <i>'Example-039'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><hr><p>
+This basic example about the use of the C++ programming language is a very elementary videogame, where the user must guess a pseudo-random number, generated automatically by using the <i>'srand()'</i> and the <i>'rand()'</i> functions.<p>In particular, this test consists of the <i>'Example-039'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for building this program are provided.<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

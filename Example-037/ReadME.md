@@ -2,7 +2,7 @@
 
 <H3>The 'Example-037' Test</H3>
 
-This is a basic example about the use of the C++ programming language. Basically, this program shows how cycling the rows of a matrix in the forward and in the reverse direction.<p>In particular, this test consists of the <i>'Example-037'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for its building are provided.<p><table border=1><tr><td><p><b>VERY IMPORTANT:</b><p>This test can be used if your C++ compiler is a C++11-compliant compiler. The most recent versions of the compilers in the current literature are C++11-compliant.<p></td></tr></table><p><hr><p>
+This basic example about the use of the C++ programming language shows how cycling the rows of a matrix in the forward and in the reverse direction. The key idea consists of exploiting the automatic initialization of several arrays, provided by the C++11 standard.<p>In particular, this test consists of the <i>'Example-037'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for building this test are provided.<p><table border=1><tr><td><p><b>VERY IMPORTANT:</b><p>It is clear that this test can be built and run ONLY if your C++ compiler is a C++11-compliant compiler. The most recent versions of the compilers in the current literature are C++11-compliant.<p></td></tr></table><p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

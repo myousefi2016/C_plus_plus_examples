@@ -2,10 +2,10 @@
 
 <H3>The 'Example-035' Test</H3>
 
-This is a basic example about the use of the C++ programming language. Basically, this program shows how exploiting the call-by-reference parameters passing for a custom function, defined on a separate header file.<p>In particular, this test consists of the <i>'Example-035'</i> executable file, based on several components, that are distributed in several files:<ul>
-<li>the <i>'main'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li>
-<li>the <i>custom</i> function <i>'addThree()'</i> is defined in the <i>'myheader.h'</i> C++ header file (in the <i>'include'</i> folder)</li>
-<li>the implementation of the <i>custom</i> function <i>'addThree()'</i> is stored in the <i>'myheader.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li></ul><p>Several methods for its building are provided, and take into the account the source code organization (described above).<p><hr><p>
+This basic example about the use of the C++ programming language shows how exploiting the call-by-reference parameters passing for a custom function, defined on a separate header file.<p>In particular, this test consists of the <i>'Example-035'</i> executable file, based on several components, that are distributed in several files:<ul>
+<li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li>
+<li>the <i>'addThree()'</i> function is defined in the <i>'myheader.h'</i> C++ header file (in the <i>'include'</i> folder)</li>
+<li>the implementation of the <i>'addThree()'</i> function is stored in the <i>'myheader.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li></ul><p>Several methods for building this test are provided, and take into the account its source code organization (described above).<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

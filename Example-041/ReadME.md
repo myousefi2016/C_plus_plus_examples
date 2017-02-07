@@ -2,7 +2,7 @@
 
 <H3>The 'Example-041' Test</H3>
 
-This basic example about the use of the C++ programming language is a primitive prototype of a videogame, where two craps are launched together. There is no player, which wins the game, and only the result of the crasps is shown. Broadly speaking, this test validates the generation of several pseudo-random <i>'integer'</i> values by using the <i>'srand()'</i> and the <i>'rand()'</i> functions in the Standard C Library.<p>In particular, this test consists of the <i>'Example-041'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for building this test are provided.<p><hr><p>
+This basic example about the use of the C++ programming language is a prototype of a videogame, where two craps are launched together. There is no player, which wins the game, and only the result of the crasps is shown. Broadly speaking, this test validates the generation of several pseudo-random <i>'integer'</i> values by using the <i>'srand()'</i> and the <i>'rand()'</i> functions in the Standard C Library.<p>In particular, this test consists of the <i>'Example-041'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder) without using other dependencies.<p>Several methods for building this test are provided.<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

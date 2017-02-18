@@ -39,7 +39,20 @@ int main(void)
  	for(auto it=d0.cbegin();it!=d0.cend();++it) cout<<" "<<(*it);
  	cout<<endl;
  	cout<<"\tInitializing the first 3 locations in the deque 'd0' (which is resized properly) ... ";
- 	d0.assign(d0.begin(),d0.begin()+3);
+	cout.flush();
+	#ifndef _MSC_VER
+
+		/* Here, we are not using the 'Microsoft Visual Studio' compiler. Thus, we can exploit the 'assign()' member function with the deque iterators. */
+		d0.assign(d0.begin(), d0.begin() + 3);
+
+	#else
+
+		/* Here, we are using the 'Microsoft Visual Studio' compiler, thus the deque iterators are not derefencable. Here, we simply exploit the 'resize()' member function. */
+		d0.resize(3);
+
+	#endif
+	
+	/* If we arrive here, then we can continue. */
  	cout<<"ok"<<endl<<"\t#values in the deque 'd0': "<<d0.size()<<endl;
  	cout<<"\tThe 'int' values in the deque 'd0':";
  	for(auto it=d0.cbegin();it!=d0.cend();++it) cout<<" "<<(*it);
@@ -56,6 +69,7 @@ int main(void)
  	cout<<endl;
  	if(d1.empty()==true) cout<<"\tThe deque 'd1' is empty"<<endl<<endl;
  	else cout<<"\tThe deque 'd1' is not empty"<<endl<<endl;
+	cout.flush();
  	
  	/* TASK #3 - creating a new deque as the copy of another. */
  	cout<<"\tCreating a deque 'd2' as the copy of the deque 'd1' ... ";
@@ -107,6 +121,7 @@ int main(void)
  	cout<<"\tThe 'int' values in the deque 'd4' (in the forward direction):";
  	for(unsigned int k=0;k<d4.size();k++) cout<<" "<<d4.at(k);
  	cout<<endl;
+	cout.flush();
  	
  	/* TASK #6 - analysis of the deque 'd4' */
  	cout<<"\t#values in the deque 'd4': "<<d4.size()<<endl;

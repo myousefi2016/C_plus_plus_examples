@@ -4,7 +4,7 @@
 #
 # GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
 #
-# David Canino, January 2017
+# David Canino, February 2017
 #
 # CMakeLists.txt - the CMake directives for building the test 'Example-056’
 ##################################################################################

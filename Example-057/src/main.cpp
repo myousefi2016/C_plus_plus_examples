@@ -15,7 +15,7 @@
 #include <cstdlib>
 using namespace std;
 #define PI 3.14159265
-#if defined(_MSC_VER)
+#if !defined(_MSC_VER)
 	#pragma fenv_access (on)
 #else
 	#pragma STDC FENV_ACCESS ON

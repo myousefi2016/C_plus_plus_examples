@@ -9,10 +9,11 @@
  **********************************************************************************************/
  
 #include <iostream>
-#include <cfenv>
+#include <fenv.h>
 #include <cmath>
-#include <cerrno>
+#include <errno.h>
 #include <cstdlib>
+#include <float.h>
 using namespace std;
 #if !defined(_MSC_VER)
 	#pragma fenv_access (on)

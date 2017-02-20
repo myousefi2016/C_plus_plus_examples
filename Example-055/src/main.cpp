@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), February 2017
  *
  * main.cpp - the source file, implementing the main function for the test 'Example-055'.
  **********************************************************************************************/
@@ -14,7 +14,7 @@
 #include <cerrno>
 #include <cstdlib>
 using namespace std;
-#if defined(_MSC_VER)
+#if !defined(_MSC_VER)
 	#pragma fenv_access (on)
 #else
 	#pragma STDC FENV_ACCESS ON

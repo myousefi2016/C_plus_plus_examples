@@ -52,7 +52,7 @@ int main(void)
     else cout<<"\tThe MATH_ERREXCEPT macro is set"<<endl;
     feclearexcept(FE_ALL_EXCEPT);
     errno=0;
-    cout<<"\tComputing 'log(0)' ... ";
+    cout<<"\tComputing the 'log(0)' value ... ";
   	aaa=log(0);
   	if(verifyState())
   	{

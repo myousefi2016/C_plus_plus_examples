@@ -296,7 +296,7 @@ int main(void)
  	cout<<"\t#values in the list 'l4': "<<l4.size()<<endl;
  	cout<<"\tThe 'int' values in the list 'l4' (in the forward direction):";
  	for(auto it=l4.begin();it!=l4.end();++it) cout<<" "<<(*it);
- 	cout<<endl;
+ 	cout<<endl<<endl;
  	cout.flush();
 
  	/* TASK #9 - allocating a new C-like array by using the allocator of the list 'l5' */

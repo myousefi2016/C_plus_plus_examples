@@ -16,7 +16,6 @@
 #include <float.h>
 using namespace std;
 #pragma fenv_access (on)
-//#pragma STDC FENV_ACCESS ON
 
 /// This function verifies whether an error occurred while performing several floating-point operations in the system.
 bool verifyState()

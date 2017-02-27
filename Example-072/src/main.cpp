@@ -32,7 +32,7 @@ int main(void)
 	cout<<endl<<"\tThis is the example 'Example-072' in the C++ language"<<endl<<endl;
     cout.flush();
     
-     /* TASK #1 - validating the empty constructor for the lists. */
+    /* TASK #1 - validating the empty constructor for the lists. */
     cout<<"\tCreating an empty list 'l0' of 'int' values ... ";
  	cout.flush();
  	list<int> l0;

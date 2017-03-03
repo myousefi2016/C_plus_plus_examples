@@ -3,9 +3,9 @@
 <H3>The 'Example-081' Test</H3>
 
 This basic example about the use of the C++ programming language validates the definition and the implementation of a generic <i>'class'</i>. It is well known that the <i>'class'</i> is the most important construct for an object-oriented programming language (like the C++ programming language). In this case, the basic definition of the <i>'House'</i> class is proposed, which describes briefly a generic house. This class has some <i>'private'</i> member fields, that are accessed by the corresponding <i>'getter/setter'</i> member functions. These latter are implemented by using the not constant references and the constant references, available in the C++ language. This class is also equipped with a (friend) exporting operator, which operates on a generic output stream (not necessarily a file).<p>In particular, this test consists of the <i>'Example-081'</i> executable file, based on several components, that are distributed in several files:<ul>
-<li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li>
-<li>the <i>'House'</i> class is defined in the <i>'house.h'</i> C++ header file (in the <i>'include'</i> folder).</li>
-<li>the implementation of the member functions, offered by the <i>'House'</i> class, is stored in the <i>'house.cpp'</i> C++ source file (in the <i>'src'</i> folder)</li></ul><p>Several methods for building this test are provided, and take into the account its source code organization (described above).<p><hr><p>
+<li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i>'src'</i> folder);</li>
+<li>the <i>'House'</i> class is defined in the <i>'house.h'</i> C++ header file (in the <i>'include'</i> folder);</li>
+<li>the implementation of the member functions, offered by the <i>'House'</i> class, is stored in the <i>'house.cpp'</i> C++ source file (in the <i>'src'</i> folder).</li></ul><p>Several methods for building this test are provided, and take into the account its source code organization (described above).<p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

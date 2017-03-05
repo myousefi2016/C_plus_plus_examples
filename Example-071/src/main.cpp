@@ -255,7 +255,7 @@ int main(void)
  	cout<<endl;
  	cout<<"\tDeallocating the new C-like array ... ";
  	for(int i=0;i<7;i++) d5->get_allocator().destroy(&p[i]);
- 	d5->get_allocator().deallocate(p,5);
+ 	d5->get_allocator().deallocate(p,7);
  	cout<<"ok"<<endl;
  	p=nullptr;
  	

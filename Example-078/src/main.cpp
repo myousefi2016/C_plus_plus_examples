@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <algorithm>
+#include <functional>
 #include <forward_list>
 using namespace std;
 #ifndef uint
@@ -28,17 +29,6 @@ struct isEvenStruct
 	/// This operator checks whether an <i>'uint'</i> value is an <i>even</i> number.
 	bool operator()(const uint &v) { return ( (v%2)==0); }
 };
-
-// a predicate implemented as a function:
-//bool single_digit (const int& value) { return (value<10); }
-
-// a predicate implemented as a class:
-//class is_odd_class
-//{
-//public:
-//  bool operator() (const int& value) {return (value%2)==1; }
-//} is_odd_object;
-
 
 /// The main function for the <i>Example-078</i> unit test.
 int main(void)

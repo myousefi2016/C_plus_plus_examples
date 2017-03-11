@@ -17,6 +17,9 @@ using namespace std;
 #ifndef uint
 	typedef unsigned int uint;
 #endif
+#ifdef _MSC_VER
+	#include <functional>
+#endif
 
 /// This function is a custom function for comparing the 'string' keys.
 bool compareStrings(const string& a,const string& b) { return (a<b); }

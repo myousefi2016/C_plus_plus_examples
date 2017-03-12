@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-077')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-077' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), February 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-077'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-077' unit test.
+ **************************************************************************************************/
  
 #include <cstdlib>
 #include <vector>
@@ -31,8 +31,8 @@ struct CompareUlongValues
 /// The main function for the <i>Example-077</i> unit test.
 int main(void)
 {
-	/* This is the example 'Example-077', where the 'multiset' containers are validated. */
-	cout<<endl<<"\tThis is the example 'Example-077' in the C++ language"<<endl<<endl;
+	/* This is the 'Example-077' unit test, where the 'multiset' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-077' unit test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - validating the empty constructor for the multisets. */

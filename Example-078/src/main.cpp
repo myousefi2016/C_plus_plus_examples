@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-078')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-078' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
  * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-078'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-078' unit test.
+ **************************************************************************************************/
 
 #include <cstdlib>
 #include <iostream>
@@ -33,8 +33,8 @@ struct isEvenStruct
 /// The main function for the <i>Example-078</i> unit test.
 int main(void)
 {
-	/* This is the example 'Example-078', where the 'forward_list' containers are validated. */
-	cout<<endl<<"\tThis is the example 'Example-078' in the C++ language"<<endl<<endl;
+	/* This is the 'Example-078' unit test, where the 'forward_list' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-078' unit test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - validating the empty constructor for the 'forward_list' containers. */

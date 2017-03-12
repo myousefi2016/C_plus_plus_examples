@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-072')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-072' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), February 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-072'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-072' unit test.
+ **************************************************************************************************/
  
 #include <cstdlib>
 #include <list>
@@ -28,8 +28,8 @@ struct EvenStruct
 /// The main function for the <i>Example-072</i> unit test.
 int main(void)
 {
-	/* This is the example 'Example-072', where the 'list' containers are validated. */
-	cout<<endl<<"\tThis is the example 'Example-072' in the C++ language"<<endl<<endl;
+	/* This is the 'Example-072' unit test, where the 'list' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-072' unit test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - validating the empty constructor for the lists. */

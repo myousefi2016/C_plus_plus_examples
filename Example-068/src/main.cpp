@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-068')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-068' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
  * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-068'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-068' unit test.
+ **************************************************************************************************/
 
 #include <cstdlib>
 #include <tuple>
@@ -16,16 +16,16 @@
 #include <utility>
 using namespace std;
 
-/// The main function for the <i>Example-068</i> unit test.
+/// The main function for the <i>'Example-068'</i> unit test.
 int main(void)
 {
 	string s;
 
-	/* This is the example 'Example-068', where the 'tuple' containers are validated. */
-    cout<<endl<<"\tThis is the example 'Example-068' in the C++ language"<<endl<<endl;
+	/* This is the 'Example-068' unit test, where the 'tuple' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-068' unit test in the C++ language."<<endl<<endl;
     cout.flush();
     
-    /* Creating a new tuple 't0', containing a 'string' and an 'int' value. */
+    /* TASK #1 - Creating a new tuple 't0', containing a 'string' and an 'int' value. */
     cout<<"\tCreate a new tuple 't0', containing a 'string' and an 'int' value ... ";
     tuple<string,int> t0("John",18);
     cout<<"ok"<<endl;
@@ -34,7 +34,7 @@ int main(void)
     cout<<"\tThe 'int' value in the tuple 't0' is: "<<std::get<1>(t0)<<endl<<endl;
     cout.flush();
     
-    /* Creating a copy 't1' of the tuple 't0'. */
+    /* TASK #2 - Creating a copy 't1' of the tuple 't0'. */
     cout<<"\tCreating a new tuple 't1' as a copy of the existing tuple 't0' ... ";
     auto t1=t0;
     cout<<"ok"<<endl;
@@ -47,7 +47,7 @@ int main(void)
 	cout<<endl;
 	cout.flush();
 	
-	/* Creating a new tuple 't2'. */
+	/* TASK #2 - Creating a new tuple 't2', containing a 'string' and an 'int' value. */
 	cout<<"\tCreating a new tuple 't2' by starting from a 'string' and an 'int' value ... ";
 	auto t2=make_tuple(string("Jack"),5);
 	cout<<"ok"<<endl;
@@ -74,7 +74,7 @@ int main(void)
 	cout<<"\tThe 'string' element in the tuple 't2' is: "<<std::get<0>(t2)<<endl;
     cout<<"\tThe 'int' value in the tuple 't2' is: "<<std::get<1>(t2)<<endl<<endl;
 	
-	/* Creating a new tuple 't3'. */
+	/* TASK #3 - Creating a new tuple 't3'. */
 	cout<<"\tCreating a new tuple 't3' by using the automatic detection of its elements ... ";
 	auto t3=make_tuple( 25, "'t3'", 88.4);
 	cout<<"ok"<<endl;
@@ -88,7 +88,7 @@ int main(void)
 	cout<<"\tThe field #2 in the tuple 't3' contains: "<<t32<<endl<<endl;
 	cout.flush();
 	
-	/* Creating a new tuple 't4' by packing together the elements of the tuple 't3'. */
+	/* TASK #4 - Creating a new tuple 't4' by packing together the elements of the tuple 't3'. */
 	cout<<"\tCreating a new tuple 't4' by packing together the elements in the existing tuple 't3' ... ";
 	auto t4=std::forward_as_tuple(t30,t31,t32);
 	cout<<"ok"<<endl;
@@ -112,7 +112,7 @@ int main(void)
 	cout<<endl;
 	cout.flush();
 	
-	/* Creating a new tuple 't5' by concatenating the tuples 't3' and 't4'. */
+	/* TASK #5 - Creating a new tuple 't5' by concatenating the tuples 't3' and 't4'. */
 	cout<<"\tCreating a new tuple 't5' by concatenating the tuples 't1' and 't3' ... ";
 	auto t5=std::tuple_cat(t1,t3);
 	cout<<"ok"<<endl;

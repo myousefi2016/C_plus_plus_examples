@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-069')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-069' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
  * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-069'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-069' unit test.
+ **************************************************************************************************/
 
 #include <cstdlib>
 #include <array>
@@ -18,8 +18,8 @@ using namespace std;
 /// The main function for the <i>Example-069</i> unit test.
 int main(void)
 {
-	/* This is the example 'Example-069', where the 'array' containers are validated. */
-    cout<<endl<<"\tThis is the example 'Example-069' in the C++ language"<<endl<<endl;
+	/* This is the 'Example-069' unit test, where the 'array' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-069' unit test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - validating the empty constructor for the 'array' containers. */

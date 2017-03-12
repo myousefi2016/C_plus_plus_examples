@@ -1,12 +1,12 @@
-/********************************************************************************************************
- * Examples in the C++ language (the test 'Example-005')
+/*************************************************************************************************************
+ * Examples in the C++ language (the 'Example-005' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), December 2016
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * myfunc.cpp - the source file, implementing the auxiliary function for the test 'Example-005'.
- ********************************************************************************************************/
+ * myfunc.cpp - the source file, where the auxiliary function for the 'Example-005' unit test is implemented.
+ *************************************************************************************************************/
  
 #include "myfunc.h"
 #include <iostream>

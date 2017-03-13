@@ -18,6 +18,7 @@ int main(void)
 {
 	/* This is the 'Example-005' unit test, which exploits the 'myfunc()' function. This latter is defined in the 'myfunc.h' header file. */
     cout<<endl<<"\tThis is the 'Example-005' unit test in the C++ language."<<endl<<endl;
+    cout.flush();
 	myfunc();
 	return EXIT_SUCCESS;
 }

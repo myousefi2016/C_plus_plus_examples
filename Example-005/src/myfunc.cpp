@@ -14,6 +14,6 @@ using namespace std;
 
 void myfunc(void)
 {
-	cout<<"\tThis is the 'myfunc()' auxiliary function in the 'Example-005' unit test"<<endl<<endl;
+	cout<<"\tThis is the 'myfunc()' auxiliary function in the 'Example-005' unit test."<<endl<<endl;
 	cout.flush();
 }

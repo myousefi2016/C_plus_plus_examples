@@ -1,12 +1,12 @@
-/********************************************************************************************************
- * Examples in the C++ language (the test 'Example-009')
+/******************************************************************************************************************************
+ * Examples in the C++ language (the 'Example-009' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), December 2016
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * myfunctions.h - the header file, containing the auxiliary functions for the test 'Example-009'.
- ********************************************************************************************************/
+ * myfunctions.h - the header file, where the auxiliary functions for the 'Example-009' unit test are defined.
+ ******************************************************************************************************************************/
  
 /* Optional inclusion! */
 #ifndef MY_FUNCTIONS_H

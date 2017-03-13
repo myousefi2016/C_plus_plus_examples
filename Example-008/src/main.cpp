@@ -1,12 +1,12 @@
-/********************************************************************************************************
- * Examples in the C++ language (the test 'Example-008')
+/**********************************************************************************************
+ * Examples in the C++ language (the 'Example-008' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), December 2016
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-008'.
- ********************************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-008' unit test.
+ **********************************************************************************************/
 
 #include "myfunctions.h"
 #include <cstdlib>
@@ -18,11 +18,11 @@ int main(void)
 {
 	double d,r,h,vc;
 
-	/* Main operations! */
-	cout<<endl<<"\tThis is the example 'Example-008' in the C++ language"<<endl<<endl;
-    cout.flush();
+	/* This is the 'Example-008' unit test, which exploits several functions, defined in the 'myfunctions.h' header file. */
+	cout<<endl<<"\tThis is the 'Example-008' unit test in the C++ language."<<endl<<endl;
+	cout.flush();
 
-	/* STEP #1 - compute the volume for a cube! */    
+	/* TASK #1 - compute the volume for a cube. */    
     cout<<"\tPlease, insert the length 'd' for the side of a cube: ";
     cin>>d;
     if( (!cin) || (d<0) )
@@ -32,14 +32,14 @@ int main(void)
     }
     else
     {
-    	cout<<"\tYou inserted the valid length 'd'="<<d<<" as the size of a cube"<<endl;
+    	cout<<"\tYou inserted the valid length 'd'="<<d<<" as the side of a cube."<<endl;
     	vc = volume(d);
     	cout.flush();
-    	cout<<"\tThe volume for the cube of interest is: "<<vc<<endl<<endl;
+    	cout<<"\tThe volume for the cube of interest is: "<<vc<<"."<<endl<<endl;
     	cout.flush();
     }
     
-    /* STEP #2 - compute the volume for a cylinder */
+    /* TASK #2 - compute the volume for a cylinder. */
     cout<<"\tPlease, insert the length 'r' for the radius of the circular basis in a cylinder: ";
     cin>>r;
     if( (!cin) || (r<0) )
@@ -49,7 +49,7 @@ int main(void)
     }
     
     /* The radius 'r' is ok. Now, we insert the height 'h' of a cylinder. */
-    cout<<"\tYou inserted the valid length 'r'="<<r<<" for the radius of the circular basis in a cylinder"<<endl;
+    cout<<"\tYou inserted the valid length 'r'="<<r<<" for the radius of the circular basis in a cylinder."<<endl;
     cout<<"\tPlease, insert the height 'h' of a cylinder: ";
     cin>>h;
     if( (!cin) || (h<0) )
@@ -59,12 +59,12 @@ int main(void)
     }
     
     /* All parameters are correct! */
-    cout<<"\tYou inserted the valid height 'h'="<<r<<" for the height of a cylinder"<<endl;
+    cout<<"\tYou inserted the valid height 'h'="<<r<<" for the height of a cylinder."<<endl;
     vc=volume(r,h);
-    cout<<"\tThe volume for the cylinder of interest is: "<<vc<<endl<<endl;
+    cout<<"\tThe volume for the cylinder of interest is: "<<vc<<"."<<endl<<endl;
     cout.flush();
     
-    /* STEP #3 - compute the volume of a cuboid */
+    /* TASK #3 - compute the volume of a cuboid. */
     cout<<"\tPlease, insert the width 'a' of a cuboid: ";
     cin>>d;
     if( (!cin) || (d<0) )
@@ -74,7 +74,7 @@ int main(void)
     }
    	
    	/* The width is ok. Now, we insert the depth 'b' of a cuboid. */
-   	cout<<"\tYou inserted the valid width 'a'="<<d<<" of a cuboid"<<endl;
+   	cout<<"\tYou inserted the valid width 'a'="<<d<<" of a cuboid."<<endl;
    	cout<<"\tPlease, insert the depth 'b' of a cuboid: ";
     cin>>r;
     if( (!cin) || (r<0) )
@@ -84,7 +84,7 @@ int main(void)
     }
     
     /* The depth is ok. Now, we insert the height 'c' of a cuboid. */
-   	cout<<"\tYou inserted the valid depth 'b'="<<r<<" of a cuboid"<<endl;
+   	cout<<"\tYou inserted the valid depth 'b'="<<r<<" of a cuboid."<<endl;
     cout<<"\tPlease, insert the height 'c' of a cuboid: ";
     cin>>h;
     if( (!cin) || (h<0) )
@@ -94,9 +94,9 @@ int main(void)
     }
     
     /* All parameters are correct! */
-    cout<<"\tYou inserted the valid height 'c'="<<h<<" of a cuboid"<<endl;
+    cout<<"\tYou inserted the valid height 'c'="<<h<<" of a cuboid."<<endl;
     vc=volume(d,r,h);
-    cout<<"\tThe volume for the cuboid of interest is: "<<vc<<endl<<endl;
+    cout<<"\tThe volume for the cuboid of interest is: "<<vc<<"."<<endl<<endl;
     cout.flush();
     return EXIT_SUCCESS;
 }

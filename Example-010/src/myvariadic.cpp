@@ -1,12 +1,12 @@
-/********************************************************************************************************
- * Examples in the C++ language (the test 'Example-010')
+/******************************************************************************************************************************
+ * Examples in the C++ language (the 'Example-010' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), December 2016
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * myvariadic.cpp - the source file, implementing the auxiliary functions for the test 'Example-010'.
- ********************************************************************************************************/
+ * myvariadic.cpp - the source file, where the auxiliary functions for the 'Example-010' unit test are implemented.
+ ******************************************************************************************************************************/
  
 #include "myvariadic.h"
 
@@ -16,7 +16,7 @@ double average(unsigned int count,...)
 	double tot=0.0;
 	
 	/* Now, we extract everything from the variadic list of parameters! */
-	fprintf(stdout,"\tInvoking the 'average()' function with %d parameters\n\n",count);
+	fprintf(stdout,"\tInvoking the 'average()' function with the following %d parameters:\n\n",count);
 	fflush(stdout);
 	va_start(vl,count);
 	for(unsigned int i=0;i<count;i++) 
@@ -44,10 +44,10 @@ int message(const char *fmt,...)
 	fprintf(stdout,"\tInvoking the 'message()' function by using the format '%s'\n",fmt);
 	fflush(stdout);
 	va_start(vl,fmt);
-	fprintf(stdout,"\tFormatted message as required: ");
+	fprintf(stdout,"\tFormatted message as required: '");
 	rc=vfprintf(stdout,fmt,vl);
 	va_end(vl);
-	fprintf(stdout,"\n");
+	fprintf(stdout,"'\n");
 	fflush(stdout);
 	return rc;
 }

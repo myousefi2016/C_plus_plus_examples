@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-056')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-056' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), February 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-056'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-056' unit test.
+ **************************************************************************************************/
  
 #include <iostream>
 #include <fenv.h>
@@ -42,44 +42,44 @@ int main(void)
 {
 	float c;
 
-	/* This is the example 'Example-056', where all supported floating-point exceptions are validated. */
-    cout<<endl<<"\tThis is the example 'Example-056' in the C++ language"<<endl<<endl;
-    cout.flush();
-    feclearexcept (FE_ALL_EXCEPT);
-	errno=0;
-    if(math_errhandling & MATH_ERREXCEPT) cout<<"\tThe MATH_ERREXCEPT macro is defined and set correctly"<<endl<<endl;
-    else cout<<"\tThe MATH_ERREXCEPT macro is not defined and set correctly"<<endl<<endl;
+    /* This is the 'Example-056' unit test, where all supported floating-point exceptions are validated. */
+    cout<<endl<<"\tThis is the 'Example-056' unit test in the C++ language."<<endl<<endl;
     cout.flush();
     
-    /* We perform several 'wrong' operations! */
+    /* TASK #1 - initialize several macros, and perform a collection of 'wrong' operations. */
+    feclearexcept (FE_ALL_EXCEPT);
+	errno=0;
+    if(math_errhandling & MATH_ERREXCEPT) cout<<"\tThe MATH_ERREXCEPT macro is defined and set correctly."<<endl<<endl;
+    else cout<<"\tThe MATH_ERREXCEPT macro is not defined and set correctly."<<endl<<endl;
+    cout.flush();
     c=(0.0/0.0);
     verifyState();
-    cout<<"\tThe result of the operation '0.0 / 0.0' = "<<c<<endl;
+    cout<<"\tThe result of the operation '0.0 / 0.0' is "<<c<<"."<<endl;
 	cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=(1.0/0.0);
     verifyState();
-    cout<<"\tThe result of the operation '1.0 / 0.0' = "<<c<<endl;
+    cout<<"\tThe result of the operation '1.0 / 0.0' is "<<c<<"."<<endl;
     cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=sqrt(-1);
     verifyState();
-    cout<<"\tThe result of the operation 'sqrt(-1)' = "<<c<<endl;
+    cout<<"\tThe result of the operation 'sqrt(-1)' is "<<c<<"."<<endl;
     cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=1.0/10.0;
     verifyState();
-    cout<<"\tThe result of the operation '1.0 / 10.0' = "<<c<<endl;
+    cout<<"\tThe result of the operation '1.0 / 10.0' is "<<c<<"."<<endl;
     cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=DBL_MAX*2.0;
     verifyState();
-    cout<<"\tThe result of the operation 'DBL_MAX*2.0' = "<<c<<endl;
+    cout<<"\tThe result of the operation 'DBL_MAX*2.0' is "<<c<<"."<<endl;
     cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     c=nextafter(DBL_MIN/pow(2.0,52),0.0);
     verifyState();
-    cout<<"\tThe result of the operation 'nextafter(DBL_MIN/pow(2.0,52),0.0)' = "<<c<<endl;
+    cout<<"\tThe result of the operation 'nextafter(DBL_MIN/pow(2.0,52),0.0)' is "<<c<<"."<<endl;
     cout<<"\t----------------------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
     cout.flush();
     

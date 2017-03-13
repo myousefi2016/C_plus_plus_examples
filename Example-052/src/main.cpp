@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-052')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-052' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-052'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-052' unit test.
+ **************************************************************************************************/
 
 #include <cstdlib>
 #include <iostream>
@@ -22,18 +22,18 @@ int main(void)
 	const double CHILD_FARE = 30.0;
 	const double FAMILY_FARE = 100.0;
 	
-	/* This is the example 'Example-052', where the 'switch' and other constructs are tested. */
-    cout<<endl<<"\tThis is the example 'Example-052' in the C++ language"<<endl;
+	/* This is the 'Example-052' unit test, where the 'switch' and other constructs are tested. */
+    cout<<endl<<"\tThis is the 'Example-052' unit test in the C++ language."<<endl;
     cout.flush();
     cout<<fixed<<setprecision(2)<<showpoint;
 	do
 	{
 		/* Several member fares are available for being purchased. */
 		cout<<endl<<"\tThe following memership fares are available for being purchased:"<<endl<<endl;
-		cout<<"\t1. Adult Membership Fare (40 euro/month)"<<endl;
-		cout<<"\t2. Child Membership Fare (30 euro/month)"<<endl;
-		cout<<"\t3. Family Membership Fare (100 euro/month)"<<endl;
-		cout<<"\t4. Exit"<<endl<<endl;
+		cout<<"\t1. Adult Membership Fare (40 euro/month);"<<endl;
+		cout<<"\t2. Child Membership Fare (30 euro/month);"<<endl;
+		cout<<"\t3. Family Membership Fare (100 euro/month);"<<endl;
+		cout<<"\t4. Exit."<<endl<<endl;
 		cout<<"\tPlease, select what membership fare you prefer: ";
 		cin>>menuChoice;
 		if( (!cin) || (menuChoice < 1) || (menuChoice > 4) )
@@ -65,30 +65,30 @@ int main(void)
 			case 1:
 			
 			/* The Adult Membership Fare is selected! */		
-			cout<<endl<<"\tORDER OVERVIEW"<<endl<<endl<<"\tThe Adult Membership Fare (40 euro/month) is selected, and it must be valid for "<<months<<" months."<<endl;
+			cout<<endl<<"\tORDER OVERVIEW"<<endl<<endl<<"\tThe Adult Membership Fare (40 euro/month) is selected, and it must be valid for "<<months<<" month(s)."<<endl;
 			totalCharge=ADULT_FARE*months;
 			break;
 			
 			case 2:
 			
 			/* The Child Membership Fare is selected! */		
-			cout<<endl<<"\tORDER OVERVIEW"<<endl<<endl<<"\tThe Child Membership Fare (30 euro/month) is selected, and it must be valid for "<<months<<" months."<<endl;
+			cout<<endl<<"\tORDER OVERVIEW"<<endl<<endl<<"\tThe Child Membership Fare (30 euro/month) is selected, and it must be valid for "<<months<<" month(s)."<<endl;
 			totalCharge=CHILD_FARE*months;
 			break;
 			
 			case 3:
 			
 			/* The Family Membership Fare is selected! */		
-			cout<<endl<<"\tORDER OVERVIEW"<<endl<<endl<<"\tThe Family Membership Fare (100 euro/month) is selected, and it must be valid for "<<months<<" months."<<endl;
+			cout<<endl<<"\tORDER OVERVIEW"<<endl<<endl<<"\tThe Family Membership Fare (100 euro/month) is selected, and it must be valid for "<<months<<" month(s)."<<endl;
 			totalCharge=FAMILY_FARE*months;
 			break;
 		}
 		
 		/* If we arrive here, all is ok! */
-		cout<<"\tThus, the total fare is charged: "<<totalCharge<<" euro"<<endl<<endl<<"\t======================================================================================================"<<endl;
+		cout<<"\tThus, the total fare is charged: "<<totalCharge<<" euro."<<endl<<endl<<"\t======================================================================================================"<<endl;
 		cout.flush();
 	}
 	while(menuChoice != 4);
-	cout<<endl<<"\tThis program is closing correctly"<<endl<<endl;
-	return EXIT_FAILURE;    
+	cout<<endl<<"\tThis program is closing correctly!"<<endl<<endl;
+	return EXIT_SUCCESS;    
 }

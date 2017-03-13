@@ -1,16 +1,17 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-054')
+/******************************************************************************************************************************
+ * Examples in the C++ language (the 'Example-054' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * myheader.h - the header file, containing custom data structures for the test 'Example-054'.
- **********************************************************************************************/
+ * myheader.h - the header file, where the auxiliary functions for the 'Example-054' unit test are defined.
+ ******************************************************************************************************************************/
  
 #include <iostream>
 using namespace std;
 
+/* Optional inclusion! */
 #ifndef MY_HEADER_H
 
 	#define MY_HEADER_H
@@ -37,11 +38,11 @@ using namespace std;
 		inline friend ostream& operator<<(ostream &os,Change &c)
 		{
 			/* We export the internal state of the 'Change' struct */
-			os<<"\t#Dollars: "<<c.dollars<<endl;
-			os<<"\t#Quarters: "<<c.quarters<<endl;
-			os<<"\t#Dimes: "<<c.dimes<<endl;
-			os<<"\t#Nickels: "<<c.nickels<<endl;
-			os<<"\t#Pennies: "<<c.pennies<<endl<<endl;
+			os<<"\t#Dollar(s): "<<c.dollars<<";"<<endl;
+			os<<"\t#Quarter(s): "<<c.quarters<<";"<<endl;
+			os<<"\t#Dime(s): "<<c.dimes<<";"<<endl;
+			os<<"\t#Nickel(s): "<<c.nickels<<";"<<endl;
+			os<<"\t#Pennie(s): "<<c.pennies<<"."<<endl<<endl;
 			os.flush();
 			return os;
 		}

@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-050')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-050' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-050'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-050' unit test.
+ **************************************************************************************************/
 
 #include <cstdlib>
 #include <iostream>
@@ -39,17 +39,19 @@ inline void concatenateStrings(const string &s0,const string &s1,string &stot)
 	stot+=s1;
 }
 
-/// The main function for the <i>Example-050</i> unit test.
+/// The main function for the <i>'Example-050'</i> unit test.
 int main(void)
 {
 	unsigned int w,h,a,p;
 	double r,ca,cp;
 	string s0,s1,stot;
-
-	/* This is the example 'Example-050', where the computation of several basic expressions and constructs is tested! */
-    cout<<endl<<"\tThis is the example 'Example-050' in the C++ language"<<endl<<endl;
+	
+	/* This is the 'Example-050' unit test, where the computation of several basic expressions and constructs is tested! */
+	cout<<endl<<"\tThis is the 'Example-050' unit test in the C++ language."<<endl<<endl;
     cout.flush();
-	cout<<"\tPlease, insert the positive and not null integer values, corresponding to the width (w) and the height (h) of a rectangle, respectively: ";
+    
+    /* TASK #1 - we compute the area and the perimeter for a rectangle of width 'w' and height 'h' (read from the standard input stream). */
+	cout<<"\tPlease, insert the positive and not null integer values (separated by a space), corresponding to the width (w) and the height (h) of a rectangle, respectively: ";
 	cin>>w>>h;
 	if( (!cin) || (w==0) || (h==0) )
 	{
@@ -62,15 +64,15 @@ int main(void)
 	else
 	{
 		/* Here, the reading operations were ok! */
-		cout<<"\tThe width 'w' for the rectangle of interest is: "<<w<<endl;
-		cout<<"\tThe height 'h' for the rectangle of interest is: "<<h<<endl;
+		cout<<"\tThe width 'w' for the rectangle of interest is "<<w<<"."<<endl;
+		cout<<"\tThe height 'h' for the rectangle of interest is "<<h<<"."<<endl;
 		computeAreaPerimeter(w,h,a,p);
-		cout<<"\tThe area for the rectangle of interest is: "<<a<<endl;
-		cout<<"\tThe perimeter for the rectangle of interest is: "<<p<<endl<<endl;
+		cout<<"\tThe area for the rectangle of interest is "<<a<<"."<<endl;
+		cout<<"\tThe perimeter for the rectangle of interest is "<<p<<"."<<endl<<endl;
 		cout.flush();
 	}
 	
-	/* Now, we analyze a circle. */
+	/* TASK #2 - we compute the circumference and the area for a circle of radius 'r' (read from the standard input stream). */
 	cout<<"\tPlease, insert the positive and not null floating point value, corresponding to the radius (r) of a circle: ";
 	cin>>r;
 	if( (!cin) || (r<=0.0) )
@@ -84,14 +86,14 @@ int main(void)
 	else
 	{
 		/* Here, the reading operation was ok! */
-		cout<<"\tThe radius 'r' for the circle of interest is: "<<r<<endl;
+		cout<<"\tThe radius 'r' for the circle of interest is "<<r<<"."<<endl;
 		computeAreaCircumference(r,ca,cp);
-		cout<<"\tThe area for the circle of interest is: "<<ca<<endl;
-		cout<<"\tThe circumference for the circle of interest is: "<<cp<<endl<<endl;
+		cout<<"\tThe area for the circle of interest is "<<ca<<"."<<endl;
+		cout<<"\tThe circumference for the circle of interest is "<<cp<<"."<<endl<<endl;
 		cout.flush();
 	}
 	
-	/* Now, we concatenate two strings. We read the first string 's0'. */
+	/* TASK #3 - we concatenate two strings, read from the standard input stream. We read the first string 's0'. */
 	cout<<"\tPlease, insert the first string 's0' to be concatenated: ";
 	cin>>s0;
 	if(!cin)
@@ -116,10 +118,10 @@ int main(void)
 	}
 	
 	/* Now, we can concatenate everything! */
-	cout<<"\tThe first string 's0' to be concatenated is: '"<<s0<<"'"<<endl;
-	cout<<"\tThe second string 's1' to be concatenated is: '"<<s1<<"'"<<endl;
+	cout<<"\tThe first string 's0' to be concatenated is '"<<s0<<"'"<<"."<<endl;
+	cout<<"\tThe second string 's1' to be concatenated is '"<<s1<<"'"<<"."<<endl;
 	concatenateStrings(s0,s1,stot);
-	cout<<"\tThe final string 'stot' is: '"<<stot<<"'"<<endl<<endl;
+	cout<<"\tThe final string 's=s0+s1' is '"<<stot<<"'"<<"."<<endl<<endl;
 	cout.flush();
 
 	/* If we arrive here, all is ok! */    

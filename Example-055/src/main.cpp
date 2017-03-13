@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-055')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-055' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), February 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-055'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-055' unit test.
+ **************************************************************************************************/
  
 #include <iostream>
 #include <fenv.h>
@@ -39,14 +39,16 @@ bool verifyState()
 int main(void)
 {
 	double aaa;
-
-	/* This is the example 'Example-055', where the infrastructure for the mathematical errors is tested. */
-    cout<<endl<<"\tThis is the example 'Example-055' in the C++ language"<<endl<<endl;
+	
+	/* This is the 'Example-055' unit test, where the infrastructure for the mathematical errors (floating-points exceptions) is tested. */
+    cout<<endl<<"\tThis is the 'Example-055' unit test in the C++ language."<<endl<<endl;
     cout.flush();
-    if(math_errhandling & MATH_ERRNO) cout<<"\tThe MATH_ERRNO macro is set"<<endl;
-    else cout<<"\tThe MATH_ERRNO macro is set"<<endl;
-    if(math_errhandling & MATH_ERREXCEPT) cout<<"\tThe MATH_ERREXCEPT macro is set"<<endl;
-    else cout<<"\tThe MATH_ERREXCEPT macro is set"<<endl;
+    
+	/* TASK #1 - setting correctly the error macros, and perform a wrong operation (computing the logarithmic of '0'.). */
+    if(math_errhandling & MATH_ERRNO) cout<<"\tThe MATH_ERRNO macro is set."<<endl;
+    else cout<<"\tThe MATH_ERRNO macro is set."<<endl;
+    if(math_errhandling & MATH_ERREXCEPT) cout<<"\tThe MATH_ERREXCEPT macro is set."<<endl;
+    else cout<<"\tThe MATH_ERREXCEPT macro is set."<<endl;
     feclearexcept(FE_ALL_EXCEPT);
     errno=0;
     cout<<"\tComputing the 'log(0)' value ... ";
@@ -61,7 +63,7 @@ int main(void)
   	else
   	{
   		/* If we arrive here, an error occurred! */
-  		cout<<endl<<endl<<"\tAN ERROR OCCURRED. THIS PROGRAM IS CLOSING..."<<endl<<endl;
+  		cout<<endl<<endl<<"\tAN ERROR OCCURRED. THIS PROGRAM IS CLOSING ..."<<endl<<endl;
   		cout.flush();
   		return EXIT_FAILURE;
   	}

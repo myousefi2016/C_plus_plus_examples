@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-054')
+/******************************************************************************************************************************
+ * Examples in the C++ language (the 'Example-054' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * myheader.cpp - the source file, implementing custom data structures for the test 'Example-054'.
- **********************************************************************************************/
+ * myheader.cpp - the source file, where the auxiliary functions for the 'Example-054' unit test are implemented.
+ ******************************************************************************************************************************/
  
 #include "myheader.h"
 #include <cmath>

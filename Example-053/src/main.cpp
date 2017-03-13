@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-053')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-053' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-053'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-053' unit test.
+ **************************************************************************************************/
 
 #include <iostream>
 #include <cstdlib>
@@ -25,9 +25,9 @@ int main(void)
 	bool admitted=false;
 	int numOfDays=0;
 	double dailyCharge=0.0,medCharges=0.0, labCharges=0.0;
-
-	/* This is the example 'Example-053', where the 'switch' and other constructs are tested. */
-    cout<<endl<<"\tThis is the example 'Example-053' in the C++ language"<<endl<<endl;
+	
+	/* This is the 'Example-053' unit test, where the 'switch' and other constructs are tested. */
+    cout<<endl<<"\tThis is the 'Example-053' unit test in the C++ language."<<endl<<endl;
     cout.flush();
     cout<<"\tImpatient care (admitted to the hospital) - (Y)es, (N)o: ";
 	cin>>ans;
@@ -38,7 +38,7 @@ int main(void)
 		return EXIT_FAILURE;
 	}
     
-    /* If we arrive here, we must consider the answer 'ans'. */
+    /* TASK #1 - consider the answer 'ans'. */
     if( (ans=='Y') || (ans=='y') ) 
     {
     	/* The patient is admitted to the hospital. First, insert the number of the days, spent in the hospital. */
@@ -64,12 +64,12 @@ int main(void)
     	}
     	
     	/* Now, we compute a partial result! */
-    	cout<<endl<<"\tThe partial charge for being admitted to the hospital: "<<(numOfDays)*dailyCharge<<" euro"<<endl;
+    	cout<<endl<<"\tThe partial charge for being admitted to the hospital is "<<(numOfDays)*dailyCharge<<" euro."<<endl;
     	cout.flush();
     }
     else { admitted=false; }
     
-     /* Now, insert the charge for the medical cares! */
+     /* TASK #2 - insert the charge for the medical cares! */
     cout<<endl<<"\tPlease, insert the (positive) charge for the medical cares (in euro): ";
     cin>>medCharges;
     if( (!cin) || (medCharges<0) )
@@ -79,7 +79,7 @@ int main(void)
 		return EXIT_FAILURE;
     }
     
-    /* Now, insert the laboratory charge! */
+    /* TASK #3 - insert the laboratory charge! */
     cout<<"\tPlease, insert the (positive) laboratory charge (in euro): ";
     cin>>labCharges;
     if( (!cin) || (labCharges<0) )
@@ -89,8 +89,10 @@ int main(void)
 		return EXIT_FAILURE;
     }
     
-    /* If we arrive here, all is ok! */
-    cout<<endl<<"\tThe partial charge for the medical and the laboratory cares is "<<(medCharges+labCharges)<<" euro"<<endl<<endl;
-    if(admitted) cout<<"\tThe total charge for receiving the medical attentions is "<<calculateCharge(numOfDays,dailyCharge,medCharges,labCharges)<<" euro"<<endl<<endl;
-    else cout<<"\tThe total charge for receiving the medical attentions is "<<calculateCharge(medCharges,labCharges)<<" euro"<<endl<<endl;
+    /* TASK #4 - If we arrive here, all is ok! */
+    cout<<endl<<"\tThe partial charge for the medical and the laboratory cares is "<<(medCharges+labCharges)<<" euro."<<endl<<endl;
+    if(admitted) cout<<"\tThe total charge for receiving the medical attentions is "<<calculateCharge(numOfDays,dailyCharge,medCharges,labCharges)<<" euro."<<endl<<endl;
+    else cout<<"\tThe total charge for receiving the medical attentions is "<<calculateCharge(medCharges,labCharges)<<" euro."<<endl<<endl;
+    cout.flush();
+    return EXIT_SUCCESS;
 }

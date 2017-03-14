@@ -1,13 +1,13 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-039')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-039' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-039'.
- **********************************************************************************************/
-
+ * main.cpp - the source file, implementing the main function for the 'Example-039' unit test.
+ **************************************************************************************************/
+ 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -17,16 +17,18 @@ using namespace std;
 int number=0;
 int jackpot=1000;
 
-/// This function checks whether the number is guessed.
+/// This function checks whether the number of interest is guessed.
 bool verifyUserBet(int u)
 {
+	/* First, we check if the current guess coincides with the number to be guessed. */
 	if(u==number) return true;
 	else
 	{
-		if(u>number) { cout<<"\tYour bet "<<u<<" is not correct. [ HINT ]: it is too high"<<endl; }
-		else { cout<<"\tYour bet "<<u<<" is not correct. [ HINT ]: it is too low"<<endl; }
+		/* The current guess does not coincide with the number to be guessed. */
+		if(u>number) { cout<<"\tYour bet "<<u<<" is not correct. [ HINT ]: it is too high."<<endl; }
+		else { cout<<"\tYour bet "<<u<<" is not correct. [ HINT ]: it is too low."<<endl; }
 		jackpot=jackpot-50;
-		cout<<"\tNew jackpot: "<<jackpot<<endl<<endl;
+		cout<<"\tNew jackpot: "<<jackpot<<" euro."<<endl<<endl;
 		cout.flush();
 		return false;
 	}
@@ -37,13 +39,14 @@ int main(void)
 {
 	int unum;
 
-	/* This is the example 'Example-039', where the use of the standard C/C++ generator is tested! */
-    cout<<endl<<"\tThis is the example 'Example-039' in the C++ language"<<endl<<endl;
+	/* This is the 'Example-039' unit test, where the standard C/C++ generator of (pseudo-) random values is tested through a very simple game. */
+	cout<<endl<<"\tThis is the 'Example-039' unit test in the C++ language."<<endl<<endl;
     cout.flush();
+
+	/* TASK #1 - we start our game! */    
     srand(time(0));
     number=rand()%100+1;
-    cout<<"\tThe initial jackpot is "<<jackpot<<" euro"<<endl<<endl;
-    cout<<"\tSelected the integer number to be guessed, belonging to [0,100]"<<endl<<endl;
+    cout<<"\tThe initial jackpot is "<<jackpot<<" euro. Selected the integer number to be guessed, belonging to [0,100]."<<endl<<endl;
     do
     {
 		/* Please, insert you choice! */
@@ -53,15 +56,14 @@ int main(void)
 		cout.flush();
 		if(!cin)
 		{
-			cout<<"\tPLEASE, YOU MUST INSERT AN INTEGER VALUE. THIS PROGRAM IS CLOSING"<<endl<<endl;
+			cout<<"\tPLEASE, YOU MUST INSERT AN INTEGER VALUE. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
 			cout.flush();
 			return EXIT_FAILURE;
 		}
     }
-    while(verifyUserBet(unum)!=true);
-	cout<<"\tThe selected number is "<<number<<". You win (virtually) ";
-	if(jackpot>0) cout<<jackpot<<" euro!"<<endl<<endl;
-	else cout<<"nothing"<<endl<<endl;
+    while( (verifyUserBet(unum)!=true) && (jackpot>0) );
+	if(jackpot>0) { cout<<"\tYou guess the selected number "<<number<<", and win (virtually) "<<jackpot<<" euro!"<<endl<<endl; }
+	else { cout<<"\tThe jackpot is null, and you do not guess the selected number "<<number<<"!"<<endl<<endl; }
 	cout.flush();
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }

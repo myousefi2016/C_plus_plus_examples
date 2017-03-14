@@ -1,12 +1,12 @@
-/********************************************************************************************************
- * Examples in the C++ language (the test 'Example-036')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-036' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), December 2016
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-036'.
- ********************************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-036' unit test.
+ **************************************************************************************************/
 
 #include "myheader.h"
 #include <cstdlib>
@@ -18,30 +18,34 @@ int main(void)
 {
 	int a,b;
 
-	/* Main operations! */
-	cout<<endl<<"\tThis is the example 'Example-036' in the C++ language"<<endl<<endl;
-	cout.flush();
-	cout<<"\tPlease, insert the integer value 'a': ";
+	/* This is the 'Example-036' unit test, where the call-by-value parameters passing for a function is validated. */
+    cout<<endl<<"\tThis is the 'Example-036' unit test in the C++ language."<<endl<<endl;
+    cout.flush();
+	
+	/* TASK #1 - inserting the 'integer' value for the variable 'a'. */
+	cout<<"\tPlease, insert the integer value for the variable 'a': ";
 	cin>>a;
 	if(!cin)
 	{
-		cout<<endl<<"\tYOU MUST ENTER an INTEGER VALUE for 'a'!!!"<<endl<<endl;
+		cout<<endl<<"\tPLEASE, INSERT THE INTEGER VALUE FOR THE VARIABLE 'a'."<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		return EXIT_FAILURE;
 	}
 	
-	cout<<"\tPlease, insert the integer value 'b': ";
+	/* TASK #2 - inserting the 'integer' value for the variable 'b'. */
+	cout<<"\tPlease, insert the integer value for the variable 'b': ";
 	cin>>b;
 	if(!cin)
 	{
-		cout<<endl<<"\tYOU MUST ENTER an INTEGER VALUE for 'b'!!!"<<endl<<endl;
+		cout<<endl<<"\tPLEASE, INSERT THE INTEGER VALUE FOR THE VARIABLE 'b'."<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		return EXIT_FAILURE;
 	}
 
-	cout<<endl<<"\tThe initial integer value for the variable 'a' in the 'main()' function is: "<<a<<endl;
-	cout<<"\tThe initial integer value for the variable 'b' in the 'main()' function is: "<<b<<endl<<endl;
+	/* TASK #3 - invoking the 'addThree()' function in order to validate the call-by-value parameters passing. */
+	cout<<endl<<"\tThe initial integer value for the variable 'a' in the 'main()' function is "<<a<<"."<<endl;
+	cout<<"\tThe initial integer value for the variable 'b' in the 'main()' function is: "<<b<<"."<<endl<<endl;
 	addThree(a,b);
-	cout<<"\tThe final integer value for the variable 'a' in the 'main()' function is: "<<a<<endl;
-	cout<<"\tThe final integer value for the variable 'b' in the 'main()' function is: "<<b<<endl<<endl;
+	cout<<"\tThe final integer value for the variable 'a' in the 'main()' function is "<<a<<"."<<endl;
+	cout<<"\tThe final integer value for the variable 'b' in the 'main()' function is "<<b<<"."<<endl<<endl;
 	return EXIT_SUCCESS;
 }
 

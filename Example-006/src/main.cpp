@@ -14,7 +14,7 @@ using namespace std;
 /// The main function for the <i>'Example-006'</i> unit test.
 int main(void)
 {
-	/* This is the 'Example-006' unit test, which exploits 'jump' construct for navigating among the labels. */
+	/* This is the 'Example-006' unit test, where the 'jump' construct for navigating among the labels is validated. */
     cout<<endl<<"\tThis is the 'Example-006' unit test in the C++ language."<<endl<<endl;
     cout.flush();
     
@@ -33,8 +33,8 @@ int main(void)
     	cout.flush();
     	goto final_step;
     
-    	/* Label step1 */
-    	step1:
+    /* Label step1 */
+    step1:
     
     	cout<<"ok"<<endl;
     	cout<<"\tReached the statement, related to the label 'step1'."<<endl<<endl;
@@ -50,7 +50,7 @@ int main(void)
     	cout<<"\tFinished navigation among the labels."<<endl<<endl;
     	cout.flush();
     	
-    	/* All is ok! */
+    /* All is ok! */
 	return EXIT_SUCCESS;
 }
 

@@ -27,13 +27,14 @@ int main(void)
     cin>>n;
    	if(!cin)
     {
-    	cout<<"\tYou must enter a positive integer value!"<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER A POSITIVE INTEGER VALUE 'n'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout.flush();
     	return EXIT_FAILURE;
     }
     
     /* If you arrive here, everything is ok! */
     cout<<endl<<"\tYou inserted the positive integer value "<<n<<"."<<endl;
-    cout<<"\tThe factorial "<<n<<"! is: "<<factorial(n)<<"."<<endl<<endl;
+    cout<<"\tThe factorial "<<n<<"! is "<<factorial(n)<<"."<<endl<<endl;
     cout.flush();
     return EXIT_SUCCESS;
 }

@@ -13,7 +13,7 @@
 
 	#define RECURSIVE_FACTORIAL_H
 
-	/// This function computes the factorial of an integer number ('long' value).
+	/// This function computes the factorial of an integer number ('ulong' value).
 	unsigned long factorial(unsigned long n);
 	
 #endif

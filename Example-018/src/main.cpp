@@ -19,6 +19,8 @@ int main(void)
 	/* This is the 'Example-018' unit test, where the properties of the 'integer (int)' C++ built-in type are analyzed. */
     cout<<endl<<"\tThis is the 'Example-018' unit test in the C++ language."<<endl<<endl;
     cout.flush();
+    
+    /* TASK #1 - retrieving the properties of the 'integer (int)' C++ built-in type. */
 	cout<<"\tThe 'integer (int)' C++ built-in type:"<<endl<<endl;
 	cout<<"\t-) requires "<<sizeof(int)<<" bytes for being represented;"<<endl;
 	if(std::numeric_limits<int>::is_specialized) cout<<"\t-) is specialized;"<<endl;
@@ -68,7 +70,7 @@ int main(void)
 			break;
 	}
 	
-	/* Now, we finalize our analysis! */
+	/* TASK #2 - finalizing our analysis! */
 	if(std::numeric_limits<int>::is_iec559) cout<<"\t-) fulfills the requirements of IEC 559 (IEEE 754) standard;"<<endl;
 	else cout<<"\t-) does not fulfill the requirements of IEC 559 (IEEE 754) standard;"<<endl;
 	if(std::numeric_limits<int>::is_bounded) cout<<"\t-) represents a finit set of values;"<<endl;

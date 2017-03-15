@@ -18,7 +18,9 @@ int main(void)
 	/* This is the 'Example-033' unit test, where the even numbers in the '[1,100]' range are generated. */
     cout<<endl<<"\tThis is the 'Example-033' unit test in the C++ language."<<endl<<endl;
     cout.flush();
-	for(int n=1;n<100;n++) { if( (n%2)==0 ) cout<<"\tEven number: "<<n<<"."<<endl; }
+    
+     /* TASK #1 - looking for the even numbers in the '[1,100]' range. */
+	for(int n=1;n<=100;n++) { if( (n%2)==0 ) cout<<"\tFound even number "<<n<<"."<<endl; }
 	cout<<endl;
 	cout.flush();
     return EXIT_SUCCESS;

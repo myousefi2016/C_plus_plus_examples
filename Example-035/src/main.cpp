@@ -27,7 +27,8 @@ int main(void)
 	cin>>a;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, INSERT THE INTEGER VALUE FOR THE VARIABLE 'a'."<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"\tPLEASE, INSERT THE INTEGER VALUE FOR THE VARIABLE 'a'."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout.flush();
 		return EXIT_FAILURE;
 	}
 	
@@ -36,13 +37,14 @@ int main(void)
 	cin>>b;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, INSERT THE INTEGER VALUE FOR THE VARIABLE 'b'."<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"\tPLEASE, INSERT THE INTEGER VALUE FOR THE VARIABLE 'b'."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout.flush();
 		return EXIT_FAILURE;
 	}
 
 	/* TASK #3 - invoking the 'addThree()' function in order to validate the call-by-reference parameters passing. */
 	cout<<endl<<"\tThe initial integer value for the variable 'a' in the 'main()' function is "<<a<<"."<<endl;
-	cout<<"\tThe initial integer value for the variable 'b' in the 'main()' function is: "<<b<<"."<<endl<<endl;
+	cout<<"\tThe initial integer value for the variable 'b' in the 'main()' function is "<<b<<"."<<endl<<endl;
 	addThree(a,b);
 	cout<<"\tThe final integer value for the variable 'a' in the 'main()' function is "<<a<<"."<<endl;
 	cout<<"\tThe final integer value for the variable 'b' in the 'main()' function is "<<b<<"."<<endl<<endl;

@@ -30,7 +30,7 @@ int main(void)
     cout<<"ok"<<endl;
     cout<<"\tThe C-like pointer 'a' to the new 'int' value is "<<all<<"."<<endl;
     cout<<"\tThe 'int' value, referred by the C-like pointer 'a', is "<<(*all)<<"."<<endl<<endl;
-    cout<<"\tModifying the existing 'int' value, referred by the C-like pointer 'a', ... ";
+    cout<<"\tModifying the existing 'int' value, referred by the C-like pointer 'a' ... ";
     (*all)=4;
     cout<<"ok"<<endl;
     cout<<"\tThe C-like pointer 'a' to the existing 'int' value is "<<all<<"."<<endl;

@@ -28,7 +28,7 @@ bool verifyUserBet(int u)
 		if(u>number) { cout<<"\tYour bet "<<u<<" is not correct. [ HINT ]: it is too high."<<endl; }
 		else { cout<<"\tYour bet "<<u<<" is not correct. [ HINT ]: it is too low."<<endl; }
 		jackpot=jackpot-50;
-		cout<<"\tNew jackpot: "<<jackpot<<" euro."<<endl<<endl;
+		cout<<"\tThe new jackpot is "<<jackpot<<" euro."<<endl<<endl;
 		cout.flush();
 		return false;
 	}
@@ -56,7 +56,7 @@ int main(void)
 		cout.flush();
 		if(!cin)
 		{
-			cout<<"\tPLEASE, YOU MUST INSERT AN INTEGER VALUE. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
+			cout<<"\tPLEASE, YOU MUST INSERT YOUR BET AS AN INTEGER VALUE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 			cout.flush();
 			return EXIT_FAILURE;
 		}

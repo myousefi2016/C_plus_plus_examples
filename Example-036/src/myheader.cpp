@@ -1,11 +1,11 @@
 /********************************************************************************************************
- * Examples in the C++ language (the test 'Example-036')
+ * Examples in the C++ language (the 'Example-036' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), December 2016
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * myheader.cpp - the source file, implementing the auxiliary function for the test 'Example-036'.
+ * myheader.cpp - the source file, implementing the auxiliary function for the 'Example-036' unit test.
  ********************************************************************************************************/
 
 #include <iostream>
@@ -13,11 +13,11 @@ using namespace std;
  
 void addThree(int a,int b)
 {
-	cout<<"\tInitial value for the integer value 'a' in the 'addThree()' function: "<<a<<endl;
-	cout<<"\tInitial value for the integer value 'b' in the 'addThree()' function: "<<b<<endl<<endl;
+	cout<<"\tThe initial value for the variable 'a' in the 'addThree()' function is "<<a<<"."<<endl;
+	cout<<"\tThe initial value for the variable 'b' in the 'addThree()' function is "<<b<<"."<<endl<<endl;
 	a=a+3;
 	b=b+3;
-	cout<<"\tUpdated value for the integer value 'a' in the 'addThree()' function: "<<a<<endl;
-	cout<<"\tUpdated value for the integer value 'b' in the 'addThree()' function: "<<b<<endl<<endl;
+	cout<<"\tThe final (updated) value for the variable 'a' in the 'addThree()' function is "<<a<<"."<<endl;
+	cout<<"\tThe final (updated) value for the variable 'b' in the 'addThree()' function is "<<b<<"."<<endl<<endl;
+	cout.flush();
 }
-

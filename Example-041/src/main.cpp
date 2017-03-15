@@ -106,8 +106,7 @@ int main(void)
     	cin>>c;
     	if( (!cin) || ( (c!='N') && (c!='n') && (c!='Y') && (c!='y') ) )
     	{
-    		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CHOICE!"<<endl;
-    		cout<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CHOICE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     		cout.flush();
     		return EXIT_FAILURE;
     	}

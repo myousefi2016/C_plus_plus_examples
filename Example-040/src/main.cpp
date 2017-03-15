@@ -29,7 +29,8 @@ int main(void)
     for(int k=0;k<10;k++)
     {
     	number=rand()%100+1;
-    	cout<<"\t\tGenerated pseudo-random integer value #"<<k<<": "<<number<<"."<<endl;
+    	if(k<9) cout<<"\t\tgenerated the pseudo-random integer value "<<number<<";"<<endl;
+    	else cout<<"\t\tgenerated the pseudo-random integer value "<<number<<"."<<endl;
     	cout.flush();
     }
     

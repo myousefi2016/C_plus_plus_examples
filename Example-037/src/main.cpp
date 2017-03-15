@@ -21,6 +21,7 @@ int main(void)
     cout.flush();
    	
    	/* TASK #1 - allocating a matrix and navigating its rows. */
+   	cout<<"\tCreating the 4 x 3 matrix 'A', containing 'int' values ... ";
    	int n = 0;
 	float a[][4]={
 		{ 4.0,4.0,0.0},
@@ -28,6 +29,10 @@ int main(void)
 		{ 6,6,0 },
 		{ 7,7,0 }
 	};
+	
+	/* All is ok. */
+	cout<<"ok"<<endl<<endl;
+	cout.flush();
 	
    	/* Here, we consider a very simple C++11 construct for navigating the 'float' values in the matrix 'a'. */
    	for(auto row : a)
@@ -40,13 +45,13 @@ int main(void)
    	}
    	
    	/* TASK #2 - cycling over the matrix 'a' (in the forward direction). */
-	cout<<endl<<"\tCycling the rows for the matrix 'A' in the forward direction."<<endl<<endl;
+	cout<<endl<<"\tCycling the rows for the matrix 'A' in the forward direction:"<<endl<<endl;
    	cout.flush();
    	for(int s=4;s>=0;s--)
 	{
 		for(int i=0;i<4;i++)
 		{
-			cout<<"\t";
+			cout<<"\t\t";
 			int jj=(i+s)%4;
 			for(int j=0;j<3;j++) cout<<" "<<a[jj][j];
 			if(i<3) cout<<";"<<endl;
@@ -58,13 +63,13 @@ int main(void)
 	}
    	
    	/* TASK #3 - cycling over the matrix 'a' (in the reverse direction). */
-	cout<<"\tCycling the rows for the matrix 'A' in the reverse direction."<<endl<<endl;
+	cout<<"\tCycling the rows for the matrix 'A' in the reverse direction:"<<endl<<endl;
    	cout.flush();
    	for(int s=0;s<=4;s++)
 	{
 		for(int i=0;i<4;i++)
 		{
-			cout<<"\t";
+			cout<<"\t\t";
 			int jj=(i+s)%4;
 			for(int j=0;j<3;j++) cout<<" "<<a[jj][j];
 			if(i<3) cout<<";"<<endl;

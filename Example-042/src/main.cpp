@@ -45,7 +45,7 @@ int main(void)
 	getline(cin,str);
 	if(!cin)
 	{
-		cout<<endl<<"PLEASE, INSERT A VALID STRING TO BE USED AS THE NEW SEED. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"PLEASE, INSERT A VALID STRING TO BE USED AS THE NEW SEED."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -89,7 +89,7 @@ int main(void)
 	out.open("g1.txt");
 	if(!out)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'g1.txt' FILE. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"\tCANNOT OPEN THE 'g1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -111,7 +111,7 @@ int main(void)
 	in.open("g1.txt");
 	if(!in)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'g1.txt' FILE. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"\tCANNOT OPEN THE 'g1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}

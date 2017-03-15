@@ -24,7 +24,8 @@ double average(unsigned int count,...)
 		double p=va_arg(vl,double);
 		
 		/* Now, we extract the parameter #i */
-		fprintf(stdout,"\t\tParameter #%d: %3f\n",i,p);
+		if(i<count-1) fprintf(stdout,"\t\tthe parameter #%d is %3f;\n",i,p);
+		else fprintf(stdout,"\t\tthe parameter #%d is %3f.\n",i,p);
 		fflush(stdout);
 		tot+=p;
 	}
@@ -41,13 +42,13 @@ int message(const char *fmt,...)
 	int rc;
 
 	/* Now, we extract everything from the variadic list of parameters! */
-	fprintf(stdout,"\tInvoking the 'message()' function by using the format '%s'\n",fmt);
+	fprintf(stdout,"\tInvoking the 'message()' function by using the format '%s'.\n",fmt);
 	fflush(stdout);
 	va_start(vl,fmt);
 	fprintf(stdout,"\tFormatted message as required: '");
 	rc=vfprintf(stdout,fmt,vl);
 	va_end(vl);
-	fprintf(stdout,"'\n");
+	fprintf(stdout,"'.\n");
 	fflush(stdout);
 	return rc;
 }

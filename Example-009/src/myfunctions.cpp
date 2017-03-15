@@ -28,12 +28,12 @@ char drawShell()
 	
 	/* Now, we draw the shell, and select which function has to be run. */
 	cout<<"\tChoosing which function has to be run:"<<endl<<endl;
-	cout<<"\t1. Function 'fa()'."<<endl;
-	cout<<"\t2. Function 'fb()'."<<endl;
-	cout<<"\t3. Function 'fc()'."<<endl;
-	cout<<"\t4. Function 'fd()'."<<endl;
-	cout<<"\t5. Function 'fe()'."<<endl;
-	cout<<"\tQ. Exit from the program."<<endl<<endl;
+	cout<<"\t1) \t invoking the function 'fa()';"<<endl;
+	cout<<"\t2) \t invoking the function 'fb()';"<<endl;
+	cout<<"\t3) \t invoking the function 'fc()';"<<endl;
+	cout<<"\t4) \t invoking the function 'fd()';"<<endl;
+	cout<<"\t5) \t invoking the function 'fe()';"<<endl;
+	cout<<"\tQ/q)\t exit from the program."<<endl<<endl;
 	cout<<"\t>> ";
 	cout.flush();
 	cin>>ans;
@@ -69,8 +69,9 @@ void runFunction(char ans)
 	if( (i<0) || (i>=fl) ) 
 	{
 		/* A not valid choice has been inserted! */
-		cout<<endl<<"\tPlease, insert a valid choice!!"<<endl<<endl;
+		cout<<endl<<"\tPLEASE, INSERT A VALID CHOICE!!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
+		exit(EXIT_FAILURE);
 	}
 	else 
 	{ 

@@ -22,32 +22,34 @@ int main(void)
     cout<<endl<<"\tThis is the 'Example-011' unit test in the C++ language."<<endl<<endl;
     cout.flush();
     	
-	/* TASK #1 - Insert the first integer ('int') value 'a'. */
+	/* TASK #1 - insert the first integer ('int') value 'a'. */
 	cout<<"\tPlease, insert an integer ('int') value 'a': ";
     cin>>a;
    	if(!cin)
     {
-    	cout<<"\tYou must enter an integer ('int') value!"<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER AN INTEGER ('INT') VALUE 'a'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout.flush();
     	return EXIT_FAILURE;
     }
 
-	/* TASK #2 - Insert the second integer ('int') value 'b'. */
-	cout<<"\tYou inserted the integer ('int') value 'a': "<<a<<"."<<endl<<endl;
+	/* TASK #2 - insert the second integer ('int') value 'b'. */
+	cout<<"\tYou inserted the integer ('int') value 'a'="<<a<<"."<<endl<<endl;
     cout<<"\tPlease, insert an integer ('int') value 'b': ";
     cin>>b;
    	if(!cin)
     {
-    	cout<<"\tYou must enter an integer ('int') value!"<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER AN INTEGER ('INT') VALUE 'b'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout.flush();
     	return EXIT_FAILURE;
     }
 
 	/* TASK #3 - If we arrive here, everything is ok. We can add the integer ('int') values 'a' and 'b'. */
-	cout<<"\tYou inserted the integer value 'b': "<<b<<"."<<endl<<endl;
+	cout<<"\tYou inserted the integer value 'b'="<<b<<"."<<endl<<endl;
 	MyClass ca(a),cb(b);
-	cout<<"\tThe first instance 'a' of the 'MyClass' class contains the integer ('int') value "<<ca.value()<<"."<<endl;
-	cout<<"\tThe second instance 'b' of the 'MyClass' class contains the integer ('int') value "<<cb.value()<<"."<<endl;
+	cout<<"\tThe first instance 'a' of the 'MyClass' class contains the integer ('int') value 'a'="<<ca.value()<<"."<<endl;
+	cout<<"\tThe second instance 'b' of the 'MyClass' class contains the integer ('int') value 'b'="<<cb.value()<<"."<<endl;
    	s = ca+cb;
-	cout<<"\tThe sum of these integer values is: "<<s<<"."<<endl<<endl;
+	cout<<"\tThe sum of these integer values is 'a+b'="<<s<<"."<<endl<<endl;
 	cout.flush();
 	return EXIT_SUCCESS;
 }

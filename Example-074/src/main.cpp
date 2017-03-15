@@ -1,13 +1,13 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-074')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-074' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
  * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-074'.
- **********************************************************************************************/
- 
+ * main.cpp - the source file, implementing the main function for the 'Example-074' unit test.
+ **************************************************************************************************/
+
 #include <cstdlib>
 #include <queue>
 #include <vector>
@@ -24,33 +24,53 @@ class MyPriorityFunction
 	/// This operator compares two <i>'integer'</i> values.
 	bool operator()(const int& a, const int& b) const { return a<b; }
 };
- 
+
 /// The main function for the <i>Example-074</i> unit test.
 int main(void)
 {
-	/* This is the example 'Example-074', where the 'priority queque' containers are validated. */
-	cout<<endl<<"\tThis is the example 'Example-074' in the C++ language"<<endl<<endl;
-  	cout.flush();
-  	
-  	/* TASK #1: validating the empty constructor for the 'priority queue' containers. */
+	/* This is the 'Example-074' unit test, where the 'priority queue' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-074' unit test in the C++ language."<<endl<<endl;
+    cout.flush();
+    
+    /* TASK #1: validating the empty constructor for the 'priority queue' containers. */
     cout<<"\tCreating the empty priority queue 'q0' of 'int' values ... ";
     priority_queue<int> q0;
     cout<<"ok"<<endl;
-    cout<<"\t#values in the priority queue 'q0': "<<q0.size()<<endl;
-  	if(q0.empty()==true) cout<<"\tThe priority queue 'q0' is empty"<<endl<<endl;
- 	else cout<<"\tThe priority queue 'q0' is not empty"<<endl<<endl;
+    cout<<"\t#values in the priority queue 'q0' is "<<q0.size()<<"."<<endl;
+  	if(q0.empty()==true) cout<<"\tThe priority queue 'q0' is empty."<<endl<<endl;
+ 	else cout<<"\tThe priority queue 'q0' is not empty."<<endl<<endl;
  	cout.flush();
-  	
-  	/* TASK #2: validating the constructor for the 'priority queue' containers, starting from another container (e.g., the 'vector' container). */
+ 	
+ 	/* TASK #2: validating the constructor for the 'priority queue' containers, starting from another container (e.g., the 'vector' container). */
  	cout<<"\tCreating the new priority queue 'q1' by initializing its content through another container ... ";
  	vector<int> aux=vector<int>(2,100);
  	priority_queue<int> q1(aux.begin(),aux.end());
  	cout<<"ok"<<endl;
- 	cout<<"\t#values in the priority queue 'q1': "<<q1.size()<<endl;
-	if(q1.empty()==true) cout<<"\tThe priority queue 'q1' is empty"<<endl<<endl;
- 	else cout<<"\tThe priority queue 'q1' is not empty"<<endl<<endl;
+ 	cout<<"\t#values in the priority queue 'q1' is "<<q1.size()<<"."<<endl;
+	if(q1.empty()==true) cout<<"\tThe priority queue 'q1' is empty."<<endl<<endl;
+ 	else cout<<"\tThe priority queue 'q1' is not empty."<<endl<<endl;
+ 	cout.flush();
  	
- 	/* TASK #3: validating the constructor for the 'priority queue' containers, starting from another container (e.g., the 'vector' container) and the 'std::greater' priority. */
+ 	/* TASK #3: swapping the content of the priority queues 'q0' and 'q1'. */
+ 	cout<<"\t#values in the priority queue 'q0' is "<<q0.size()<<"."<<endl;
+  	if(q0.empty()==true) cout<<"\tThe priority queue 'q0' is empty."<<endl;
+ 	else cout<<"\tThe priority queue 'q0' is not empty."<<endl;
+ 	cout<<"\t#values in the priority queue 'q1' is "<<q1.size()<<"."<<endl;
+  	if(q1.empty()==true) cout<<"\tThe priority queue 'q1' is empty."<<endl;
+ 	else cout<<"\tThe priority queue 'q1' is not empty."<<endl;
+ 	cout<<"\tSwapping the content of the priority queues 'q0' and 'q1' ... ";
+ 	q1.swap(q0);
+ 	cout<<"ok"<<endl;
+ 	cout<<"\t#values in the priority queue 'q0' is "<<q0.size()<<"."<<endl;
+  	if(q0.empty()==true) cout<<"\tThe priority queue 'q0' is empty."<<endl;
+ 	else cout<<"\tThe priority queue 'q0' is not empty."<<endl;
+ 	cout<<"\t#values in the priority queue 'q1' is "<<q1.size()<<"."<<endl;
+  	if(q1.empty()==true) cout<<"\tThe priority queue 'q1' is empty."<<endl;
+ 	else cout<<"\tThe priority queue 'q1' is not empty."<<endl;
+ 	cout<<endl;
+ 	cout.flush();
+
+ 	/* TASK #4: validating the constructor for the 'priority queue' containers, starting from another container (e.g., the 'vector' container) and the 'std::greater' priority. */
   	cout<<"\tCreating the new priority queue 'q2' by using the 'std::greater' priority ... ";
   	priority_queue<int, vector<int>, greater<int> > q2;
   	cout<<"ok"<<endl;
@@ -62,28 +82,28 @@ int main(void)
   	q2.push(4);
   	q2.push(-1);
   	cout<<"ok"<<endl;
-  	cout<<"\t#values in the priority queue 'q2': "<<q2.size()<<endl;
-	if(q2.empty()==true) cout<<"\tThe priority queue 'q2' is empty"<<endl<<endl;
- 	else cout<<"\tThe priority queue 'q2' is not empty"<<endl<<endl;
+  	cout<<"\t#values in the priority queue 'q2' is "<<q2.size()<<"."<<endl;
+	if(q2.empty()==true) cout<<"\tThe priority queue 'q2' is empty."<<endl<<endl;
+ 	else cout<<"\tThe priority queue 'q2' is not empty."<<endl<<endl;
  	cout.flush();
  	
- 	/* TASK #4: visiting the 'int' values in the priority queue 'q2'. */
- 	cout<<"\tThe first 'int' value in the priority queue 'q2': "<<q2.top()<<endl;
- 	cout<<"\tRemoving and visiting iteratively all 'int' values in the priority queue 'q2': ";
+ 	/* TASK #5: visiting the 'int' values in the priority queue 'q2'. */
+ 	cout<<"\tThe first 'int' value in the priority queue 'q2' is "<<q2.top()<<"."<<endl;
+ 	cout<<"\tRemoving and visiting iteratively all 'int' values in the priority queue 'q2' (as follows):";
  	while(!q2.empty())
  	{
- 		cout<<q2.top()<<" ";
+ 		cout<<" "<<q2.top();
  		q2.pop();
  	}
  	
  	/* At the end, the priority queue 'q2' should be empty! */
- 	cout<<endl<<"\t#values in the priority queue 'q2': "<<q2.size()<<endl;
-	if(q2.empty()==true) cout<<"\tThe priority queue 'q2' is empty"<<endl<<endl;
- 	else cout<<"\tThe priority queue 'q2' is not empty"<<endl<<endl;
+ 	cout<<"."<<endl<<"\t#values in the priority queue 'q2' is "<<q2.size()<<"."<<endl;
+	if(q2.empty()==true) cout<<"\tThe priority queue 'q2' is empty."<<endl<<endl;
+ 	else cout<<"\tThe priority queue 'q2' is not empty."<<endl<<endl;
  	cout.flush();
  	
- 	/* TASK #5: validating the constructor for the 'priority queue' containers, starting from another container (e.g., the 'vector' container) and a custom priority. */
- 	cout<<"\tCreating the new priority queue 'q3' by using a custom priority ... ";
+ 	/* TASK #6: validating the constructor for the 'priority queue' containers, starting from another container (e.g., the 'vector' container) and a custom priority. */
+ 	cout<<"\tCreating the new priority queue 'q3' by using the 'MyPriorityFunction' class as the custom priority ... ";
  	priority_queue<int, vector<int>, MyPriorityFunction > *q3=new priority_queue<int, vector<int>, MyPriorityFunction >();
  	cout<<"ok"<<endl;
  	cout<<"\tAdding several 'int' values to the priority queue 'q3' ... ";
@@ -94,42 +114,24 @@ int main(void)
   	q3->push(4);
   	q3->push(-1);
   	cout<<"ok"<<endl;
-  	cout<<"\t#values in the priority queue 'q3': "<<q3->size()<<endl;
-	if(q3->empty()==true) cout<<"\tThe priority queue 'q3' is empty"<<endl;
- 	else cout<<"\tThe priority queue 'q3' is not empty"<<endl;
- 	cout<<"\tThe first 'int' value in the priority queue 'q3': "<<q3->top()<<endl;
- 	cout<<"\tRemoving and visiting iteratively all 'int' values in the priority queue 'q3': ";
+  	cout<<"\t#values in the priority queue 'q3' is "<<q3->size()<<"."<<endl;
+	if(q3->empty()==true) cout<<"\tThe priority queue 'q3' is empty."<<endl;
+ 	else cout<<"\tThe priority queue 'q3' is not empty."<<endl;
+ 	cout<<"\tThe first 'int' value in the priority queue 'q3' is "<<q3->top()<<"."<<endl;
+ 	cout<<"\tRemoving and visiting iteratively all 'int' values in the priority queue 'q3' (as follows):";
  	while(!q3->empty())
  	{
- 		cout<<q3->top()<<" ";
+ 		cout<<" "<<q3->top();
  		q3->pop();
  	}
  	
  	/* At the end, the priority queue 'q3' should be empty! */
- 	cout<<endl<<"\t#values in the priority queue 'q3': "<<q3->size()<<endl;
-	if(q3->empty()==true) cout<<"\tThe priority queue 'q3' is empty"<<endl<<endl;
- 	else cout<<"\tThe priority queue 'q3' is not empty"<<endl<<endl;
+ 	cout<<"."<<endl<<"\t#values in the priority queue 'q3' is "<<q3->size()<<"."<<endl;
+	if(q3->empty()==true) cout<<"\tThe priority queue 'q3' is empty."<<endl<<endl;
+ 	else cout<<"\tThe priority queue 'q3' is not empty."<<endl<<endl;
  	cout.flush();
- 	
- 	/* TASK #6: swapping the content of the priority queues 'q0' and 'q1'. */
- 	cout<<"\t#values in the priority queue 'q0': "<<q0.size()<<endl;
-  	if(q0.empty()==true) cout<<"\tThe priority queue 'q0' is empty"<<endl;
- 	else cout<<"\tThe priority queue 'q0' is not empty"<<endl;
- 	cout<<"\t#values in the priority queue 'q1': "<<q1.size()<<endl;
-  	if(q1.empty()==true) cout<<"\tThe priority queue 'q1' is empty"<<endl;
- 	else cout<<"\tThe priority queue 'q1' is not empty"<<endl;
- 	cout<<"\tSwapping the content of the priority queues 'q0' and 'q1' ... ";
- 	q1.swap(q0);
- 	cout<<"ok"<<endl;
- 	cout<<"\t#values in the priority queue 'q0': "<<q0.size()<<endl;
-  	if(q0.empty()==true) cout<<"\tThe priority queue 'q0' is empty"<<endl;
- 	else cout<<"\tThe priority queue 'q0' is not empty"<<endl;
- 	cout<<"\t#values in the priority queue 'q1': "<<q1.size()<<endl;
-  	if(q1.empty()==true) cout<<"\tThe priority queue 'q1' is empty"<<endl;
- 	else cout<<"\tThe priority queue 'q1' is not empty"<<endl;
- 	cout<<endl;
-  	
-  	/* TASK #7 - deallocating all priority queues */
+ 
+ 	/* TASK #7 - deallocating all priority queues */
     cout<<"\tDeallocating the content of all priority queues ... ";
     aux.clear();
     while(!q0.empty()) q0.pop();

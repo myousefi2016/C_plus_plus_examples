@@ -23,14 +23,14 @@ bool verifyState()
 	bool ris = true;
 
 	/* Now, we analyze the state of the system! */
-	if(errno == EDOM) { cout<<endl<<endl<<"\tA domain error occurred (Found the 'EDOM' value)."; ris=false; }
-	if(errno == ERANGE) { cout<<endl<<endl<<"\tA range error occurred (Found the 'ERANGE' value)."; ris=false; }
-	if(errno == EILSEQ) { cout<<endl<<endl<<"\tAn illegal sequence occurred (Found the 'EILSEQ' value)."; ris=false; }
-	if(fetestexcept(FE_DIVBYZERO)) { cout<<endl<<endl<<"\tA pole error occurred (Found the 'FE_DIVBYZERO' value)."; ris=false; }
-	if(fetestexcept(FE_INEXACT)) { cout<<endl<<endl<<"\tAn inexact result found. Rounding was necessary to store the result of an earlier floating-point operation. (Found the 'FE_INEXACT' value)."; ris=false; }
-	if(fetestexcept(FE_INVALID)) { cout<<endl<<endl<<"\tA domain error occurred in an earlier floating-point operation. (Found the 'FE_INVALID' value)."; ris=false; }
-	if(fetestexcept(FE_OVERFLOW)) { cout<<endl<<endl<<"\tAn overflow error occurred in an earlier floating-point operation. (Found the 'FE_OVERFLOW' value)."; ris=false; }
-	if(fetestexcept(FE_UNDERFLOW)) { cout<<endl<<endl<<"\tAn underflow error occurred in an earlier floating-point operation. (Found the 'FE_UNDERFLOW' value)."; ris=false; }
+	if(errno == EDOM) { cout<<endl<<endl<<"\tA domain error occurred (found the 'EDOM' value)."; ris=false; }
+	if(errno == ERANGE) { cout<<endl<<endl<<"\tA range error occurred (found the 'ERANGE' value)."; ris=false; }
+	if(errno == EILSEQ) { cout<<endl<<endl<<"\tAn illegal sequence occurred (found the 'EILSEQ' value)."; ris=false; }
+	if(fetestexcept(FE_DIVBYZERO)) { cout<<endl<<endl<<"\tA pole error occurred (found the 'FE_DIVBYZERO' value)."; ris=false; }
+	if(fetestexcept(FE_INEXACT)) { cout<<endl<<endl<<"\tAn inexact result found. Rounding was necessary to store the result of an earlier floating-point operation (found the 'FE_INEXACT' value)."; ris=false; }
+	if(fetestexcept(FE_INVALID)) { cout<<endl<<endl<<"\tA domain error occurred in an earlier floating-point operation (found the 'FE_INVALID' value)."; ris=false; }
+	if(fetestexcept(FE_OVERFLOW)) { cout<<endl<<endl<<"\tAn overflow error occurred in an earlier floating-point operation (found the 'FE_OVERFLOW' value)."; ris=false; }
+	if(fetestexcept(FE_UNDERFLOW)) { cout<<endl<<endl<<"\tAn underflow error occurred in an earlier floating-point operation (found the 'FE_UNDERFLOW' value)."; ris=false; }
 	cout.flush();
 	feclearexcept (FE_ALL_EXCEPT);
     errno=0;
@@ -48,11 +48,11 @@ int main(void)
     cout.flush();
     
     /* TASK #1 - read a 'floating-point' value from the standard input stream. */
-	cout<<"\tPlease, insert an angle (in degree): ";
+	cout<<"\tPlease, insert an angle (in degrees): ";
     cin>>param;
     if(!cin)
     {
-    	cout<<"\tPLEASE, INSERT A VALID ANGLE (IN DEGREE). THIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, INSERT A VALID ANGLE (IN DEGREES)."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }

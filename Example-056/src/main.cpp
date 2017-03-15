@@ -23,14 +23,14 @@ bool verifyState()
 	bool ris = true;
 
 	/* Now, we analyze the state of the system! */
-	if(errno == EDOM) { cout<<"\tA domain error occurred (Found the 'EDOM' value)."<<endl; ris=false; }
-	if(errno == ERANGE) { cout<<"\tA range error occurred (Found the 'ERANGE' value)."<<endl; ris=false; }
-	if(errno == EILSEQ) { cout<<"\tAn illegal sequence occurred (Found the 'EILSEQ' value)."<<endl; ris=false; }
-	if(fetestexcept(FE_DIVBYZERO)) { cout<<"\tA pole error occurred (Found the 'FE_DIVBYZERO' value)."<<endl; ris=false; }
-	if(fetestexcept(FE_INEXACT)) { cout<<"\tAn inexact result found. Rounding was necessary to store the result of an earlier floating-point operation. (Found the 'FE_INEXACT' value)."<<endl; ris=false; }
-	if(fetestexcept(FE_INVALID)) { cout<<"\tA domain error occurred in an earlier floating-point operation. (Found the 'FE_INVALID' value)."<<endl; ris=false; }
-	if(fetestexcept(FE_OVERFLOW)) { cout<<"\tAn overflow error occurred in an earlier floating-point operation. (Found the 'FE_OVERFLOW' value)."<<endl; ris=false; }
-	if(fetestexcept(FE_UNDERFLOW)) { cout<<"\tAn underflow error occurred in an earlier floating-point operation. (Found the 'FE_UNDERFLOW' value)."<<endl; ris=false; }
+	if(errno == EDOM) { cout<<"\tA domain error occurred (found the 'EDOM' value)."<<endl; ris=false; }
+	if(errno == ERANGE) { cout<<"\tA range error occurred (found the 'ERANGE' value)."<<endl; ris=false; }
+	if(errno == EILSEQ) { cout<<"\tAn illegal sequence occurred (found the 'EILSEQ' value)."<<endl; ris=false; }
+	if(fetestexcept(FE_DIVBYZERO)) { cout<<"\tA pole error occurred (found the 'FE_DIVBYZERO' value)."<<endl; ris=false; }
+	if(fetestexcept(FE_INEXACT)) { cout<<"\tAn inexact result found. Rounding was necessary to store the result of an earlier floating-point operation (found the 'FE_INEXACT' value)."<<endl; ris=false; }
+	if(fetestexcept(FE_INVALID)) { cout<<"\tA domain error occurred in an earlier floating-point operation (found the 'FE_INVALID' value)."<<endl; ris=false; }
+	if(fetestexcept(FE_OVERFLOW)) { cout<<"\tAn overflow error occurred in an earlier floating-point operation (found the 'FE_OVERFLOW' value)."<<endl; ris=false; }
+	if(fetestexcept(FE_UNDERFLOW)) { cout<<"\tAn underflow error occurred in an earlier floating-point operation (found the 'FE_UNDERFLOW' value)."<<endl; ris=false; }
 	cout.flush();
 	feclearexcept (FE_ALL_EXCEPT);
     errno=0;

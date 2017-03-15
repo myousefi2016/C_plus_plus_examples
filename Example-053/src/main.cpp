@@ -33,7 +33,7 @@ int main(void)
 	cin>>ans;
 	if( (!cin) || ( (ans!='Y') && (ans!='y') && (ans!='n') && (ans!='N') ) )
 	{
-		cout<<"\tPLEASE, INSERT A VALID ANSWER. THIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID ANSWER."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -48,7 +48,7 @@ int main(void)
     	cin>>numOfDays;
     	if( (!cin) || (numOfDays<=0) )
     	{
-    		cout<<"\tPLEASE, INSERT A VALID NUMBER OF THE DAYS. THIS PROGRAM IS CLOSING ..."<<endl<<endl;
+    		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID NUMBER OF THE DAYS."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
 			return EXIT_FAILURE;
     	}
@@ -58,7 +58,7 @@ int main(void)
     	cin>>dailyCharge;
     	if( (!cin) || (dailyCharge<0) )
     	{
-    		cout<<"\tPLEASE, INSERT A VALID DAILY RATE. THIS PROGRAM IS CLOSING ..."<<endl<<endl;
+    		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID DAILY RATE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
 			return EXIT_FAILURE;
     	}
@@ -74,7 +74,7 @@ int main(void)
     cin>>medCharges;
     if( (!cin) || (medCharges<0) )
     {
-    	cout<<"\tPLEASE, INSERT A VALID CHARGE FOR THE MEDICAL CARES. THIS PROGRAM IS CLOSING ..."<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CHARGE FOR THE MEDICAL CARES."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
     }
@@ -84,7 +84,7 @@ int main(void)
     cin>>labCharges;
     if( (!cin) || (labCharges<0) )
     {
-    	cout<<"\tPLEASE, INSERT A VALID CHARGE FOR THE LABORATORY. THIS PROGRAM IS CLOSING ..."<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CHARGE FOR THE LABORATORY."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
     }

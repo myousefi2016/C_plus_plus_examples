@@ -56,8 +56,7 @@ int main(void)
 	if( (!cin) || (w==0) || (h==0) )
 	{
 		/* An error occurred! */
-		cout<<endl<<"\tPLEASE, YOY MUST INSERT THE POSITIVE AND NOT NULL INTEGER VALUES, CORRESPONDING TO THE WIDTH (w) AND THE HEIGHT (h) OF A RECTANGLE"<<endl;
-		cout<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOY MUST INSERT THE POSITIVE AND NOT NULL INTEGER VALUES, CORRESPONDING TO THE WIDTH (w) AND THE HEIGHT (h) OF A RECTANGLE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -78,8 +77,7 @@ int main(void)
 	if( (!cin) || (r<=0.0) )
 	{
 		/* An error occurred! */
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE POSITIVE AND NOT NULL FLOATING POINT VALUE, CORRESPONDING TO THE RADIUS (R) OF A CIRCLE"<<endl;
-		cout<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE POSITIVE AND NOT NULL FLOATING POINT VALUE, CORRESPONDING TO THE RADIUS (R) OF A CIRCLE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -99,8 +97,7 @@ int main(void)
 	if(!cin)
 	{
 		/* An error occurred! */
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE FIRST STRING 's0' TO BE CONCATENATED"<<endl;
-		cout<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE FIRST STRING 's0' TO BE CONCATENATED."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -111,8 +108,7 @@ int main(void)
 	if(!cin)
 	{
 		/* An error occurred! */
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE FIRST STRING 's1' TO BE CONCATENATED"<<endl;
-		cout<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE FIRST STRING 's1' TO BE CONCATENATED."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}

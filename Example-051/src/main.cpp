@@ -33,13 +33,13 @@ int main(void)
     cin>>price;
     if( (!cin) || (price<0) )
     {
-    	cout<<"\tPLEASE, INSERT A VALID PRICE FOR THE ITEM OF INTEREST. THIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID PRICE FOR THE ITEM OF INTEREST."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }
     
     /* TASK #2 - If we arrive here, we can decide! */
-    cout<<endl<<"\tThe price for the item of interest: "<<price<<" euro."<<endl;
+    cout<<endl<<"\tThe price for the item of interest is "<<price<<" euro."<<endl;
     cout.flush();
     tot=price;
     if(price>75) { cout<<"\tThis item is eligible for the free shipping."<<endl; }
@@ -60,7 +60,7 @@ int main(void)
     }
     
     /* If we arrive here, the price is completed! */
- 	cout<<"\tThe total price is: "<<fixed<<setprecision(2)<<tot<<" euro."<<endl<<endl;
+ 	cout<<"\tThe total price is "<<fixed<<setprecision(2)<<tot<<" euro."<<endl<<endl;
  	cout.flush();
 	return EXIT_SUCCESS;   
 }

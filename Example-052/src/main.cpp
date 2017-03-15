@@ -30,15 +30,15 @@ int main(void)
 	{
 		/* Several member fares are available for being purchased. */
 		cout<<endl<<"\tThe following memership fares are available for being purchased:"<<endl<<endl;
-		cout<<"\t1. Adult Membership Fare (40 euro/month);"<<endl;
-		cout<<"\t2. Child Membership Fare (30 euro/month);"<<endl;
-		cout<<"\t3. Family Membership Fare (100 euro/month);"<<endl;
-		cout<<"\t4. Exit."<<endl<<endl;
+		cout<<"\t1) Adult Membership Fare (40 euro/month);"<<endl;
+		cout<<"\t2) Child Membership Fare (30 euro/month);"<<endl;
+		cout<<"\t3) Family Membership Fare (100 euro/month);"<<endl;
+		cout<<"\t4) Exit from this program."<<endl<<endl;
 		cout<<"\tPlease, select what membership fare you prefer: ";
 		cin>>menuChoice;
 		if( (!cin) || (menuChoice < 1) || (menuChoice > 4) )
 		{
-			cout<<"\tPLEASE, INSERT A VALID MEMBERSHIP FARE. THIS PROGRAM IS CLOSING ..."<<endl<<endl;
+			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID MEMBERSHIP FARE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
 			return EXIT_FAILURE;
 		}
@@ -54,7 +54,7 @@ int main(void)
 		cin>>months;
 		if( (!cin) || (months<1) || (months>24) )
 		{
-			cout<<"\tPLEASE, INSERT A VALID NUMBER OF THE MONTHS. THIS PROGRAM IS CLOSING ..."<<endl<<endl;
+			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID NUMBER OF THE MONTHS."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
 			return EXIT_FAILURE;
 		}

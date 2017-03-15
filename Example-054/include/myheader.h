@@ -16,33 +16,33 @@ using namespace std;
 
 	#define MY_HEADER_H
 	
-	/// This struct contains the organized change coins after a payment (in dollars).
+	/// This struct contains the organized change coins after a payment (in the US dollars).
 	struct Change
 	{
-		/// The number of the dollars.
+		/// The number of the US dollars.
 		unsigned int dollars=0;
 
-		/// The number of the dollar quarters.
+		/// The number of the US dollars quarters.
 		unsigned int quarters=0;
 		
-		/// The number of the dollar dimes.
+		/// The number of the US dollars dimes.
 		unsigned int dimes=0;
 		
-		/// The number of the dollar nickels.
+		/// The number of the US dollars nickels.
 		unsigned int nickels=0;
 		
-		/// The number of the dollar pennies.
+		/// The number of the US dollars pennies.
 		unsigned int pennies=0;
 		
 		/// This operator exports the change on a generic I/O stream (not necessarily a file).
 		inline friend ostream& operator<<(ostream &os,Change &c)
 		{
 			/* We export the internal state of the 'Change' struct */
-			os<<"\t#Dollar(s): "<<c.dollars<<";"<<endl;
-			os<<"\t#Quarter(s): "<<c.quarters<<";"<<endl;
-			os<<"\t#Dime(s): "<<c.dimes<<";"<<endl;
-			os<<"\t#Nickel(s): "<<c.nickels<<";"<<endl;
-			os<<"\t#Pennie(s): "<<c.pennies<<"."<<endl<<endl;
+			os<<"\t# US dollar(s): "<<c.dollars<<";"<<endl;
+			os<<"\t# US dollars quarter(s): "<<c.quarters<<";"<<endl;
+			os<<"\t# US dollars dime(s): "<<c.dimes<<";"<<endl;
+			os<<"\t# US dollars nickel(s): "<<c.nickels<<";"<<endl;
+			os<<"\t# US dollars pennie(s): "<<c.pennies<<"."<<endl<<endl;
 			os.flush();
 			return os;
 		}
@@ -50,7 +50,7 @@ using namespace std;
 		/// This member function computes and organizes a given change.
 		void findCoins(double change);
 		
-		/// This member function returns the change, described by this struct (expressed in pennies).
+		/// This member function returns the change, described by this struct (expressed in the US dollars pennies).
 		double getChange();
 	};
 	

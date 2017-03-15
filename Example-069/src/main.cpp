@@ -29,13 +29,13 @@ int main(void)
  	cout<<"ok"<<endl;
     if(a0.empty()==true) { cout<<"\tThe new array 'a0' is empty."<<endl; }
  	else cout<<"\tThe new array 'a0' is not empty."<<endl;
- 	cout<<"\tThe 'int' values in the new array 'a0':";
+ 	cout<<"\tThe 'int' values in the new array 'a0' are:";
     if(a0.size()==0) { cout<<"none."<<endl; }
  	else { for(auto i : a0) cout<<" "<<i; cout<<"."<<endl; }
  	cout<<"\tSetting explicitly '6' as the unique 'int' value for all locations of the array 'a0' ... ";
  	a0.fill(6);
  	cout<<"ok"<<endl;
- 	cout<<"\tThe 'int' values in the new array 'a0':";
+ 	cout<<"\tThe 'int' values in the new array 'a0' are:";
  	for(auto it=a0.crbegin();it!=a0.crend();it++) cout<<" "<<(*it);
  	cout<<"."<<endl<<endl;
  	cout.flush();
@@ -48,7 +48,7 @@ int main(void)
  	cout<<"\tThe array 'a1' contains "<<a1.size()<<" 'int' values."<<endl;
  	cout<<"\tThe 'int' values in the array 'a1' (in the forward direction) are:";
  	for(auto it=a1.begin();it!=a1.end();it++) cout<<" "<<(*it);
- 	cout<<"."<<endl<<"\tThe 'int' values in the array 'a1' (in the reverse direction) are: ";
+ 	cout<<"."<<endl<<"\tThe 'int' values in the array 'a1' (in the reverse direction) are:";
  	for(auto it=a1.rbegin();it!=a1.rend();it++) cout<<" "<<(*it);
  	cout<<"."<<endl<<endl;
  	cout.flush();
@@ -71,9 +71,9 @@ int main(void)
  	array<int,3> a3={5,2};
  	cout<<"ok"<<endl;
  	cout<<"\tThe new array 'a3' contains "<<tuple_size<decltype(a3)>::value<<" 'int' values."<<endl;
- 	cout<<"\tThe 'int' values in the new array 'a3' are (in the reverse direction): ";
+ 	cout<<"\tThe 'int' values in the new array 'a3' (in the reverse direction) are:";
  	for(int k=2;k>=0;k--) cout<<" "<<a3[k];
- 	cout<<"."<<endl<<"\tThe 'int' values in the new array 'a3' are (in the forward direction):";
+ 	cout<<"."<<endl<<"\tThe 'int' values in the new array 'a3' (in the forward direction) are:";
  	int* aux=(int*)a3.data();
 	for(int k=0;k<a2.size();k++) cout<<" "<<aux[k];
 	cout<<"."<<endl<<endl;
@@ -97,7 +97,7 @@ int main(void)
 	if(a2>a3) cout<<"\tThe 'int' values in the array 'a2' are 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator)."<<endl;
  	else cout<<"\tThe 'int' values in the array 'a2' are not 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator)."<<endl;
  	cout.flush();
- 
+ 	
  	/* TASK #6 - accessing elements of the array 'a2' (interpreted as a tuple). */
  	cout<<endl<<"\tThe 'int' value in the location #0 of the array 'a2' (interpreted as a multidimensional 'tuple', see the 'get()' and the 'tuple_element()' template functions) is ";
  	tuple_element<0,decltype(a3)>::type a=get<0>(a2);
@@ -110,5 +110,4 @@ int main(void)
  	cout<<a<<"."<<endl<<endl;
  	cout.flush();
     return EXIT_SUCCESS;
- 	
 }

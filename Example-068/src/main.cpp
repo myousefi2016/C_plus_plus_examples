@@ -61,9 +61,9 @@ int main(void)
 	else cout<<"\tThe tuple 't1' is not 'strictly less than' the tuple 't2' (with respect to the '<' operator)."<<endl;
 	if(t1>t2) cout<<"\tThe tuple 't1' is 'strictly greater than' the tuple 't2' (with respect to the '>' operator)."<<endl;
 	else cout<<"\tThe tuple 't1' is not 'strictly greater than' the tuple 't2' (with respect to the '>' operator)."<<endl;
-	if(t1<=t2) cout<<"\tThe tuple 't1' may be 'strictly less than' or 'the same as' the tuple 't2' (with respect to the '<=' operator)."<<endl;
+	if(t1<=t2) cout<<"\tThe tuple 't1' may be either 'strictly less than', or 'the same as' the tuple 't2' (with respect to the '<=' operator)."<<endl;
 	else cout<<"\tThe tuple 't1' is not both 'strictly less than' and 'the same as' the tuple 't2' (with respect to the '<=' operator)."<<endl;
-	if(t1>=t2) cout<<"\tThe tuple 't1' may be 'strictly greater than' or 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
+	if(t1>=t2) cout<<"\tThe tuple 't1' may be either 'strictly greater than', or 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
 	else cout<<"\tThe tuple 't1' is not both 'strictly greater than' and 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
 	cout<<endl;
 	
@@ -90,9 +90,10 @@ int main(void)
 	std::tuple_element<1,decltype(t3)>::type t31 = std::get<1>(t3);
 	std::tuple_element<2,decltype(t3)>::type t32 = std::get<2>(t3);
 	cout<<"ok"<<endl;
-	cout<<"\tThe field #0 in the tuple 't3' contains "<<t30<<"."<<endl;
-	cout<<"\tThe field #1 in the tuple 't3' contains '"<<t31<<"'."<<endl;
-	cout<<"\tThe field #2 in the tuple 't3' contains "<<t32<<"."<<endl<<endl;
+	cout<<"\tThe new tuple 't3' contains the following fields:"<<endl<<endl;
+	cout<<"\t\tthe field #0 in the tuple 't3' contains "<<t30<<";"<<endl;
+	cout<<"\t\tthe field #1 in the tuple 't3' contains '"<<t31<<"';"<<endl;
+	cout<<"\t\tthe field #2 in the tuple 't3' contains "<<t32<<"."<<endl<<endl;
 	cout.flush();
     
     /* TASK #5 - Creating a new tuple 't4' by packing together the elements of the tuple 't3'. */
@@ -105,13 +106,14 @@ int main(void)
 	std::tuple_element<1,decltype(t4)>::type t41 = std::get<1>(t4);
 	std::tuple_element<2,decltype(t4)>::type t42 = std::get<2>(t4);
 	cout<<"ok"<<endl;
-	cout<<"\tThe field #0 in the tuple 't4' contains "<<t40<<"."<<endl;
-	cout<<"\tThe field #1 in the tuple 't4' contains '"<<t41<<"'."<<endl;
-	cout<<"\tThe field #2 in the tuple 't4' contains "<<t42<<"."<<endl;
+	cout<<"\tThe new tuple 't4' contains the following fields:"<<endl<<endl;
+	cout<<"\t\tthe field #0 in the tuple 't4' contains "<<t40<<";"<<endl;
+	cout<<"\t\tthe field #1 in the tuple 't4' contains '"<<t41<<"';"<<endl;
+	cout<<"\t\tthe field #2 in the tuple 't4' contains "<<t42<<"."<<endl<<endl;
 	cout<<"\tRetrieving the field #1 in the tuple 't4' (and ignoring the remaining fields)  ... ";
 	std::tie(std::ignore, s, std::ignore) = t4;
 	cout<<"ok"<<endl;
-	cout<<"\tThe field #1 in the tuple 't4' is '"<<s<<"'."<<endl;
+	cout<<"\tThe field #1 in the tuple 't4' is '"<<s<<"'."<<endl<<endl;
 	if(t3==t4) cout<<"\tThe tuples 't3' and 't4' coincide element by element (with respect to the '==' operator)."<<endl;
     else cout<<"\tThe tuples 't3' and 't4' do not coincide element by element (with respect to the '==' operator)."<<endl;
     if(t3!=t4) cout<<"\tThe tuples 't3' and 't4' do not coincide element by element (with respect to the '!=' operator)."<<endl;
@@ -133,11 +135,12 @@ int main(void)
 	std::tuple_element<3,decltype(t5)>::type t53 = std::get<3>(t5);
 	std::tuple_element<4,decltype(t5)>::type t54 = std::get<4>(t5);
 	cout<<"ok"<<endl;
-	cout<<"\tThe field #0 in the tuple 't5' contains '"<<t50<<"'."<<endl;
-	cout<<"\tThe field #1 in the tuple 't5' contains "<<t51<<"."<<endl;
-	cout<<"\tThe field #2 in the tuple 't5' contains "<<t52<<"."<<endl;
-	cout<<"\tThe field #3 in the tuple 't5' contains '"<<t53<<"'."<<endl;
-	cout<<"\tThe field #4 in the tuple 't5' contains "<<t54<<"."<<endl<<endl;
+	cout<<"\tThe new tuple 't5' contains the following fields:"<<endl<<endl;
+	cout<<"\t\tthe field #0 in the tuple 't5' contains '"<<t50<<"';"<<endl;
+	cout<<"\t\tthe field #1 in the tuple 't5' contains "<<t51<<";"<<endl;
+	cout<<"\t\tthe field #2 in the tuple 't5' contains "<<t52<<";"<<endl;
+	cout<<"\t\tthe field #3 in the tuple 't5' contains '"<<t53<<"';"<<endl;
+	cout<<"\t\tthe field #4 in the tuple 't5' contains "<<t54<<"."<<endl<<endl;
 	cout.flush();
 	return EXIT_SUCCESS;	
 }

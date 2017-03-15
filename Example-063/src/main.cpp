@@ -54,7 +54,7 @@ int main(void)
     	cout<<"\tThe new map 'm0' contains the following "<<m0.size()<<" associations between a 'string' and an 'uint' value, enumerated in the forward direction:"<<endl<<endl;
     	for(auto it=m0.cbegin();it!=m0.cend();it++,n++) 
     	{ 
-    		cout<<"\t\tThe string '"<<it->first<<"' is associated with the 'uint' value "<<it->second; 
+    		cout<<"\t\tthe string '"<<it->first<<"' is associated with the 'uint' value "<<it->second; 
     		if(n==m0.size()-1) cout<<".";
     		else cout<<";";
     		cout<<endl; 
@@ -64,8 +64,8 @@ int main(void)
     	cout<<endl;
     	cout.flush();
     }
- 	
- 	/* TASK #2 - Creating a copy of another map. */
+    
+    /* TASK #2 - Creating a copy of another map. */
     cout<<"\tCreating the copy 'm1' of the existing map 'm0' ... ";
     map<string,uint> m1(m0.crbegin(),m0.crend());
     cout<<"ok"<<endl;
@@ -102,7 +102,7 @@ int main(void)
     	n=0;
     	for(auto it=m2.cbegin();it!=m2.cend();it++,n++) 
     	{ 
-    		cout<<"\t\tThe string '"<<it->first<<"' is associated with the 'uint' value "<<it->second; 
+    		cout<<"\t\tthe string '"<<it->first<<"' is associated with the 'uint' value "<<it->second; 
     		if(n==m2.size()-1) cout<<".";
     		else cout<<";";
     		cout<<endl; 
@@ -136,7 +136,7 @@ int main(void)
     cout<<endl;
     cout.flush();
     
-     /* TASK #5 - Allocating a new map 'm4' by using a custom function for sorting the keys. */
+    /* TASK #5 - Allocating a new map 'm4' by using a custom function for sorting the keys. */
     cout<<"\tAllocating a new map 'm4' for storing associations between a 'string' and an 'uint' value by using the custom function 'compareStrings()' for sorting correctly the keys ('strings', in this case) ... ";
     map< string, uint, bool(*)(const string&,const string&)> *m4=nullptr;
     m4=new map< string, uint, bool(*)(const string&,const string&)>(compareStrings);
@@ -149,12 +149,12 @@ int main(void)
     m4->emplace_hint(m4->end(),string("Ten"),10);
     cout<<"ok"<<endl;
     if(m4->empty()==true) cout<<"\tThe new map 'm4' contains no association between a 'string' and an 'uint' value."<<endl;
-    else cout<<"\tThe new map 'm4' contains the following "<<m4->size()<<" associations between a 'string' and an 'uint' value."<<endl<<endl;
-    cout<<"\t\tThe string 'Thirteen' is associated with the 'uint' value "<<m4->at(string("Thirteen"))<<";"<<endl;
-    cout<<"\t\tThe string 'Fourteen' is associated with the 'uint' value "<<m4->at(string("Fourteen"))<<";"<<endl;
-    cout<<"\t\tThe string 'Nine' is associated with the 'uint' value "<<m4->at(string("Nine"))<<";"<<endl;
-    cout<<"\t\tThe string 'One' is associated with the 'uint' value "<<m4->at(string("One"))<<";"<<endl;
-    cout<<"\t\tThe string 'Ten' is associated with the 'uint' value "<<m4->at(string("Ten"))<<"."<<endl<<endl;
+    else cout<<"\tThe new map 'm4' contains the following "<<m4->size()<<" associations between a 'string' and an 'uint' value:"<<endl<<endl;
+    cout<<"\t\tthe string 'Thirteen' is associated with the 'uint' value "<<m4->at(string("Thirteen"))<<";"<<endl;
+    cout<<"\t\tthe string 'Fourteen' is associated with the 'uint' value "<<m4->at(string("Fourteen"))<<";"<<endl;
+    cout<<"\t\tthe string 'Nine' is associated with the 'uint' value "<<m4->at(string("Nine"))<<";"<<endl;
+    cout<<"\t\tthe string 'One' is associated with the 'uint' value "<<m4->at(string("One"))<<";"<<endl;
+    cout<<"\t\tthe string 'Ten' is associated with the 'uint' value "<<m4->at(string("Ten"))<<"."<<endl<<endl;
     cout.flush();
     
     /* TASK #6 - allocating a new C-like array by using the allocator of the map 'm4' */
@@ -170,7 +170,7 @@ int main(void)
     cout<<"ok"<<endl<<"\tThe associations between a 'string' and an 'uint' value (stored as pairs) in the new allocated array are the following:"<<endl<<endl;
     for(int i=0;i<6;i++) 
     {
-    	cout<<"\t\tThe string '"<<p[i].first<<"' is associated with the 'uint' value "<<p[i].second;
+    	cout<<"\t\tthe string '"<<p[i].first<<"' is associated with the 'uint' value "<<p[i].second;
     	if(i<5) cout<<";"<<endl;
     	else cout<<"."<<endl;
     }
@@ -196,13 +196,13 @@ int main(void)
     m5.emplace_hint(m5.end(),"Seventeen",17);
     cout<<"ok"<<endl;
     cout<<"\tThe new map 'm5' contains the following "<<m5.size()<<" associations between a 'string' and an 'uint' value:"<<endl<<endl;
-    cout<<"\t\tThe string 'Seven' is associated with the 'uint' value "<<m5.at(string("Seven"))<<";"<<endl;
-    cout<<"\t\tThe string 'Eight' is associated with the 'uint' value "<<m5.at(string("Eight"))<<";"<<endl;
-    cout<<"\t\tThe string 'Twelve' is associated with the 'uint' value "<<m5.at(string("Twelve"))<<";"<<endl;
-    cout<<"\t\tThe string 'Seventeen' is associated with the 'uint' value "<<m5.at(string("Seventeen"))<<"."<<endl<<endl;
+    cout<<"\t\tthe string 'Seven' is associated with the 'uint' value "<<m5.at(string("Seven"))<<";"<<endl;
+    cout<<"\t\tthe string 'Eight' is associated with the 'uint' value "<<m5.at(string("Eight"))<<";"<<endl;
+    cout<<"\t\tthe string 'Twelve' is associated with the 'uint' value "<<m5.at(string("Twelve"))<<";"<<endl;
+    cout<<"\t\tthe string 'Seventeen' is associated with the 'uint' value "<<m5.at(string("Seventeen"))<<"."<<endl<<endl;
     cout.flush();
- 	
- 	/* TASK 8 - Deallocating all maps, used in this test. */
+	
+	/* TASK 8 - Deallocating all maps, used in this test. */
     cout<<"\tDeallocating all maps and other auxiliary data structures in this test ... ";
     m0.clear();
     m1.clear();

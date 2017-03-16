@@ -62,9 +62,9 @@ int main(void)
 	if(t1>t2) cout<<"\tThe tuple 't1' is 'strictly greater than' the tuple 't2' (with respect to the '>' operator)."<<endl;
 	else cout<<"\tThe tuple 't1' is not 'strictly greater than' the tuple 't2' (with respect to the '>' operator)."<<endl;
 	if(t1<=t2) cout<<"\tThe tuple 't1' may be either 'strictly less than', or 'the same as' the tuple 't2' (with respect to the '<=' operator)."<<endl;
-	else cout<<"\tThe tuple 't1' is not both 'strictly less than' and 'the same as' the tuple 't2' (with respect to the '<=' operator)."<<endl;
+	else cout<<"\tThe tuple 't1' is not both 'strictly less than', and 'the same as' the tuple 't2' (with respect to the '<=' operator)."<<endl;
 	if(t1>=t2) cout<<"\tThe tuple 't1' may be either 'strictly greater than', or 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
-	else cout<<"\tThe tuple 't1' is not both 'strictly greater than' and 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
+	else cout<<"\tThe tuple 't1' is not both 'strictly greater than', and 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
 	cout<<endl;
 	
 	/* TASK #3 - Swapping the content of the tuples 't1' and 't2'. */

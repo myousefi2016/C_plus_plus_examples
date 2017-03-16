@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-080')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-080' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * main.cpp - the source file, implementing the main function for the test 'Example-080'.
- **********************************************************************************************/
+ * main.cpp - the source file, implementing the main function for the 'Example-080' unit test.
+ **************************************************************************************************/
 
 #include <cstdlib>
 #include <iostream>
@@ -20,9 +20,11 @@ int main(void)
 	vector<Movie> movies;
 	int k=0;
 
-	/* This is the example 'Example-080', where the classes and other constructs are tested. */
-    cout<<endl<<"\tThis is the example 'Example-080' in the C++ language"<<endl<<endl;
+	/* This is the 'Example-080' unit test, where the constructs for defining a generic class are validated. */
+    cout<<endl<<"\tThis is the 'Example-080' unit test in the C++ language."<<endl<<endl;
     cout.flush();
+    
+    /* TASK #1 - creating several instances of the 'Movie' class, defined in the 'movie.h' header file. */
     movies.push_back(Movie());
     movies.back().setTitle("The Matrix");
     movies.back().setYear(1999);
@@ -33,7 +35,7 @@ int main(void)
     movies.push_back( Movie("Independence Day",1996,"Very good/Masterpiece"));
     movies.push_back( Movie("Rocky",1976,"Masterpiece"));
     movies.push_back( Movie("First Blood",1982,"Masterpiece"));
-    cout<<"\tThis archive contains "<<movies.size()<<" movies: "<<endl<<endl;
+    cout<<"\tThis archive contains the following "<<movies.size()<<" movies: "<<endl<<endl;
     for(vector<Movie>::iterator it=movies.begin();it!=movies.end();it++,k++) 
     {
     	cout<<"\tMOVIE #"<<k<<endl;

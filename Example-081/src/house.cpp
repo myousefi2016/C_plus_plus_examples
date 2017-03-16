@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-081')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-081' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * house.cpp - the source file, implementing the 'House' class for the test 'Example-081'.
- **********************************************************************************************/
+ * house.cpp - the source file, implementing the 'House' class for the 'Example-081' unit test.
+ **************************************************************************************************/
 
 #include "house.h"
 using namespace std;

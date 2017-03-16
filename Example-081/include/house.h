@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-081')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-081' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * movie.h - the header file, defining the 'House' class for the test 'Example-081'.
- **********************************************************************************************/
+ * house.h - the header file, defining the 'House' class for the 'Example-081' unit test.
+ **************************************************************************************************/
  
 #ifndef HOUSE_H
 
@@ -60,10 +60,10 @@
 		/// This friend operator exports the content of the current record, describing a generic house.
 		inline friend ostream& operator<<(ostream& os,House &h)
 		{
-			os<<"\tThe color: "<<h.getCColor()<<endl;
-			os<<"\tThe number of the bathrooms/restrooms: "<<h.getCNumberOfBathRooms()<<endl;
-			os<<"\tThe number of the rooms (except the bathrooms): "<<h.getCNumberOfRooms()<<endl;
-			os<<"\tThe square meters: "<<h.getCSquareMeters()<<endl<<endl;
+			os<<"\tthe color for the house is '"<<h.getCColor()<<"';"<<endl;
+			os<<"\t#bathrooms/restrooms for the house is '"<<h.getCNumberOfBathRooms()<<"';"<<endl;
+			os<<"\t#rooms (except the bathrooms) for the house is '"<<h.getCNumberOfRooms()<<"';"<<endl;
+			os<<"\tthe square meters for the house are '"<<h.getCSquareMeters()<<"'"<<endl<<endl;
 			os.flush();
 			return os;
 		}

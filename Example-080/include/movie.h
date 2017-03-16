@@ -1,12 +1,12 @@
-/**********************************************************************************************
- * Examples in the C++ language (the test 'Example-080')
+/**************************************************************************************************
+ * Examples in the C++ language (the 'Example-080' unit test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), January 2017
+ * Created by David Canino (canino.david@gmail.com), March 2017
  *
- * movie.h - the header file, defining the 'Movie' class for the test 'Example-080'.
- **********************************************************************************************/
+ * movie.h - the header file, defining the 'Movie' class for the 'Example-080' unit test.
+ **************************************************************************************************/
  
 #ifndef MOVIE_H
 
@@ -54,9 +54,9 @@
 		/// This friend operator exports the content of the current record, describing a generic movie.
 		inline friend ostream& operator<<(ostream& os,Movie &m)
 		{
-			os<<"\tThe title of the movie: "<<m.getTitle()<<endl;
-			os<<"\tThe distribution year of the movie: "<<m.getYear()<<endl;
-			os<<"\tThe rating of the movie: "<<m.getRating()<<endl<<endl;
+			os<<"\tthe title of the movie is '"<<m.getTitle()<<"';"<<endl;
+			os<<"\tthe distribution year of the movie is '"<<m.getYear()<<"';"<<endl;
+			os<<"\tthe (personal) rating of the movie is '"<<m.getRating()<<"'."<<endl<<endl;
 			os.flush();
 			return os;
 		}

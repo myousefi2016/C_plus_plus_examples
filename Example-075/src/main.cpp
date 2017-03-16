@@ -108,7 +108,6 @@ int main(void)
  	if(s0>s1) cout<<"\tThe stack 's0' is 'strictly greater than' the stack 's1' (with respect to the '>' operator)."<<endl;
  	if(s0<=s1) cout<<"\tThe stack 's0' may be either 'strictly less than', or 'the same as' the stack 's1' (with respect to the '<=' operator)."<<endl;
  	if(s0>=s1) cout<<"\tThe stack 's0' may be either 'strictly greater than', or 'the same as' the stack 's1' (with respect to the '>=' operator)."<<endl;
- 	cout<<endl;
  	if(s1==s0) cout<<"\tThe stack 's1' is 'the same as' the stack 's0' (with respect to the '==' operator)."<<endl;
  	if(s1<s0) cout<<"\tThe stack 's1' is 'strictly less than' the stack 's0' (with respect to the '<' operator)."<<endl;
  	if(s1!=s0) cout<<"\tThe stack 's1' is not 'the same as' the stack 's0' (with respect to the '!=' operator)."<<endl;

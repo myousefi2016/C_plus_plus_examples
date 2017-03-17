@@ -19,8 +19,8 @@ int main(void)
 	/* This is the 'Example-070' unit test, where the 'vector' containers are validated. */
     cout<<endl<<"\tThis is the 'Example-070' unit test in the C++ language."<<endl<<endl;
 	cout.flush();
-
-    /* TASK #1 - validating the empty constructor for the 'vector' containers. */
+	
+	/* TASK #1 - validating the empty constructor for the 'vector' containers. */
  	cout<<"\tCreating an empty vector 'v0' of 'int' values ... ";
  	cout.flush();
  	vector<int> v0;
@@ -28,7 +28,7 @@ int main(void)
  	cout<<"\t#values in the vector 'v0' is "<<v0.size()<<"."<<endl;
  	if(v0.empty()==true) cout<<"\tThe vector 'v0' is empty."<<endl;
  	else cout<<"\tThe vector 'v0' is not empty."<<endl;
- 	cout<<"\tCreating 5 new locations in the vector 'v0', storing the default 'int' value ... ";
+	cout<<"\tCreating 5 new locations in the vector 'v0', storing the default 'int' value 100 ... ";
  	v0.assign(5,100);
  	cout<<"ok"<<endl;
  	if(v0.empty()==true) cout<<"\tThe vector 'v0' is empty."<<endl;
@@ -37,15 +37,15 @@ int main(void)
  	cout<<"\tThe 'int' values in the vector 'v0' are:";
  	for(auto it=v0.cbegin();it!=v0.cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl;
- 	cout<<"\tInitializing the first 3 locations in the vector 'v0' (which is resized properly) ... ";
+	cout<<"\tInitializing only the first 3 locations in the vector 'v0' (which is resized properly) ... ";
  	v0.assign(v0.begin(),v0.begin()+3);
  	cout<<"ok"<<endl<<"\t#values in the vector 'v0' is "<<v0.size()<<"."<<endl;
  	cout<<"\tThe 'int' values in the vector 'v0' are:";
  	for(auto it=v0.cbegin();it!=v0.cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl<<endl;
  	cout.flush();
- 	
- 	/* TASK #2 - creating a new vector by giving a valid initialization. */
+	
+	/* TASK #2 - creating a new vector by giving a valid initialization. */
  	cout<<"\tCreating a vector 'v1' with 4 'int values, initialized to '37' ... ";
  	vector<int> v1 (4,37);
  	cout<<"ok"<<endl;
@@ -56,8 +56,8 @@ int main(void)
  	if(v1.empty()==true) cout<<"\tThe vector 'v1' is empty."<<endl<<endl;
  	else cout<<"\tThe vector 'v1' is not empty."<<endl<<endl;
     cout.flush();
-    
-    /* TASK #3 - creating a new vector as the copy of another. */
+	
+	/* TASK #3 - creating a new vector as the copy of another vector. */
  	cout<<"\tCreating a vector 'v2' as the copy of the vector 'v1' ... ";
  	vector<int> v2 (v1.begin(),v1.end());
  	cout<<"ok"<<endl;
@@ -71,7 +71,7 @@ int main(void)
  	else cout<<"\tThe vectors 'v1' and 'v2' do not coincide position by position (with respect to the '==' operator)."<<endl<<endl;
  	cout.flush();
  	
- 	/* TASK #4 - creating a new vector as the copy of another. */
+ 	/* TASK #4 - creating a new vector as the copy of another vector. */
  	cout<<"\tCreating a vector 'v3' as the copy of the vector 'v2' ... ";
  	vector<int> v3(v2);
  	cout<<"ok"<<endl;
@@ -126,7 +126,7 @@ int main(void)
  	cout<<"\tThe capacity of the vector 'v4' is "<<v4.capacity()<<"."<<endl<<endl;
  	cout.flush();
  	
- 	/* TASK #7 - allocating a new vector 'v5' and modifying its 'int' values. */
+	/* TASK #7 - allocating a new vector 'v5' and modifying its 'int' values. */
  	cout<<"\tAllocating a new vector 'v5' ... ";
  	vector<int> *v5=nullptr;
  	v5 = new vector<int>(7);
@@ -150,7 +150,10 @@ int main(void)
  	cout<<"\t#values in the vector 'v5' is "<<v5->size()<<"."<<endl;
  	cout<<"\tThe 'int' values in the vector 'v5' are:";
  	for(auto it=v5->begin();it!=v5->end();++it) cout<<" "<<(*it);
- 	cout<<"."<<endl;
+ 	cout<<"."<<endl<<endl;
+ 	cout.flush();
+ 	
+ 	/* TASK #8 - operating on the 'int' values in the vector 'v5'. */
  	cout<<"\tThe last 'int' value of the vector 'v5' is "<<v5->back()<<"."<<endl;
  	cout<<"\tRemoving the last 'int' value from the vector 'v5' ... ";
  	v5->pop_back();
@@ -202,8 +205,8 @@ int main(void)
  	for(auto it=v5->cbegin();it!=v5->cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl<<endl;
  	cout.flush();
- 	
- 	/* TASK #8 - swapping the content of two vectors 'v2' and 'v5'. */
+	
+	/* TASK #9 - swapping the content of two vectors 'v2' and 'v5'. */
  	cout<<"\tThe 'int' values in the vector 'v2' are:";
  	for(auto it=v2.cbegin();it!=v2.cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl;
@@ -212,6 +215,8 @@ int main(void)
  	cout<<"."<<endl;
  	if(v2<(*v5)) cout<<"\tThe 'int' values in the vector 'v2' are 'strictly less than' the 'int' values in the vector 'v5' (with respect to the '<' operator)"<<endl;
  	else cout<<"\tThe 'int' values in the vector 'v2' are not 'strictly less than' the 'int' values in the vector 'v5' (with respect to the '<' operator)"<<endl;
+ 	if(v2<=(*v5)) cout<<"\tThe 'int' values in the vector 'v2' may be either 'strictly less than', or 'the same as' the 'int' values in the vector 'v5' (with respect to the '<=' operator)"<<endl;
+ 	else cout<<"\tThe 'int' values in the vector 'v2' are not both 'strictly less than', and 'the same as' the 'int' values in the vector 'v5' (with respect to the '<=' operator)"<<endl;
  	cout<<"\tSwapping the content of the vectors 'v2' and 'v5' ... ";
  	v2.swap(*v5);
  	cout<<"ok"<<endl;
@@ -221,12 +226,12 @@ int main(void)
  	cout<<"\tThe 'int' values in the vector 'v5' are:";
  	for(auto it=v5->cbegin();it!=v5->cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl;
- 	if(v2>(*v5)) cout<<"\tThe 'int' values in the vector 'v2' are 'strictly greater than' the 'int' values in the vector 'v5' (with respect to the '>' operator)"<<endl;
- 	else cout<<"\tThe 'int' values in the vector 'v2' are not 'strictly greater than' the 'int' values in the vector 'v5' (with respect to the '>' operator)"<<endl;
+ 	if(v2>(*v5)) cout<<"\tThe 'int' values in the vector 'v2' may be either 'strictly greater than', or 'the same as' the 'int' values in the vector 'v5' (with respect to the '>=' operator)"<<endl;
+ 	else cout<<"\tThe 'int' values in the vector 'v2' are not both 'strictly greater than', and 'the same as' the 'int' values in the vector 'v5' (with respect to the '>=' operator)"<<endl;
  	cout<<endl;
  	cout.flush();
-
- 	/* TASK #9 - allocating a new C-like array by using the allocator of the vector 'v5' */
+	
+	/* TASK #10 - allocating a new C-like array by using the allocator of the vector 'v5' */
  	cout<<"\tAllocating a new C-like array of 7 locations by using the allocator of the vector 'v5' ... ";
  	int *p = v5->get_allocator().allocate(7);
  	cout<<"ok"<<endl<<"\tInitializing the locations of the new C-like array ... ";
@@ -239,8 +244,8 @@ int main(void)
  	v5->get_allocator().deallocate(p,7);
  	cout<<"ok"<<endl;
  	p=nullptr;
-
- 	/* TASK #10 - deallocating all vectors */
+	
+	/* TASK #11 - deallocating all vectors */
     cout<<endl<<"\tDeallocating the content of all vectors ... ";
     v0.clear();
     v1.clear();

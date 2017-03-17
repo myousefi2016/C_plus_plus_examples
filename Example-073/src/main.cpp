@@ -124,7 +124,6 @@ int main(void)
  	else cout<<"\tThe queue 'q3' is not empty."<<endl<<endl;
  	cout.flush();
  	
- 	
  	/* TASK #7 - deallocating all queues */
     cout<<"\tDeallocating the content of all queues ... ";
     while(!q0.empty()) q0.pop();

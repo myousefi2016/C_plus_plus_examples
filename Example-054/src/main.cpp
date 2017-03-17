@@ -25,21 +25,21 @@ int main(void)
     cout.flush();
     
     /* TASK #1 - insert the net price for the item of interest. */
-    cout<<"\tPlease, insert the (positive) price for the item of interest (in the US dollars): ";
+    cout<<"\tPlease, insert the (positive) price for the item of interest (in US dollars): ";
     cin>>price;
     if( (!price) || (price<=0.0) )
     {
-    	cout<<endl<<"\tPLEASE, INSERT A VALID PRICE FOR THE ITEM OF INTEREST."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID PRICE FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }
     
     /* TASK #2 - insert the customer payment. */
-    cout<<"\tPlease, insert the (positive) customer payment for the item of interest (in the US dollars): ";
+    cout<<"\tPlease, insert the (positive) customer payment for the item of interest (in US dollars): ";
     cin>>payment;
     if( (!price) || (payment<=0.0) || (payment<price) )
     {
-    	cout<<endl<<"\tPLEASE, INSERT A VALID CUSTOMER PAYMENT FOR THE ITEM OF INTEREST."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CUSTOMER PAYMENT FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }

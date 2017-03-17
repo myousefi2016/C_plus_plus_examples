@@ -67,7 +67,6 @@ int main(void)
     cout<<"\tThe C-like pointer 'c' is "<<letter_ptr<<"."<<endl<<endl;
     cout.flush();
     
-    
     /* TASK #5 - deallocating the memory, referred by the C-like pointers in this test. */
     cout<<"\tDeallocating the memory, referred by the C-like pointers in this test ... ";
     if(all!=nullptr) delete all;

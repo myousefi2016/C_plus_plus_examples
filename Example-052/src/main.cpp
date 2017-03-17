@@ -38,7 +38,7 @@ int main(void)
 		cin>>menuChoice;
 		if( (!cin) || (menuChoice < 1) || (menuChoice > 4) )
 		{
-			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID MEMBERSHIP FARE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID MEMBERSHIP FARE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
 			return EXIT_FAILURE;
 		}
@@ -54,7 +54,7 @@ int main(void)
 		cin>>months;
 		if( (!cin) || (months<1) || (months>24) )
 		{
-			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID NUMBER OF THE MONTHS."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID NUMBER OF THE MONTHS!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
 			return EXIT_FAILURE;
 		}

@@ -52,7 +52,7 @@ int main(void)
     cin>>param;
     if(!cin)
     {
-    	cout<<endl<<"\tPLEASE, INSERT A VALID ANGLE (IN DEGREES)."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID ANGLE (IN DEGREES)!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }

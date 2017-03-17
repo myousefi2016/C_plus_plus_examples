@@ -27,7 +27,7 @@ int main(void)
 	cin>>a;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, INSERT THE INTEGER VALUE FOR THE VARIABLE 'a'."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE INTEGER VALUE FOR THE VARIABLE 'a'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -37,7 +37,7 @@ int main(void)
 	cin>>b;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, INSERT THE INTEGER VALUE FOR THE VARIABLE 'b'."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE INTEGER VALUE FOR THE VARIABLE 'b'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}

@@ -27,7 +27,7 @@ int main(void)
     cin>>d;
     if( (!cin) || (d<=0) )
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST ENTER A VALID LENGTH 'd' (POSITIVE AND NOT NULL) FOR THE SIDE OF A CUBE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER THE VALID LENGTH 'd' (POSITIVE AND NOT NULL) FOR THE SIDE OF A CUBE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }
@@ -45,7 +45,7 @@ int main(void)
     cin>>r;
     if( (!cin) || (r<=0) )
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST ENTER A VALID LENGTH 'r' (POSITIVE AND NOT NULL) FOR THE RADIUS OF THE CIRCULAR BASIS IN A CYLINDER!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER THE VALID LENGTH 'r' (POSITIVE AND NOT NULL) FOR THE RADIUS OF THE CIRCULAR BASIS IN A CYLINDER!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }
@@ -56,7 +56,7 @@ int main(void)
     cin>>h;
     if( (!cin) || (h<=0) )
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST ENTER A VALID HEIGHT 'h' (POSITIVE AND NOT NULL) OF A CYLINDER!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER THE VALID HEIGHT 'h' (POSITIVE AND NOT NULL) OF A CYLINDER!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }
@@ -83,7 +83,7 @@ int main(void)
     cin>>r;
     if( (!cin) || (r<=0) )
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST ENTER A VALID DEPTH 'b' (POSITIVE AND NOT NULL) OF A CUBOID!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER THE VALID DEPTH 'b' (POSITIVE AND NOT NULL) OF A CUBOID!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }
@@ -94,7 +94,7 @@ int main(void)
     cin>>h;
     if( (!cin) || (h<=0) )
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST ENTER A VALID HEIGHT 'c' (POSITIVE AND NOT NULL) OF A CUBOID!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER THE VALID HEIGHT 'c' (POSITIVE AND NOT NULL) OF A CUBOID!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }

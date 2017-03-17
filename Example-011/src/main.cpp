@@ -23,22 +23,22 @@ int main(void)
     cout.flush();
     	
 	/* TASK #1 - insert the first integer ('int') value 'a'. */
-	cout<<"\tPlease, insert an integer ('int') value 'a': ";
+	cout<<"\tPlease, insert the integer ('int') value 'a': ";
     cin>>a;
    	if(!cin)
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST ENTER AN INTEGER ('INT') VALUE 'a'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER THE INTEGER ('INT') VALUE 'a'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }
 
 	/* TASK #2 - insert the second integer ('int') value 'b'. */
 	cout<<"\tYou inserted the integer ('int') value 'a'="<<a<<"."<<endl<<endl;
-    cout<<"\tPlease, insert an integer ('int') value 'b': ";
+    cout<<"\tPlease, insert the integer ('int') value 'b': ";
     cin>>b;
    	if(!cin)
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST ENTER AN INTEGER ('INT') VALUE 'b'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+    	cout<<endl<<"\tPLEASE, YOU MUST ENTER THE INTEGER ('INT') VALUE 'b'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
     	return EXIT_FAILURE;
     }

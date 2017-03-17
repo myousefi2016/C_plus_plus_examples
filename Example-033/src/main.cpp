@@ -20,7 +20,7 @@ int main(void)
     cout.flush();
     
      /* TASK #1 - looking for the even numbers in the '[1,100]' range. */
-	for(int n=1;n<=100;n++) { if( (n%2)==0 ) cout<<"\tFound even number "<<n<<"."<<endl; }
+	for(int n=1;n<=100;n++) { if( (n%2)==0 ) cout<<"\tFound the even number "<<n<<"."<<endl; }
 	cout<<endl;
 	cout.flush();
     return EXIT_SUCCESS;

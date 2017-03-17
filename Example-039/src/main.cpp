@@ -56,7 +56,7 @@ int main(void)
 		cout.flush();
 		if(!cin)
 		{
-			cout<<"\tPLEASE, YOU MUST INSERT YOUR BET AS AN INTEGER VALUE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+			cout<<"\tPLEASE, YOU MUST INSERT YOUR BET AS AN INTEGER VALUE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 			cout.flush();
 			return EXIT_FAILURE;
 		}

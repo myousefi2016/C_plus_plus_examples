@@ -24,7 +24,7 @@ int main(void)
     cout.flush();
     goto step1;
 
-	/* Label step2 */
+	/* Label 'step2'. */
     step2:
     	
     	cout<<"ok"<<endl;
@@ -33,7 +33,7 @@ int main(void)
     	cout.flush();
     	goto final_step;
     
-    /* Label step1 */
+    /* Label 'step1'. */
     step1:
     
     	cout<<"ok"<<endl;
@@ -42,7 +42,7 @@ int main(void)
     	cout.flush();
     	goto step2;
     	
-   	/* Label 'final_step' */
+   	/* Label 'final_step'. */
 	final_step:
     
     	cout<<"ok"<<endl;

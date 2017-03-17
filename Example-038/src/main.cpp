@@ -27,7 +27,7 @@ int main(void)
 	cin>>x1>>y1;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x1,y1)'."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x1,y1)'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -37,7 +37,7 @@ int main(void)
 	cin>>x2>>y2;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x2,y2)'."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x2,y2)'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
 		return EXIT_FAILURE;
 	}

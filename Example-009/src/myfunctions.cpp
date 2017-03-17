@@ -69,7 +69,7 @@ void runFunction(char ans)
 	if( (i<0) || (i>=fl) ) 
 	{
 		/* A not valid choice has been inserted! */
-		cout<<endl<<"\tPLEASE, INSERT A VALID CHOICE!!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CHOICE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
 		exit(EXIT_FAILURE);
 	}

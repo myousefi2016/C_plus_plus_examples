@@ -29,7 +29,7 @@ int main(void)
 	do
 	{
 		/* Several member fares are available for being purchased. */
-		cout<<endl<<"\tThe following memership fares are available for being purchased:"<<endl<<endl;
+		cout<<endl<<"\tThe following membership fares are available for being purchased:"<<endl<<endl;
 		cout<<"\t1) Adult Membership Fare (40 euro/month);"<<endl;
 		cout<<"\t2) Child Membership Fare (30 euro/month);"<<endl;
 		cout<<"\t3) Family Membership Fare (100 euro/month);"<<endl;

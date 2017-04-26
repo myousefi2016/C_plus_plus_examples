@@ -2,7 +2,7 @@
 
 <H3>The 'Example-011' Test</H3>
 
-This basic example about the use of the C++ programming language shows how defining and exploiting a very basic class, defined on a separate header file.<p>In particular, this test consists of the <i>'Example-011'</i> executable file, based on several components, that are distributed in several files:<ul>
+This basic example about the use of the C++ programming language shows how defining and exploiting a very basic class, defined on a separate header file.<p>In particular, this test consists of the <i>'Example-011'</i> executable file, which is based on several components. These latter are distributed in a few files:<ul>
 <li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder);</li>
 <li>the <i>custom</i> class of interest is defined and implemented in the <i>'myclass.h'</i> C++ header file (in the <i><code>'include'</code></i> folder). Its implementation is very trivial, and is embedded in its definition by using several <i>inline</i> member functions and operators.</li></ul><p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
 <li>the <i><code>'cmake'</code></i> folder contains the project file for the <i><A href="http://cmake.org">CMake Building Tool</A></i>;</li>

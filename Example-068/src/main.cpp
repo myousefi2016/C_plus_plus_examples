@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-068' unit test).
+ * Examples in the C++ language (the 'Example-068' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-068' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-068' Test.
  **************************************************************************************************/
 
 #include <cstdlib>
@@ -16,13 +16,13 @@
 #include <utility>
 using namespace std;
 
-/// The main function for the <i>'Example-068'</i> unit test.
+/// The main function for the <i>'Example-068'</i> Test.
 int main(void)
 {
 	string s;
 
-	/* This is the 'Example-068' unit test, where the 'tuple' containers are validated. */
-	cout<<endl<<"\tThis is the 'Example-068' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-068' Test, where the 'tuple' containers are validated. */
+	cout<<endl<<"\tThis is the 'Example-068' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
      /* TASK #1 - Creating a new tuple 't0', containing a 'string' and an 'int' value. */

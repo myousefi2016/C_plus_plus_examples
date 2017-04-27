@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-063' unit test).
+ * Examples in the C++ language (the 'Example-063' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-063' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-063' Test.
  **************************************************************************************************/
  
 #include <cstdlib>
@@ -24,13 +24,13 @@ using namespace std;
 /// This function is a custom function for comparing the 'string' keys.
 bool compareStrings(const string& a,const string& b) { return (a<b); }
 
-/// The main function for the <i>'Example-063'</i> unit test.
+/// The main function for the <i>'Example-063'</i> Test.
 int main(void)
 {
 	uint n=0;
 
-	/* This is the 'Example-063' unit test, where the 'map' containers are validated. */
-    cout<<endl<<"\tThis is the 'Example-063' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-063' Test, where the 'map' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-063' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - Creating an empty map 'm0', containing no association. New associations will be added separately to the map 'm0'. */

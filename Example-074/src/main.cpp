@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-074' unit test).
+ * Examples in the C++ language (the 'Example-074' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-074' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-074' Test.
  **************************************************************************************************/
 
 #include <cstdlib>
@@ -25,11 +25,11 @@ class MyPriorityFunction
 	bool operator()(const int& a, const int& b) const { return a<b; }
 };
 
-/// The main function for the <i>Example-074</i> unit test.
+/// The main function for the <i>'Example-074'</i> Test.
 int main(void)
 {
-	/* This is the 'Example-074' unit test, where the 'priority queue' containers are validated. */
-    cout<<endl<<"\tThis is the 'Example-074' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-074' Test, where the 'priority queue' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-074' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1: validating the empty constructor for the 'priority queue' containers. */

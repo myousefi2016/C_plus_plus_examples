@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-070' unit test).
+ * Examples in the C++ language (the 'Example-070' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-070' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-070' Test.
  **************************************************************************************************/
 
 #include <vector>
@@ -13,11 +13,11 @@
 #include <cstdlib>
 using namespace std;
 
-/// The main function for the <i>'Example-070'</i> unit test.
+/// The main function for the <i>'Example-070'</i> Test.
 int main(void)
 {
-	/* This is the 'Example-070' unit test, where the 'vector' containers are validated. */
-    cout<<endl<<"\tThis is the 'Example-070' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-070' Test, where the 'vector' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-070' Test in the C++ language."<<endl<<endl;
 	cout.flush();
 	
 	/* TASK #1 - validating the empty constructor for the 'vector' containers. */

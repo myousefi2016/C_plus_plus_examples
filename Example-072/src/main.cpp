@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-072' unit test).
+ * Examples in the C++ language (the 'Example-072' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-072' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-072' Test.
  **************************************************************************************************/
 
 #include <cstdlib>
@@ -25,11 +25,11 @@ struct EvenStruct
 	bool operator() (const int& value) { return ((value%2)==0); }
 };
 
-/// The main function for the <i>'Example-072'</i> unit test.
+/// The main function for the <i>'Example-072'</i> Test.
 int main(void)
 {
-	/* This is the 'Example-071' unit test, where the 'list' containers are validated. */
-    cout<<endl<<"\tThis is the 'Example-072' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-071' Test, where the 'list' containers are validated. */
+    cout<<endl<<"\tThis is the 'Example-072' Test in the C++ language."<<endl<<endl;
 	cout.flush();
 	
 	/* TASK #1 - validating the empty constructor for the lists. */

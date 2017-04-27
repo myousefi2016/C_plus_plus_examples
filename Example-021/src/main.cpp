@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-021' unit test).
+ * Examples in the C++ language (the 'Example-021' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-021' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-021' Test.
  **************************************************************************************************/
 
 #include <limits>
@@ -13,11 +13,11 @@
 #include <cstdlib>
 using namespace std;
 
-/// The main function for the <i>'Example-021'</i> unit test.
+/// The main function for the <i>'Example-021'</i> Test.
 int main(void)
 {
-	/* This is the 'Example-021' unit test, where the properties of the 'double floating-point (double)' C++ built-in type are analyzed. */
-    cout<<endl<<"\tThis is the 'Example-021' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-021' Test, where the properties of the 'double floating-point (double)' C++ built-in type are analyzed. */
+    cout<<endl<<"\tThis is the 'Example-021' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - retrieving the properties of the 'double floating-point (double)' C++ built-in type. */

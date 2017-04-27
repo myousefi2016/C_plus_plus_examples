@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-041' unit test).
+ * Examples in the C++ language (the 'Example-041' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-041' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-041' Test.
  **************************************************************************************************/
 
 #include <iostream>
@@ -14,13 +14,13 @@
 #include <iomanip>
 using namespace std;
 
-/// The main function for the <i>Example-041</i> unit test.
+/// The main function for the <i>'Example-041'</i> Test.
 int main(void)
 {
 	char c='N';
 
-	/* This is the 'Example-041' unit test, where the generation of several pseudo-random values is tested through a simple game, involving two craps! */
-    cout<<endl<<"\tThis is the 'Example-041' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-041' Test, where the generation of several pseudo-random values is tested through a simple game, involving two craps! */
+    cout<<endl<<"\tThis is the 'Example-041' Test in the C++ language."<<endl<<endl;
     cout.flush();
 
 	/* TASK #1 - we start our game! */    

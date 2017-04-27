@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-045' unit test).
+ * Examples in the C++ language (the 'Example-045' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-045' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-045' Test.
  **************************************************************************************************/
  
 #include <iostream>
@@ -16,7 +16,7 @@
 #include <string>
 using namespace std;
 
-/// The main function for the <i>Example-045</i> unit test.
+/// The main function for the <i>'Example-045'</i> Test.
 int main(void)
 {
 	unsigned int sees1;
@@ -24,8 +24,8 @@ int main(void)
 	ofstream out;
 	ifstream in;
 	
-	/* This is the 'Example-045' unit test, where the generation of several pseudo-random values through a 'Shuffle order engine' is tested! */
-    cout<<endl<<"\tThis is the 'Example-045' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-045' Test, where the generation of several pseudo-random values through a 'Shuffle order engine' is tested! */
+    cout<<endl<<"\tThis is the 'Example-045' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - we construct a Shuffle order engine, such that its seed is automatically generated from the system clock. */

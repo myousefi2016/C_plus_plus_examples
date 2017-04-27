@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-048' unit test).
+ * Examples in the C++ language (the 'Example-048' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-048' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-048' Test.
  **************************************************************************************************/
  
 #include <iostream>
@@ -13,14 +13,14 @@
 #include <cstdlib>
 using namespace std;
 
-/// The main function for the <i>Example-048</i> unit test.
+/// The main function for the <i>'Example-048'</i> Test.
 int main(void)
 {
 	int *all=nullptr,*all2=nullptr;
 	char letter='A',*letter_ptr;
 
-	/* This is the 'Example-048' unit test, where the C-like pointers are tested. */
-    cout<<endl<<"\tThis is the 'Example-048' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-048' Test, where the C-like pointers are tested. */
+    cout<<endl<<"\tThis is the 'Example-048' Test in the C++ language."<<endl<<endl;
     cout.flush();
 
     /* TASK #1 - allocating a new 'int' value, referred through its C-like pointer. */

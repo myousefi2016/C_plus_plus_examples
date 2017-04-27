@@ -1,11 +1,11 @@
 /******************************************************************************************************************************
- * Examples in the C++ language (the 'Example-011' unit test).
+ * Examples in the C++ language (the 'Example-011' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * myclass.h - the header file, where the auxiliary class for the 'Example-011' unit test is defined.
+ * myclass.h - the header file, where the auxiliary class for the 'Example-011' Test is defined.
  ******************************************************************************************************************************/
 
 /* Optional inclusion */

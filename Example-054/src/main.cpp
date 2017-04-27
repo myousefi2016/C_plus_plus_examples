@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-054' unit test).
+ * Examples in the C++ language (the 'Example-054' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-054' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-054' Test.
  **************************************************************************************************/
 
 #include <cstdlib>
@@ -14,14 +14,14 @@
 #include "myheader.h"
 using namespace std;
 
-/// The main function for the <i>Example-054</i> unit test.
+/// The main function for the <i>'Example-054'</i> Test.
 int main(void)
 {
 	Change c;
 	double price=0.0,payment=0.0,change=0.0;
 
-	/* This is the 'Example-054' unit test, where the 'switch' and other constructs are tested. */
-    cout<<endl<<"\tThis is the 'Example-054' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-054' Test, where the 'switch' and other constructs are tested. */
+    cout<<endl<<"\tThis is the 'Example-054' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - insert the net price for the item of interest. */

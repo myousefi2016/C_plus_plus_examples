@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-057' unit test).
+ * Examples in the C++ language (the 'Example-057' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-057' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-057' Test.
  **************************************************************************************************/
  
 #include <iostream>
@@ -37,14 +37,14 @@ bool verifyState()
 	return ris;
 }
 
-/// The main function for the <i>Example-057</i> unit test.
+/// The main function for the <i>'Example-057'</i> Test.
 int main(void)
 {
 	double param,result,param2;
 	bool b;
 	
-	/* This is the 'Example-057' unit test, where several trigonometric functions and the corresponding floating-point exceptions are validated. */
-    cout<<endl<<"\tThis is the 'Example-057' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-057' Test, where several trigonometric functions and the corresponding floating-point exceptions are validated. */
+    cout<<endl<<"\tThis is the 'Example-057' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - read a 'floating-point' value from the standard input stream. */

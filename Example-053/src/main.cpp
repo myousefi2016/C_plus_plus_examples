@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-053' unit test).
+ * Examples in the C++ language (the 'Example-053' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-053' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-053' Test.
  **************************************************************************************************/
 
 #include <iostream>
@@ -18,7 +18,7 @@ inline double calculateCharge(double mc,double lc) { return (mc+lc); }
 /// This function computes the charge amount when a patient is not admitted to the hospital.
 inline double calculateCharge(int nod,double dc,double mc,double lc) { return (nod*dc+calculateCharge(mc,lc)); }
 
-/// The main function for the <i>Example-053</i> unit test.
+/// The main function for the <i>'Example-053'</i> Test.
 int main(void)
 {
 	char ans='a';
@@ -26,8 +26,8 @@ int main(void)
 	int numOfDays=0;
 	double dailyCharge=0.0,medCharges=0.0, labCharges=0.0;
 	
-	/* This is the 'Example-053' unit test, where the 'switch' and other constructs are tested. */
-    cout<<endl<<"\tThis is the 'Example-053' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-053' Test, where the 'switch' and other constructs are tested. */
+    cout<<endl<<"\tThis is the 'Example-053' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - starting the interface. */

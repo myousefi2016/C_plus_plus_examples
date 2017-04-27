@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-050' unit test).
+ * Examples in the C++ language (the 'Example-050' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-050' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-050' Test.
  **************************************************************************************************/
 
 #include <cstdlib>
@@ -39,15 +39,15 @@ inline void concatenateStrings(const string &s0,const string &s1,string &stot)
 	stot+=s1;
 }
 
-/// The main function for the <i>'Example-050'</i> unit test.
+/// The main function for the <i>'Example-050'</i> Test.
 int main(void)
 {
 	unsigned int w,h,a,p;
 	double r,ca,cp;
 	string s0,s1,stot;
 	
-	/* This is the 'Example-050' unit test, where the computation of several basic expressions and constructs is tested! */
-	cout<<endl<<"\tThis is the 'Example-050' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-050' Test, where the computation of several basic expressions and constructs is tested! */
+	cout<<endl<<"\tThis is the 'Example-050' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - we compute the area and the perimeter for a rectangle of width 'w' and height 'h' (read from the standard input stream). */

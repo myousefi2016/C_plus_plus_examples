@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-055' unit test).
+ * Examples in the C++ language (the 'Example-055' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-055' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-055' Test.
  **************************************************************************************************/
  
 #include <iostream>
@@ -35,13 +35,13 @@ bool verifyState()
 	return ris;
 }
 
-/// The main function for the <i>Example-055</i> unit test.
+/// The main function for the <i>'Example-055'</i> Test.
 int main(void)
 {
 	double aaa;
 	
-	/* This is the 'Example-055' unit test, where the infrastructure for the mathematical errors (floating-points exceptions) is tested. */
-    cout<<endl<<"\tThis is the 'Example-055' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-055' Test, where the infrastructure for the mathematical errors (floating-points exceptions) is tested. */
+    cout<<endl<<"\tThis is the 'Example-055' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
 	/* TASK #1 - setting correctly the error macros, and perform a wrong operation (computing the logarithmic of '0'.). */

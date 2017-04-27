@@ -1,11 +1,11 @@
 /******************************************************************************************************************************
- * Examples in the C++ language (the 'Example-007' unit test).
+ * Examples in the C++ language (the 'Example-007' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * recursive_factorial.cpp - the source file, where the auxiliary function for the 'Example-007' unit test is implemented.
+ * recursive_factorial.cpp - the source file, where the auxiliary function for the 'Example-007' Test is implemented.
  ******************************************************************************************************************************/
 
 #include "recursive_factorial.h"

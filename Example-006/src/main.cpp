@@ -1,21 +1,21 @@
 /**********************************************************************************************
- * Examples in the C++ language (the 'Example-006' unit test).
+ * Examples in the C++ language (the 'Example-006' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-006' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-006' Test.
  **********************************************************************************************/
 #include <cstdlib>
 #include <iostream>
 using namespace std;
 
-/// The main function for the <i>'Example-006'</i> unit test.
+/// The main function for the <i>'Example-006'</i> Test.
 int main(void)
 {
-	/* This is the 'Example-006' unit test, where the 'jump' construct for navigating among the labels is validated. */
-    cout<<endl<<"\tThis is the 'Example-006' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-006' Test, where the 'jump' construct for navigating among the labels is validated. */
+    cout<<endl<<"\tThis is the 'Example-006' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - navigating among the labels by using the 'jump' construct. */

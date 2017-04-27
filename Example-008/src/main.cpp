@@ -1,11 +1,11 @@
 /**********************************************************************************************
- * Examples in the C++ language (the 'Example-008' unit test).
+ * Examples in the C++ language (the 'Example-008' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-008' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-008' Test.
  **********************************************************************************************/
 
 #include "myfunctions.h"
@@ -13,13 +13,13 @@
 #include <iostream>
 using namespace std;
 
-/// The main function for the <i>Example-008</i> unit test.
+/// The main function for the <i>Example-008</i> Test.
 int main(void)
 {
 	double d,r,h,vc;
 
-	/* This is the 'Example-008' unit test, which exploits several functions, defined in the 'myfunctions.h' header file. */
-	cout<<endl<<"\tThis is the 'Example-008' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-008' Test, which exploits several functions, defined in the 'myfunctions.h' header file. */
+	cout<<endl<<"\tThis is the 'Example-008' Test in the C++ language."<<endl<<endl;
 	cout.flush();
 
 	/* TASK #1 - compute the volume for a cube. */    

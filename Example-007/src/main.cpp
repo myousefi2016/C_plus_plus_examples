@@ -1,11 +1,11 @@
 /**********************************************************************************************
- * Examples in the C++ language (the 'Example-007' unit test).
+ * Examples in the C++ language (the 'Example-007' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-007' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-007' Test.
  **********************************************************************************************/
 
 #include "recursive_factorial.h"
@@ -13,13 +13,13 @@
 #include <iostream>
 using namespace std;
 
-/// The main function for the <i>'Example-007'</i> unit test.
+/// The main function for the <i>'Example-007'</i> Test.
 int main(void)
 {
 	unsigned long n;
 	
-	/* This is the 'Example-007' unit test, which exploits the 'factorial()' function. This latter is defined in the 'recursive_factorial.h' header file. */
-	cout<<endl<<"\tThis is the 'Example-007' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-007' Test, which exploits the 'factorial()' function. This latter is defined in the 'recursive_factorial.h' header file. */
+	cout<<endl<<"\tThis is the 'Example-007' Test in the C++ language."<<endl<<endl;
 	cout.flush();
     
     /* TASK #1 - we ask for a positive value, and invoke the 'factorial()' function. */

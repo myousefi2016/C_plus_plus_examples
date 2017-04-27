@@ -1,11 +1,11 @@
 /*************************************************************************************************************
- * Examples in the C++ language (the 'Example-005' unit test).
+ * Examples in the C++ language (the 'Example-005' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * myfunc.cpp - the source file, where the auxiliary function for the 'Example-005' unit test is implemented.
+ * myfunc.cpp - the source file, where the auxiliary function for the 'Example-005' Test is implemented.
  *************************************************************************************************************/
  
 #include "myfunc.h"
@@ -14,6 +14,6 @@ using namespace std;
 
 void myfunc(void)
 {
-	cout<<"\tThis is the 'myfunc()' auxiliary function in the 'Example-005' unit test."<<endl<<endl;
+	cout<<"\tThis is the 'myfunc()' auxiliary function in the 'Example-005' Test."<<endl<<endl;
 	cout.flush();
 }

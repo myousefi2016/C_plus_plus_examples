@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-080' unit test).
+ * Examples in the C++ language (the 'Example-080' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * movie.cpp - the source file, implementing the 'Movie' class for the 'Example-080' unit test.
+ * movie.cpp - the source file, implementing the 'Movie' class for the 'Example-080' Test.
  **************************************************************************************************/
  
 #include "movie.h"

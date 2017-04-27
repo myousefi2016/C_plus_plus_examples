@@ -13,7 +13,7 @@
 #include <iostream>
 using namespace std;
 
-/// The main function for the <i>Example-011</i> Test.
+/// The main function for the <i>'Example-011'</i> Test.
 int main(void)
 {
 	int a,b,s;

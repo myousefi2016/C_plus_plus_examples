@@ -11,7 +11,7 @@
 #include "myvariadic.h"
 #include <cstdlib>
 
-/// The main function for the <i>Example-010</i> Test.
+/// The main function for the <i>'Example-010'</i> Test.
 int main(void)
 {
 	double aa;

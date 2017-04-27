@@ -13,7 +13,7 @@
 #include <iostream>
 using namespace std;
 
-/// The main function for the <i>Example-009</i> Test.
+/// The main function for the <i>'Example-009'</i> Test.
 int main(void)
 {
 	/* This is the 'Example-009' Test, which offers an elementary shell for invoking a custom collection of functions (upon request). */

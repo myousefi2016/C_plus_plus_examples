@@ -2,7 +2,7 @@
 
 <H3>The 'Example-031' Test</H3>
 
-This basic example about the use of the C++ programming language validates the capabilities of the C/C++ preprocessor, expecially when defining the macros of interest.<p>In particular, this test consists of the <i>'Example-031'</i> executable file, which is based on several components. These latter are distributed in a few files:<ul>
+This basic test about the use of the C++ programming language validates the capabilities of the C/C++ preprocessor, expecially when defining the macros of interest.<p>In particular, this test consists of the <i>'Example-031'</i> executable file, which is based on several components. These latter are distributed in a few files:<ul>
 <li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder);</li>
 <li>the <i>custom</i> macros of interest are defined in the <i>'myheader.h'</i> C++ header file (in the <i><code>'include'</code></i> folder).</li></ul><p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
 <li>the <i><code>'cmake'</code></i> folder contains the project file for the <i><A href="http://cmake.org">CMake Building Tool</A></i>;</li>

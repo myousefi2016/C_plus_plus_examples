@@ -1,22 +1,22 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-031' unit test).
+ * Examples in the C++ language (the 'Example-031' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-031' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-031' Test.
  **************************************************************************************************/
 
 #include <iostream>
 #include <cstdlib>
 using namespace std;
 
-/// The main function for the <i>Example-031</i> unit test.
+/// The main function for the <i>'Example-031'</i> Test.
 int main(void)
 {
-	/* This is the 'Example-031' unit test, where the C/C++ preprocessor inclusion capabilities are verified and checked. */
-    cout<<endl<<"\tThis is the 'Example-031' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-031' Test, where the C/C++ preprocessor inclusion capabilities are verified and checked. */
+    cout<<endl<<"\tThis is the 'Example-031' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* STEP #1 - Here, we analyze the 'AUX_DEFINE' and the 'AUX' macro (defined in the 'myheader.h' header file) before and after including this header file. */

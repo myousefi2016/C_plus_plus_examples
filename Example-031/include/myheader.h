@@ -1,11 +1,11 @@
 /******************************************************************************************************************************
- * Examples in the C++ language (the 'Example-031' unit test).
+ * Examples in the C++ language (the 'Example-031' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * myheader.h - the header file, used for validating the C/C++ preprocessor capabilities in the 'Example-031' unit test.
+ * myheader.h - the header file, used for validating the C/C++ preprocessor capabilities in the 'Example-031' Test.
  ******************************************************************************************************************************/
 
 /* First level macro (guard macro) for avoiding the duplicated inclusion of this header file! */

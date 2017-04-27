@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-038' unit test).
+ * Examples in the C++ language (the 'Example-038' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * myheader.h - the header file, defining the auxiliary functions for the 'Example-038' unit test.
+ * myheader.h - the header file, defining the auxiliary functions for the 'Example-038' Test.
  **************************************************************************************************/
 
 /* Optional inclusion! */

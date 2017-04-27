@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-038' unit test).
+ * Examples in the C++ language (the 'Example-038' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-038' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-038' Test.
  **************************************************************************************************/
 
 #include <iostream>
@@ -13,13 +13,13 @@
 #include "myheader.h"
 using namespace std;
 
-/// The main function for the <i>Example-038</i> unit test.
+/// The main function for the <i>'Example-038'</i> Test.
 int main(void)
 {
 	int x1,y1,x2,y2;
 
-	/* This is the 'Example-38' unit test, where the automatic conversion between the 'int' and the 'double' C++ built-in values is validated. */
-    cout<<endl<<"\tThis is the 'Example-038' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-38' Test, where the automatic conversion between the 'int' and the 'double' C++ built-in values is validated. */
+    cout<<endl<<"\tThis is the 'Example-038' Test in the C++ language."<<endl<<endl;
     cout.flush();
     
     /* TASK #1 - inserting the integer coordinates for the first 2D point '(x1,y1)'. */

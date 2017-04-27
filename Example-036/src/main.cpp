@@ -1,11 +1,11 @@
 /**************************************************************************************************
- * Examples in the C++ language (the 'Example-036' unit test).
+ * Examples in the C++ language (the 'Example-036' Test).
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), March 2017
+ * Created by David Canino (canino.david@gmail.com), April 2017
  *
- * main.cpp - the source file, implementing the main function for the 'Example-036' unit test.
+ * main.cpp - the source file, implementing the main function for the 'Example-036' Test.
  **************************************************************************************************/
 
 #include "myheader.h"
@@ -13,13 +13,13 @@
 #include <iostream>
 using namespace std;
 
-/// The main function for the <i>Example-036</i> unit test.
+/// The main function for the <i>'Example-036'</i> Test.
 int main(void)
 {
 	int a,b;
 
-	/* This is the 'Example-036' unit test, where the call-by-value parameters passing for a function is validated. */
-    cout<<endl<<"\tThis is the 'Example-036' unit test in the C++ language."<<endl<<endl;
+	/* This is the 'Example-036' Test, where the call-by-value parameters passing for a function is validated. */
+    cout<<endl<<"\tThis is the 'Example-036' Test in the C++ language."<<endl<<endl;
     cout.flush();
 	
 	/* TASK #1 - inserting the 'integer' value for the variable 'a'. */

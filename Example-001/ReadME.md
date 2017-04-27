@@ -2,7 +2,7 @@
 
 <H3>The 'Example-001' Test</H3>
 
-This basic example about the use of the C++ programming language is similar to the classic <i>'Hello World'</i> program for testing the correctness of the building infrastructure.<p>In particular, this test consists of the <i>'Example-001'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder) without using other dependencies.<p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
+This basic test about the use of the C++ programming language is similar to the classic <i>'Hello World'</i> program for testing the correctness of the building infrastructure.<p>In particular, this test consists of the <i>'Example-001'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder) without using other dependencies.<p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
 <li>the <i><code>'cmake'</code></i> folder contains the project file for the <i><A href="http://cmake.org">CMake Building Tool</A></i>;</li>
 <li>the <i><code>'vstudio'</code></i> folder contains the solution file for the <i><A href="http://www.visualstudio.com/">Microsoft Visual Studio (Community Edition 2015)</A></i>;</li>
 <li>the <i><code>'xcode'</code></i> folder contains the project file for the <i><A href="http://developer.apple.com/xcode/">Apple XCode</A></i>.</li></ul><p><hr><p>

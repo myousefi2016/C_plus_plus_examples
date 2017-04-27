@@ -2,7 +2,7 @@
 
 <H3>The 'Example-007' Test</H3>
 
-This basic example about the use of the C++ programming language validates the implementation of a recursive function for computing the factorial of an integer value. This recursive function is defined on a separate header file.<p>In particular, this test consists of the <i>'Example-007'</i> executable file, which is based on several components. These latter are distributed in a few files:<ul>
+This basic test about the use of the C++ programming language validates the implementation of a recursive function for computing the factorial of an integer value. This recursive function is defined on a separate header file.<p>In particular, this test consists of the <i>'Example-007'</i> executable file, which is based on several components. These latter are distributed in a few files:<ul>
 <li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder);</li>
 <li>the <i>'factorial()'</i> recursive function is defined in the <i>'recursive_factorial.h'</i> C++ header file (in the <i><code>'include'</code></i> folder);</li>
 <li>the implementation of the <i>'factorial()'</i> recursive function is stored in the <i>'recursive_factorial.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder).</li></ul><p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>

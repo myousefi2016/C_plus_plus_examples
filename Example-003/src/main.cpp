@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-003' Test.
  **************************************************************************************************/
@@ -37,7 +37,7 @@ int main(int argc,char **argv)
     		else cout<<"\tThere are "<<(argc-1)<<" auxiliary (shell) parameters for this program:"<<endl<<endl;
 			for(int k=1;k<argc;k++) 
 			{ 
-				cout<<"\t\tthe auxiliary parameter #"<<(k-1)<<" is '"<<argv[k]<<"'"; 
+				cout<<"\t\t-) the auxiliary parameter #"<<(k-1)<<" is '"<<argv[k]<<"'"; 
 				if(k<argc-1) { cout<<";"<<endl; }
 				else { cout<<"."<<endl; }
 			}
@@ -48,5 +48,12 @@ int main(int argc,char **argv)
     }
     
     /* All is ok! */
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.ignore(UINT_MAX, '\n');
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;   
 }

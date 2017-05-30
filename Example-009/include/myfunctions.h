@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * myfunctions.h - the header file, where the auxiliary functions for the 'Example-009' Test are defined.
  ******************************************************************************************************************************/

@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-004' Test.
  **************************************************************************************************/
@@ -27,7 +27,7 @@ int main(void)
     cout<<"\tPerforming the automatic C++11 traversal of the 'int' values in the array 'a':"<<endl<<endl;
     for(auto i : a)
     {
-        cout<<"\t\textracted the 'int' value "<<i;
+        cout<<"\t\t-) extracted the 'int' value "<<i;
         if(n<6) cout<<";"<<endl;
         else cout<<"."<<endl;
         cout.flush();
@@ -37,5 +37,12 @@ int main(void)
     /* All is ok! */
     cout<<endl;
     cout.flush();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.ignore(UINT_MAX, '\n');
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;   
 }

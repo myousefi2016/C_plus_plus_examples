@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-005' Test.
  **********************************************************************************************/
@@ -20,5 +20,12 @@ int main(void)
     cout<<endl<<"\tThis is the 'Example-005' Test in the C++ language."<<endl<<endl;
     cout.flush();
 	myfunc();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.ignore(UINT_MAX, '\n');
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
 	return EXIT_SUCCESS;
 }

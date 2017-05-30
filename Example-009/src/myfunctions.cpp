@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * myfunctions.cpp - the source file, where the auxiliary functions for the 'Example-009' Test are implemented.
  ******************************************************************************************************************************/
@@ -37,6 +37,7 @@ char drawShell()
 	cout<<"\t>> ";
 	cout.flush();
 	cin>>ans;
+	cin.ignore(UINT_MAX, '\n');
 	return ans;
 }
 
@@ -52,32 +53,67 @@ int functionsNumber()
 
 void runFunction(char ans)
 {
-	int i,fl;
-	
 	/* If the choice is 'q' or 'Q', then the program ends here! */
-	if( (ans=='q') || (ans=='Q') ) 
+	if ((ans == (int)'q') || (ans == (int)'Q'))
 	{
-		cout<<endl<<"\tThis program is ending correctly ... "<<endl<<endl;
+		cout << endl << "\tThis program is ending correctly ... " << endl << endl;
+		cout << "\tPress the RETURN key to finish ... ";
 		cout.flush();
+		cin.ignore(UINT_MAX, '\n');
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		exit(EXIT_SUCCESS);
 	}
-	
-	/* If we arrive here, the choice is valid. We retrieve the index of the location in 'funcs' */
-	fl=functionsNumber();
-	i=(int)ans-'0';
-	i--;
-	if( (i<0) || (i>=fl) ) 
+
+	/* If we arrive here, we must exclude the null number. */
+	if (ans == '0')
 	{
-		/* A not valid choice has been inserted! */
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CHOICE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout << endl << "\tPLEASE, YOU MUST INSERT A VALID CHOICE!" << endl << endl << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cout << "\tPress the RETURN key to finish ... ";
 		cout.flush();
-		exit(EXIT_FAILURE);
+		cin.ignore(UINT_MAX, '\n');
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
+		exit(EXIT_SUCCESS);
 	}
-	else 
-	{ 
+
+	/* When we arrive here, we must have a not null number.  */
+	int fl = functionsNumber();
+	string s = string() + ans;
+	int i = atoi(s.c_str());
+	if(i == 0)
+	{
+		cout << endl << "\tPLEASE, YOU MUST INSERT A VALID CHOICE!" << endl << endl << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.ignore(UINT_MAX, '\n');
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
+		exit(EXIT_SUCCESS);
+	}
+	else if ((i < 1) || (i > fl))
+	{
+		cout << endl << "\tPLEASE, YOU MUST INSERT A VALID CHOICE!" << endl << endl << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.ignore(UINT_MAX, '\n');
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
+		exit(EXIT_SUCCESS);
+	}
+	else
+	{
 		/* We execute the function in the location 'i' */
 		cout<<endl;
-		funcs[i]();
+		funcs[i-1]();
 		cout<<endl;
 		cout.flush();
 	}

@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-079' Test.
  **************************************************************************************************/
@@ -36,13 +36,20 @@ int main(void)
     cout.flush();
  	for(unsigned int k=0;k<10;k++) 
  	{ 
- 		if(k<9) cout<<"\t\tthe random device 'r' generates the value "<<r()<<";"<<endl; 
- 		else cout<<"\t\tthe random device 'r' generates the value "<<r()<<"."<<endl;
+ 		if(k<9) cout<<"\t\t-) the random device 'r' generates the value "<<r()<<";"<<endl; 
+ 		else cout<<"\t\t-) the random device 'r' generates the value "<<r()<<"."<<endl;
  		cout.flush();
  	}
  	
  	/* All is ok! */
  	cout<<endl;
  	cout.flush();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;
 }

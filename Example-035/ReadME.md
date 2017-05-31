@@ -2,7 +2,7 @@
 
 <H3>The 'Example-035' Test</H3>
 
-This basic test about the use of the C++ programming language shows how exploiting the call-by-reference parameters passing for a custom function, defined on a separate header file.<p>In particular, this test consists of the <i>'Example-035'</i> executable file, which is based on several components. These latter are distributed in a few files:<ul>
+This basic test about the use of the C++ programming language shows how exploiting the <code><i>'call-by-reference'</i></code> parameters passing for a custom function, defined on a separate header file.<p>In particular, this test consists of the <i>'Example-035'</i> executable file, which is based on several components. These latter are distributed in a few files:<ul>
 <li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder);</li>
 <li>the <i>'addThree()'</i> function is defined in the <i>'myheader.h'</i> C++ header file (in the <i><code>'include'</code></i> folder);</li>
 <li>the implementation of the <i>'addThree()'</i> function is stored in the <i>'myheader.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder).</li></ul><p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>

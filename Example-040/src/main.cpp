@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-040' Test.
  **************************************************************************************************/
@@ -29,13 +29,20 @@ int main(void)
     for(int k=0;k<10;k++)
     {
     	number=rand()%100+1;
-    	if(k<9) cout<<"\t\tgenerated the pseudo-random integer value "<<number<<";"<<endl;
-    	else cout<<"\t\tgenerated the pseudo-random integer value "<<number<<"."<<endl;
+    	if(k<9) cout<<"\t\t-) generated the pseudo-random integer value "<<number<<";"<<endl;
+    	else cout<<"\t\t-) generated the pseudo-random integer value "<<number<<"."<<endl;
     	cout.flush();
     }
     
     /* If we arrive here, all is ok */
     cout<<endl;
     cout.flush();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.ignore(UINT_MAX, '\n');
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;
 }

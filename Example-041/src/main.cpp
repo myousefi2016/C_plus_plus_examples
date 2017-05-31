@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-041' Test.
  **************************************************************************************************/
@@ -106,15 +106,33 @@ int main(void)
     	cin>>c;
     	if( (!cin) || ( (c!='N') && (c!='n') && (c!='Y') && (c!='y') ) )
     	{
-    		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CHOICE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+			cout << endl << "\tPLEASE, YOU MUST INSERT A VALID CHOICE!" << endl << endl;
+			cin.clear();
+			cin.ignore(UINT_MAX, '\n');
+			cout<< "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
     		cout.flush();
+			cout << "\tPress the RETURN key to finish ... ";
+			cout.flush();
+			cin.ignore(UINT_MAX, '\n');
+			#ifndef _MSC_VER
+				cout << endl;
+				cout.flush();
+			#endif
     		return EXIT_FAILURE;
     	}
     }	
  	while( (c=='y') || (c=='Y') );
     
     /* If we arrive here, all is ok */
-    cout<<endl;
-    cout.flush();
+	cout << endl;
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.clear();
+	cin.ignore(UINT_MAX, '\n');
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;
 }

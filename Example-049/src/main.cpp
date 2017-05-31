@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-049' Test.
  **************************************************************************************************/
@@ -19,7 +19,7 @@ void print(int* val,unsigned int n,ostream &os=cout)
 {
 	for(unsigned int k=0;k<n;k++) 
 	{ 
-		os<<"\t\tthe 'int' value in position #"<<k<<" is "<<*(val+k);
+		os<<"\t\t-) the 'int' value in position #"<<k<<" is "<<*(val+k);
 		if(k<n-1) os<<";"<<endl;
 		else os<<"."<<endl; 
 	}
@@ -34,7 +34,7 @@ void print(string* val,unsigned int n,ostream &os=cout)
 {
 	for(unsigned int k=0;k<n;k++) 
 	{ 
-		os<<"\t\tthe string in position #"<<k<<" is '"<<*(val+k);
+		os<<"\t\t-) the string in position #"<<k<<" is '"<<*(val+k);
 		if(k<n-1) os<<"';"<<endl;
 		else os<<"'."<<endl; 
 	}
@@ -79,5 +79,13 @@ int main(void)
     string weekdays[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
     cout<<"ok"<<endl<<endl<<"\tThis array (described by a C-like pointer) contains the following strings: "<<endl<<endl;
     print(weekdays,7);
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.clear();
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
 	return EXIT_SUCCESS;
 }

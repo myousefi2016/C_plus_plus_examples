@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-045' Test.
  **************************************************************************************************/
@@ -47,6 +47,15 @@ int main(void)
 	{
 		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
 	
@@ -90,6 +99,15 @@ int main(void)
 	{
 		cout<<endl<<"\tCANNOT OPEN THE 's1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
 	
@@ -112,6 +130,15 @@ int main(void)
 	{
 		cout<<endl<<"\tCANNOT OPEN THE 's1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
 	
@@ -124,5 +151,12 @@ int main(void)
 	if(s1!=s3) cout<<"\tThe internal states of the Shuffle order engines 's1' and 's3' do not coincide (with respect to the operator '!=')"<<endl<<endl;
 	else cout<<"\tThe internal states of the Shuffle order engines 's1' and 's3' coincide (with respect to the operator '!=')"<<endl<<endl;
 	cout.flush();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
 	return EXIT_SUCCESS;
 }

@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-080' Test.
  **************************************************************************************************/
@@ -38,7 +38,7 @@ int main(void)
     cout<<"\tThis archive contains the following "<<movies.size()<<" movies: "<<endl<<endl;
     for(vector<Movie>::iterator it=movies.begin();it!=movies.end();it++,k++) 
     {
-    	cout<<"\tMOVIE #"<<k<<endl;
+		cout << "\tMOVIE #" << k << endl << endl;
     	cout<<(*it);
     	cout<<"\t==============================================================================="<<endl<<endl;
     	cout.flush();
@@ -46,5 +46,12 @@ int main(void)
 
 	/* If we arrive here, everything is ok! */    
 	movies.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.ignore(UINT_MAX, '\n');
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;
 }

@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-039' Test.
  **************************************************************************************************/
@@ -56,8 +56,19 @@ int main(void)
 		cout.flush();
 		if(!cin)
 		{
-			cout<<"\tPLEASE, YOU MUST INSERT YOUR BET AS AN INTEGER VALUE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+			cout << "\tPLEASE, YOU MUST INSERT YOUR BET AS AN INTEGER VALUE!" << endl << endl;
+			
+			cout<< "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
 			cout.flush();
+			cout << "\tPress the RETURN key to finish ... ";
+			cout.flush();
+			cin.clear();
+			cin.ignore(UINT_MAX, '\n');
+			getchar();
+			#ifndef _MSC_VER
+				cout << endl;
+				cout.flush();
+			#endif
 			return EXIT_FAILURE;
 		}
     }
@@ -65,5 +76,14 @@ int main(void)
 	if(jackpot>0) { cout<<"\tYou guess the selected number "<<number<<", and win (virtually) "<<jackpot<<" euro!"<<endl<<endl; }
 	else { cout<<"\tThe jackpot is null, and you do not guess the selected number "<<number<<"!"<<endl<<endl; }
 	cout.flush();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.clear();
+	cin.ignore(UINT_MAX, '\n');
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;
 }

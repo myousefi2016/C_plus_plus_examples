@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-038' Test.
  **************************************************************************************************/
@@ -28,6 +28,15 @@ int main(void)
 	if(!cin)
 	{
 		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x1,y1)'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -38,6 +47,15 @@ int main(void)
 	if(!cin)
 	{
 		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x2,y2)'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		cout.flush();
 		return EXIT_FAILURE;
 	}
@@ -48,5 +66,14 @@ int main(void)
 	cout<<"\tTheir squared (Euclidean) distance is "<<getSquaredDistance(x1,y1,x2,y2)<<"."<<endl;
 	cout<<"\tTheir (Euclidean) distance is "<<getDistance(x1,y1,x2,y2)<<"."<<endl<<endl;
 	cout.flush();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.clear();
+	cin.ignore(UINT_MAX, '\n');
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;
 }

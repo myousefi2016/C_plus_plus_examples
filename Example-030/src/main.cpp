@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-030' Test.
  **************************************************************************************************/
@@ -94,5 +94,12 @@ int main(void)
 	cout<<"\t-) has "<<(long double)std::numeric_limits<long double>::epsilon()<<" as the machine epsilon, that is, the difference between 1.0 and the next value, representable as a 'long double' value;"<<endl;
 	cout<<"\t-) has "<<(long double)std::numeric_limits<long double>::round_error()<<" as the maximum rounding error;"<<endl;
 	cout<<"\t-) has "<<(long double)std::numeric_limits<long double>::denorm_min()<<" as the minimum positive subnormal value."<<endl<<endl;
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.ignore(UINT_MAX, '\n');
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
 	return EXIT_SUCCESS;
 }

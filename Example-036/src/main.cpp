@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-036' Test.
  **************************************************************************************************/
@@ -27,8 +27,18 @@ int main(void)
 	cin>>a;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE INTEGER VALUE FOR THE VARIABLE 'a'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout << endl << "\tPLEASE, YOU MUST INSERT THE INTEGER VALUE FOR THE VARIABLE 'a'!" << endl << endl;
+		cout<< "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
 	
@@ -38,7 +48,15 @@ int main(void)
 	if(!cin)
 	{
 		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE INTEGER VALUE FOR THE VARIABLE 'b'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		cout << "\tPress the RETURN key to finish ... ";
 		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
 
@@ -48,6 +66,14 @@ int main(void)
 	addThree(a,b);
 	cout<<"\tThe final integer value for the variable 'a' in the 'main()' function is "<<a<<"."<<endl;
 	cout<<"\tThe final integer value for the variable 'b' in the 'main()' function is "<<b<<"."<<endl<<endl;
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.clear();
+	cin.ignore(UINT_MAX, '\n');
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
 	return EXIT_SUCCESS;
 }
-

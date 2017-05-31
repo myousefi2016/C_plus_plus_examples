@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-032' Test.
  **************************************************************************************************/
@@ -20,8 +20,15 @@ int main(void)
     cout.flush();
     
     /* TASK #1 - looking for the odd numbers in the '[1,100]' range. */
-	for(int n=1;n<=100;n++) { if( (n%2)!=0 ) cout<<"\tFound the odd number "<<n<<"."<<endl; }
+	for(int n=1;n<=100;n++) { if( (n%2)!=0 ) cout<<"\t-) Found the odd number "<<n<<"."<<endl; }
 	cout<<endl;
 	cout.flush();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.ignore(UINT_MAX, '\n');
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;
 }

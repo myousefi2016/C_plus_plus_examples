@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * myvariadic.cpp - the source file, where the auxiliary functions for the 'Example-010' Test are implemented.
  ******************************************************************************************************************************/
@@ -24,8 +24,8 @@ double average(unsigned int count,...)
 		double p=va_arg(vl,double);
 		
 		/* Now, we extract the parameter #i */
-		if(i<count-1) fprintf(stdout,"\t\tthe parameter #%d is %3f;\n",i,p);
-		else fprintf(stdout,"\t\tthe parameter #%d is %3f.\n",i,p);
+		if(i<count-1) fprintf(stdout,"\t\t-) the parameter #%d is %3f;\n",i,p);
+		else fprintf(stdout,"\t\t-) the parameter #%d is %3f.\n",i,p);
 		fflush(stdout);
 		tot+=p;
 	}

@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-050' Test.
  **************************************************************************************************/
@@ -58,6 +58,15 @@ int main(void)
 		/* An error occurred! */
 		cout<<endl<<"\tPLEASE, YOY MUST INSERT THE POSITIVE AND NOT NULL INTEGER VALUES, CORRESPONDING TO THE WIDTH (w) AND THE HEIGHT (h) OF A RECTANGLE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
 	else
@@ -79,6 +88,15 @@ int main(void)
 		/* An error occurred! */
 		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE POSITIVE AND NOT NULL FLOATING POINT VALUE, CORRESPONDING TO THE RADIUS (R) OF A CIRCLE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
 	else
@@ -99,6 +117,15 @@ int main(void)
 		/* An error occurred! */
 		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE FIRST STRING 's0' TO BE CONCATENATED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
 	
@@ -110,6 +137,15 @@ int main(void)
 		/* An error occurred! */
 		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE FIRST STRING 's1' TO BE CONCATENATED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
 	
@@ -120,6 +156,15 @@ int main(void)
 	cout<<"\tThe final string 's=s0+s1' is '"<<stot<<"'"<<"."<<endl<<endl;
 	cout.flush();
 
-	/* If we arrive here, all is ok! */    
+	/* If we arrive here, all is ok! */
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.clear();
+	cin.ignore(UINT_MAX, '\n');
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;
 }

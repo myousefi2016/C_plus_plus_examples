@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-054' Test.
  **************************************************************************************************/
@@ -27,20 +27,38 @@ int main(void)
     /* TASK #1 - insert the net price for the item of interest. */
     cout<<"\tPlease, insert the (positive) price for the item of interest (in US dollars): ";
     cin>>price;
-    if( (!price) || (price<=0.0) )
+    if( (!cin) || (price<=0.0) )
     {
     	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID PRICE FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
     	return EXIT_FAILURE;
     }
     
     /* TASK #2 - insert the customer payment. */
     cout<<"\tPlease, insert the (positive) customer payment for the item of interest (in US dollars): ";
     cin>>payment;
-    if( (!price) || (payment<=0.0) || (payment<price) )
+    if( (!cin) || (payment<=0.0) || (payment<price) )
     {
     	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CUSTOMER PAYMENT FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
     	cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
     	return EXIT_FAILURE;
     }
     
@@ -59,6 +77,15 @@ int main(void)
     }
     
     /* If we arrive here, all is ok! */
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.clear();
+	cin.ignore(UINT_MAX, '\n');
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     cout.flush();
     return EXIT_SUCCESS;
 }

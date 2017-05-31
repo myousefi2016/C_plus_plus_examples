@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-055' Test.
  **************************************************************************************************/
@@ -59,6 +59,13 @@ int main(void)
   		/* If we arrive here, all is ok! */
   		cout<<"ok"<<endl<<endl;
     	cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
     	return EXIT_SUCCESS;
   	}
   	else
@@ -66,6 +73,13 @@ int main(void)
   		/* If we arrive here, an error occurred! */
   		cout<<endl<<endl<<"\tAN ERROR OCCURRED, AND THIS PROGRAM IS CLOSING ..."<<endl<<endl;
   		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
   		return EXIT_FAILURE;
   	}
 }

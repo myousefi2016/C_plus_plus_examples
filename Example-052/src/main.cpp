@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-052' Test.
  **************************************************************************************************/
@@ -40,6 +40,15 @@ int main(void)
 		{
 			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID MEMBERSHIP FARE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
+			cout << "\tPress the RETURN key to finish ... ";
+			cout.flush();
+			cin.clear();
+			cin.ignore(UINT_MAX, '\n');
+			getchar();
+			#ifndef _MSC_VER
+				cout << endl;
+				cout.flush();
+			#endif
 			return EXIT_FAILURE;
 		}
 		
@@ -56,6 +65,15 @@ int main(void)
 		{
 			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID NUMBER OF THE MONTHS!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
+			cout << "\tPress the RETURN key to finish ... ";
+			cout.flush();
+			cin.clear();
+			cin.ignore(UINT_MAX, '\n');
+			getchar();
+			#ifndef _MSC_VER
+				cout << endl;
+				cout.flush();
+			#endif
 			return EXIT_FAILURE;
 		}
 		
@@ -90,5 +108,14 @@ int main(void)
 	}
 	while(menuChoice != 4);
 	cout<<endl<<"\tThis program is closing correctly!"<<endl<<endl;
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.clear();
+	cin.ignore(UINT_MAX, '\n');
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
 	return EXIT_SUCCESS;    
 }

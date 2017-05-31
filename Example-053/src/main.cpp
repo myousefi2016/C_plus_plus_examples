@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), May 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-053' Test.
  **************************************************************************************************/
@@ -37,6 +37,15 @@ int main(void)
 	{
 		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID ANSWER!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
 	}
     
@@ -52,6 +61,15 @@ int main(void)
     	{
     		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID NUMBER OF THE DAYS!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
+			cout << "\tPress the RETURN key to finish ... ";
+			cout.flush();
+			cin.clear();
+			cin.ignore(UINT_MAX, '\n');
+			getchar();
+			#ifndef _MSC_VER
+				cout << endl;
+				cout.flush();
+			#endif
 			return EXIT_FAILURE;
     	}
     	
@@ -62,6 +80,15 @@ int main(void)
     	{
     		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID DAILY RATE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 			cout.flush();
+			cout << "\tPress the RETURN key to finish ... ";
+			cout.flush();
+			cin.clear();
+			cin.ignore(UINT_MAX, '\n');
+			getchar();
+			#ifndef _MSC_VER
+				cout << endl;
+				cout.flush();
+			#endif
 			return EXIT_FAILURE;
     	}
     	
@@ -78,6 +105,15 @@ int main(void)
     {
     	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CHARGE FOR THE MEDICAL CARES!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
     }
     
@@ -88,6 +124,15 @@ int main(void)
     {
     	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CHARGE FOR THE LABORATORY!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
 		cout.flush();
+		cout << "\tPress the RETURN key to finish ... ";
+		cout.flush();
+		cin.clear();
+		cin.ignore(UINT_MAX, '\n');
+		getchar();
+		#ifndef _MSC_VER
+			cout << endl;
+			cout.flush();
+		#endif
 		return EXIT_FAILURE;
     }
     
@@ -96,5 +141,14 @@ int main(void)
     if(admitted) cout<<"\tThe total charge for receiving the medical attentions is "<<calculateCharge(numOfDays,dailyCharge,medCharges,labCharges)<<" US dollars."<<endl<<endl;
     else cout<<"\tThe total charge for receiving the medical attentions is "<<calculateCharge(medCharges,labCharges)<<" US dollars."<<endl<<endl;
     cout.flush();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.clear();
+	cin.ignore(UINT_MAX, '\n');
+	getchar();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
     return EXIT_SUCCESS;
 }

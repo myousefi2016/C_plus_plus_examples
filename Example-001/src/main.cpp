@@ -10,8 +10,6 @@
 
 #include <iostream>
 #include <cstdlib>
-#include <climits>
-#include <string>
 #include <cstdio>
 using namespace std;
 

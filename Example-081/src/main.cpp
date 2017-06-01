@@ -11,6 +11,8 @@
 #include <cstdlib>
 #include <iostream>
 #include <vector>
+#include <climits>
+#include <cstdio>
 #include "house.h"
 using namespace std;
 
@@ -45,7 +47,7 @@ int main(void)
     houses.clear();
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	cin.ignore(UINT_MAX, '\n');
+	getchar();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();

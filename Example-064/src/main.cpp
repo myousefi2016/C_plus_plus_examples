@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-064' Test.
  **************************************************************************************************/
@@ -73,10 +73,10 @@ int main(void)
 	n = (uint)m0.count("Student #1");
 	if (n == 0) { cout << "\tThe multimap 'm0' contains no association, involving the student 'Student #1'." << endl; }
 	else { cout << "\tThe multimap 'm0' contains (at least) one association, involving the student 'Student #1' (in particular " << n << " associations)." << endl; }
-	cout << "\tRetrieving the lower bound of the student 'Student #1' in the multimap 'm1' ... ";
+	cout << "\tRetrieving the lower bound of the student 'Student #1' in the multimap 'm0' ... ";
 	auto itl = m0.lower_bound("Student #1");
 	cout << "ok. Found the student '" << itl->first << "', associated with the test mark " << itl->second << "." << endl;
-	cout << "\tRetrieving the upper bound of the student 'Student #2' in the multimap 'm1' ... ";
+	cout << "\tRetrieving the upper bound of the student 'Student #2' in the multimap 'm0' ... ";
 	auto itu = m0.upper_bound("Student #2");
 	cout << "ok. Found the student '" << itu->first << "', associated with the test mark " << itu->second << "." << endl;
 	cout << endl;
@@ -169,7 +169,7 @@ int main(void)
 	if (m3.empty() == true) cout << "\tThe new multimap 'm3' contains no association between the students and their tests marks." << endl;
 	else cout<<"\tThe new multimap 'm3' contains "<<m3.size()<<" associations between the students and their tests marks."<<endl;
 	if(m1.empty()==true) cout<<"\tThe existing multimap 'm1' contains no association between the students and their tests marks."<<endl;
-	else cout<<"\tThe existing multimap 'm1' contains "<<m1.size()<<" associations the students and their tests marks."<<endl;
+	else cout<<"\tThe existing multimap 'm1' contains "<<m1.size()<<" associations between the students and their tests marks."<<endl;
 	cout << "\tSwapping the content of the multimaps 'm1' and 'm3' ... ";
 	m1.swap(m3);
 	cout<<"ok"<<endl;

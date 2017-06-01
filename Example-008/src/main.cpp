@@ -3,15 +3,30 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-008' Test.
  **********************************************************************************************/
 
 #include "myfunctions.h"
 #include <cstdlib>
+#include <limits>
 #include <iostream>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-008'</i> Test.
 int main(void)
@@ -29,15 +44,7 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID LENGTH 'd' (POSITIVE AND NOT NULL) FOR THE SIDE OF A CUBE!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
-		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		pause();
 		return EXIT_FAILURE;
 	}
 	else
@@ -47,7 +54,6 @@ int main(void)
 		cout.flush();
 		cout << "\tThe volume for the cube of interest is " << vc << "." << endl << endl;
 		cout.flush();
-		cin.ignore(UINT_MAX, '\n');
 	}
 
 	/* TASK #2 - compute the volume for a cylinder. */
@@ -57,19 +63,10 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID LENGTH 'r' (POSITIVE AND NOT NULL) FOR THE RADIUS OF THE CIRCULAR BASIS IN A CYLINDER!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
-		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		pause();
 		return EXIT_FAILURE;
 	}
-	else { cin.ignore(UINT_MAX, '\n'); }
-
+	
 	/* The radius 'r' is ok. Now, we insert the height 'h' of a cylinder. */
 	cout << "\tYou inserted the valid length 'r'=" << r << " for the radius of the circular basis in a cylinder." << endl;
 	cout << "\tPlease, insert the height 'h' (positive and not null) of a cylinder: ";
@@ -78,25 +75,16 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID HEIGHT 'h' (POSITIVE AND NOT NULL) OF A CYLINDER!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
-		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		pause();
 		return EXIT_FAILURE;
 	}
-	else { cin.ignore(UINT_MAX, '\n'); }
 
 	/* All parameters are correct! */
 	cout << "\tYou inserted the valid length 'h'=" << r << " for the height of a cylinder." << endl;
 	vc = volume(r, h);
 	cout << "\tThe volume for the cylinder of interest is " << vc << "." << endl << endl;
 	cout.flush();
-
+	
 	/* TASK #3 - compute the volume of a cuboid. */
 	cout << "\tPlease, insert the width 'a' (positive and not null) of a cuboid: ";
 	cin >> d;
@@ -104,18 +92,9 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID WIDTH 'a' (POSITIVE AND NOT NULL) OF A CUBOID!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
-		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		pause();
 		return EXIT_FAILURE;
 	}
-	else { cin.ignore(UINT_MAX, '\n'); }
 
 	/* The width is ok. Now, we insert the depth 'b' of a cuboid. */
 	cout << "\tYou inserted the valid length 'a'=" << d << " for the width of a cuboid." << endl;
@@ -125,20 +104,11 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID DEPTH 'b' (POSITIVE AND NOT NULL) OF A CUBOID!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
-		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		pause();
 		return EXIT_FAILURE;
 	}
-	else { cin.ignore(UINT_MAX, '\n'); }
-    
-    /* The depth is ok. Now, we insert the height 'c' of a cuboid. */
+
+	/* The depth is ok. Now, we insert the height 'c' of a cuboid. */
    	cout<<"\tYou inserted the valid length 'b'="<<r<<" for the depth of a cuboid."<<endl;
     cout<<"\tPlease, insert the height 'c' (positive and not null) of a cuboid: ";
     cin>>h;
@@ -146,29 +116,20 @@ int main(void)
     {
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID HEIGHT 'c' (POSITIVE AND NOT NULL) OF A CUBOID!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
-		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		pause();
 		return EXIT_FAILURE;
-    }
-	else { cin.ignore(UINT_MAX, '\n'); }
-    
-    /* All parameters are correct! */
+	}
+
+	 /* All parameters are correct! */
     cout<<"\tYou inserted the valid length 'c'="<<h<<" for the height of a cuboid."<<endl;
     vc=volume(d,r,h);
     cout<<"\tThe volume for the cuboid of interest is "<<vc<<"."<<endl<<endl;
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	getchar();
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
-    return EXIT_SUCCESS;
+
+	
+	
+	
+
+	pause();
+	return EXIT_SUCCESS;
 }
+

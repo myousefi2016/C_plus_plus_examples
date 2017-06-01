@@ -3,13 +3,12 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-009' Test.
  **********************************************************************************************/
 
 #include "myfunctions.h"
-#include <cstdlib>
 #include <iostream>
 using namespace std;
 
@@ -19,22 +18,16 @@ int main(void)
 	/* This is the 'Example-009' Test, which offers an elementary shell for invoking a custom collection of functions (upon request). */
 	cout<<endl<<"\tThis is the 'Example-009' Test in the C++ language."<<endl<<endl;
 	cout.flush();
-    
-    /* TASK #1 - We start the main loop .. */
+
+	/* TASK #1 - We start the main loop .. */
     while(true)
     {
     	char ans=drawShell();
 		runFunction(ans);
     }
-    
-    /* Not useful! */
-	cout.flush();
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	cin.ignore(UINT_MAX, '\n');
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
-	return EXIT_SUCCESS;    
+
+	/* Not useful! */
+	pause();
+	return EXIT_SUCCESS;
 }
+

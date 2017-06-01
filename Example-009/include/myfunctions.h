@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * myfunctions.h - the header file, where the auxiliary functions for the 'Example-009' Test are defined.
  ******************************************************************************************************************************/
@@ -24,5 +24,9 @@
 	
 	/// This function retrieves the number of valid functions in 'funcs'.
 	int functionsNumber();
+
+	/// This function simulates a pause while this test runs.
+	void pause();
 	
 #endif
+

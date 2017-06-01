@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * recursive_factorial.h - the header file, where the auxiliary function for the 'Example-007' Test is defined.
  ******************************************************************************************************************************/

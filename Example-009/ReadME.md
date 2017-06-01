@@ -2,13 +2,13 @@
 
 <H3>The 'Example-009' Test</H3>
 
-This basic test about the use of the C++ programming language validates the implementation of several functions, defined on a separate header file.<p>In particular, this test consists of the <i>'Example-009'</i> executable file, which is based on several components. These latter are distributed in a few files:<ul>
+This basic test about the use of the C++ programming language validates the implementation of several functions, defined on a separate header file. In this context, several capabilities, introduced by the C++11 standard, are exploited.<p>In particular, this test consists of the <i>'Example-009'</i> executable file, which is based on several components. These latter are distributed in a few files:<ul>
 <li>the <i>'main()'</i> function is implemented in the <i>'main.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder);</li>
 <li>the <i>custom</i> functions of interest are defined in the <i>'myfunctions.h'</i> C++ header file (in the <i><code>'include'</code></i> folder);</li>
 <li>the implementation for the <i>custom</i> functions of interest is stored in the <i>'myfunctions.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder).</li></ul><p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
 <li>the <i><code>'cmake'</code></i> folder contains the project file for the <i><A href="http://cmake.org">CMake Building Tool</A></i>;</li>
 <li>the <i><code>'vstudio'</code></i> folder contains the solution file for the <i><A href="http://www.visualstudio.com/">Microsoft Visual Studio (Community Edition 2015)</A></i>;</li>
-<li>the <i><code>'xcode'</code></i> folder contains the project file for the <i><A href="http://developer.apple.com/xcode/">Apple XCode</A></i>.</li></ul><p><hr><p>
+<li>the <i><code>'xcode'</code></i> folder contains the project file for the <i><A href="http://developer.apple.com/xcode/">Apple XCode</A></i>.</li></ul><p><p><table border=1 width=100%><tr><td><p><b>VERY IMPORTANT:</b><p>It is clear that this test can be built and run ONLY if your C++ compiler is a C++11-compliant compiler. The most recent versions of the compilers in the current literature are C++11-compliant.<p></td></tr></table><p><hr><p>
 
 <h4>Instructions for building this test with the <i><A href="http://cmake.org">CMake Building Tool</A></i></h4>
 

@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-080' Test.
  **************************************************************************************************/
@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <vector>
+#include <cstdio>
 #include "movie.h"
 using namespace std;
 
@@ -48,7 +49,7 @@ int main(void)
 	movies.clear();
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	cin.ignore(UINT_MAX, '\n');
+	getchar();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();

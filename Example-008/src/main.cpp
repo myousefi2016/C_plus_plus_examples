@@ -120,15 +120,10 @@ int main(void)
 		return EXIT_FAILURE;
 	}
 
-	 /* All parameters are correct! */
+	/* All parameters are correct! */
     cout<<"\tYou inserted the valid length 'c'="<<h<<" for the height of a cuboid."<<endl;
     vc=volume(d,r,h);
     cout<<"\tThe volume for the cuboid of interest is "<<vc<<"."<<endl<<endl;
-
-	
-	
-	
-
 	pause();
 	return EXIT_SUCCESS;
 }

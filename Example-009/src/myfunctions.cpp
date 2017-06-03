@@ -7,12 +7,10 @@
  *
  * myfunctions.cpp - the source file, where the auxiliary functions for the 'Example-009' Test are implemented.
  ******************************************************************************************************************************/
-
 #include <iostream>
+#include "myfunctions.h"
 #include <limits>
 #include <cstdlib>
-#include <cstddef>
-#include "myfunctions.h"
 using namespace std;
 
 void pause()
@@ -72,13 +70,16 @@ void runFunction(char ans)
 	if ((ans == (int)'q') || (ans == (int)'Q'))
 	{
 		cout << endl << "\tThis program is ending correctly ... " << endl << endl;
-		pause();exit(EXIT_SUCCESS);
+		cin.clear();
+		pause();
+		exit(EXIT_SUCCESS);
 	}
 
 	/* If we arrive here, we must exclude the null number. */
 	if (ans == '0')
 	{
 		cout << endl << "\tPLEASE, YOU MUST INSERT A VALID CHOICE!" << endl << endl << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cin.clear();
 		pause();
 		exit(EXIT_FAILURE);
 	}
@@ -90,12 +91,14 @@ void runFunction(char ans)
 	if(i == 0)
 	{
 		cout << endl << "\tPLEASE, YOU MUST INSERT A VALID CHOICE!" << endl << endl << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cin.clear();
 		pause();
 		exit(EXIT_FAILURE);
 	}
 	else if ((i < 1) || (i > fl))
 	{
 		cout << endl << "\tPLEASE, YOU MUST INSERT A VALID CHOICE!" << endl << endl << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cin.clear();
 		pause();
 		exit(EXIT_FAILURE);
 	}

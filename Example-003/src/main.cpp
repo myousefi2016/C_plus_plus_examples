@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <cstdlib>
-#include <cstdio>
 using namespace std;
 
 /// The main function for the <i>'Example-003'</i> Test.
@@ -51,11 +50,11 @@ int main(int argc,char **argv)
     /* All is ok! */
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
-    return EXIT_SUCCESS;   
+	return EXIT_SUCCESS;
 }
 

@@ -8,9 +8,8 @@
  * main.cpp - the source file, implementing the main function for the 'Example-006' Test.
  **********************************************************************************************/
 
-#include <cstdlib>
 #include <iostream>
-#include <cstdio>
+#include <cstdlib>
 using namespace std;
 
 /// The main function for the <i>'Example-006'</i> Test.
@@ -54,7 +53,8 @@ int main(void)
     	
     /* All is ok! */
 	cout << "\tPress the RETURN key to finish ... ";
-	getchar();
+	cout.flush();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();

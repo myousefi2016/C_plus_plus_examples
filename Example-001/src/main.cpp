@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <cstdlib>
-#include <cstdio>
 using namespace std;
 
 /// The main function for the <i>'Example-001'</i> Test.
@@ -20,11 +19,11 @@ int main(void)
     cout<<endl<<"\tThis is the 'Example-001' Test in the C++ language."<<endl<<endl;
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
-    return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
 

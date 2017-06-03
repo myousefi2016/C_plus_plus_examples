@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <cstdlib>
-#include <cstdio>
 using namespace std;
 
 /// The main function for the <i>'Example-004'</i> Test.
@@ -30,21 +29,19 @@ int main(void)
     {
         cout<<"\t\t-) extracted the 'int' value "<<i;
         if(n<6) cout<<";"<<endl;
-        else cout<<"."<<endl;
+        else cout<<"."<<endl<<endl;
         cout.flush();
         n=n+1;
     }
     
     /* All is ok! */
-    cout<<endl;
-    cout.flush();
-	cout << "\tPress the RETURN key to finish ... ";
+    cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
-    return EXIT_SUCCESS;   
+	return EXIT_SUCCESS;  
 }
 

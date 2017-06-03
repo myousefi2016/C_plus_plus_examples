@@ -11,7 +11,6 @@
 #include "myfunc.h" 
 #include <cstdlib>
 #include <iostream>
-#include <cstdio>
 using namespace std;
 
 /// The main function for the <i>'Example-005'</i> Test.
@@ -22,7 +21,8 @@ int main(void)
     cout.flush();
 	myfunc();
 	cout << "\tPress the RETURN key to finish ... ";
-	getchar();
+	cout.flush();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();

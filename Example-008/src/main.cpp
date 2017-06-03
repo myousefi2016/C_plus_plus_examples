@@ -44,6 +44,8 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID LENGTH 'd' (POSITIVE AND NOT NULL) FOR THE SIDE OF A CUBE!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cin.clear();
+		cin.clear();
 		pause();
 		return EXIT_FAILURE;
 	}
@@ -63,6 +65,8 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID LENGTH 'r' (POSITIVE AND NOT NULL) FOR THE RADIUS OF THE CIRCULAR BASIS IN A CYLINDER!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cin.clear();
+		cin.clear();
 		pause();
 		return EXIT_FAILURE;
 	}
@@ -75,6 +79,8 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID HEIGHT 'h' (POSITIVE AND NOT NULL) OF A CYLINDER!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cin.clear();
+		cin.clear();
 		pause();
 		return EXIT_FAILURE;
 	}
@@ -92,6 +98,8 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID WIDTH 'a' (POSITIVE AND NOT NULL) OF A CUBOID!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cin.clear();
+		cin.clear();
 		pause();
 		return EXIT_FAILURE;
 	}
@@ -116,6 +124,8 @@ int main(void)
     {
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID HEIGHT 'c' (POSITIVE AND NOT NULL) OF A CUBOID!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cin.clear();
+		cin.clear();
 		pause();
 		return EXIT_FAILURE;
 	}

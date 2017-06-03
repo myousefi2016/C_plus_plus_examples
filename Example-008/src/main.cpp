@@ -112,6 +112,8 @@ int main(void)
 	{
 		cout << endl << "\tPLEASE, YOU MUST ENTER THE VALID DEPTH 'b' (POSITIVE AND NOT NULL) OF A CUBOID!" << endl << endl;
 		cout << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+		cin.clear();
+		cin.clear();
 		pause();
 		return EXIT_FAILURE;
 	}

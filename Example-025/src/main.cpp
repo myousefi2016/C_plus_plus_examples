@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-025' Test.
  **************************************************************************************************/
@@ -96,10 +96,11 @@ int main(void)
 	cout<<"\t-) has "<<(char32_t)std::numeric_limits<char32_t>::denorm_min()<<" as the minimum positive subnormal value."<<endl<<endl;
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	cin.ignore(UINT_MAX, '\n');
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
+

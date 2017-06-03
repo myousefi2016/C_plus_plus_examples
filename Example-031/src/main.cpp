@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-031' Test.
  **************************************************************************************************/
@@ -102,18 +102,17 @@ int main(void)
 		cout<<"\tAfter including the 'myheader.h' file, the 'AUX_DEFINE' macro is defined, and its value is "<<AUX_DEFINE<<"."<<endl;
 	#endif
 	#ifndef AUX
-		cout<<"\tAfter including the 'myheader.h' file, the 'AUX' macro is not defined."<<endl;
+		cout<<"\tAfter including the 'myheader.h' file, the 'AUX' macro is not defined."<<endl<<endl;
 	#else
-		cout<<"\tAfter including the 'myheader.h' file, the 'AUX' macro is defined."<<endl;
+		cout<<"\tAfter including the 'myheader.h' file, the 'AUX' macro is defined."<<endl<<endl;
 	#endif
-	cout<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	cin.ignore(UINT_MAX, '\n');
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
-	return EXIT_SUCCESS;    
+    return EXIT_SUCCESS;    
 }
+

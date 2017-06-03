@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-034' Test.
  **************************************************************************************************/
@@ -48,13 +48,12 @@ int main(void)
     cout<<"\tInvoking the 'computeArea()' function by passing both the custom parameter 'w'=5 and the custom parameter 'h'=10."<<endl;
 	a = computeArea(5,10);
 	cout<<"\tThe area of interest 'w*h' is "<<a<<"."<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }

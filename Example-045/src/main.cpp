@@ -14,6 +14,7 @@
 #include <fstream>
 #include <chrono>
 #include <random>
+#include <string>
 using namespace std;
 
 /// This function simulates a pause while this test runs.

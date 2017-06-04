@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-055' Test.
  **************************************************************************************************/
@@ -14,6 +14,7 @@
 #include <errno.h>
 #include <cstdlib>
 #include <float.h>
+#include <limits>
 using namespace std;
 #pragma fenv_access (on)
 
@@ -35,6 +36,14 @@ bool verifyState()
 	return ris;
 }
 
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	
+}
+
 /// The main function for the <i>'Example-055'</i> Test.
 int main(void)
 {
@@ -54,14 +63,12 @@ int main(void)
     cout<<endl;
     cout<<"\tComputing the 'log(0)' value ... ";
   	aaa=log(0);
-  	if(verifyState())
-  	{
-  		/* If we arrive here, all is ok! */
-  		cout<<"ok"<<endl<<endl;
-    	cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
+  	if(verifyState()) 
+	{ 
+		cout<<"ok"<<endl<<endl;
+    	cout << "\tPress the RETURN key to finish ... ";
 		cout.flush();
-		getchar();
+		cin.get();
 		#ifndef _MSC_VER
 			cout << endl;
 			cout.flush();
@@ -70,12 +77,10 @@ int main(void)
   	}
   	else
   	{
-  		/* If we arrive here, an error occurred! */
   		cout<<endl<<endl<<"\tAN ERROR OCCURRED, AND THIS PROGRAM IS CLOSING ..."<<endl<<endl;
-  		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
+  		cout << "\tPress the RETURN key to finish ... ";
 		cout.flush();
-		getchar();
+		cin.get();
 		#ifndef _MSC_VER
 			cout << endl;
 			cout.flush();
@@ -83,3 +88,4 @@ int main(void)
   		return EXIT_FAILURE;
   	}
 }
+

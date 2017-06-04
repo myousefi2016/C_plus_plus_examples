@@ -3,18 +3,32 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-045' Test.
  **************************************************************************************************/
- 
+
+#include <cstdlib>
+#include <limits>
 #include <iostream>
 #include <fstream>
 #include <chrono>
 #include <random>
-#include <cstdlib>
-#include <string>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-045'</i> Test.
 int main(void)
@@ -27,8 +41,8 @@ int main(void)
 	/* This is the 'Example-045' Test, where the generation of several pseudo-random values through a 'Shuffle order engine' is tested! */
     cout<<endl<<"\tThis is the 'Example-045' Test in the C++ language."<<endl<<endl;
     cout.flush();
-    
-    /* TASK #1 - we construct a Shuffle order engine, such that its seed is automatically generated from the system clock. */
+
+	/* TASK #1 - we construct a Shuffle order engine, such that its seed is automatically generated from the system clock. */
 	cout<<"\tConstructing a Shuffle order engine 's1', such that its seed is automatically generated from the current system clock ... ";
 	sees1 = (unsigned int)std::chrono::system_clock::now().time_since_epoch().count();
 	std::knuth_b s1(sees1);
@@ -45,20 +59,13 @@ int main(void)
 	getline(cin,str);
 	if(!cin)
 	{
-		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* TASK #3 - if we arrive here, then we can construct a new Shuffle order engine 's2' and update the existing Shuffle order engine 's1' with the new seed! */
 	cout<<endl<<"\tConstructing another Shuffle order engine 's2' (based on the new seed) ... ";
 	cout.flush();
@@ -91,26 +98,21 @@ int main(void)
 	if(s1!=s2) cout<<"\tThe internal states of the Shuffle order engines 's1' and 's2' do not coincide (with respect to the operator '!=')"<<endl<<endl;
 	else cout<<"\tThe internal states of the Shuffle order engines 's1' and 's2' coincide (with respect to the operator '!=')"<<endl<<endl;
 	cout.flush();
-	
+
 	/* TASK #5 - we validate the serialization operators! */
 	cout<<"\tExporting the internal state of the Shuffle order engine 's1' on the 's1.txt' file (with respect to the operator '<<') ... ";
 	out.open("s1.txt");
 	if(!out)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 's1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		out.clear();
+		out.close();
+		cout<<endl<<"\tCANNOT OPEN THE 's1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* The 's1.txt' file is open! */
 	out<<s1;
 	out.close();
@@ -128,20 +130,15 @@ int main(void)
 	in.open("s1.txt");
 	if(!in)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 's1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		in.clear();
+		in.close();
+		cout<<endl<<"\tCANNOT OPEN THE 's1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* Saving everything from the 's1.txt' file into the Shuffle order engine 's3'. */
 	in>>s3;
 	in.close();
@@ -149,14 +146,14 @@ int main(void)
 	if(s1==s3) cout<<"\tThe internal states of the Shuffle order engines 's1' and 's3' coincide (with respect to the operator '==')"<<endl;
 	else cout<<"\tThe internal states of the Shuffle order engines 's1' and 's3' do not coincide (with respect to the operator '==')"<<endl;
 	if(s1!=s3) cout<<"\tThe internal states of the Shuffle order engines 's1' and 's3' do not coincide (with respect to the operator '!=')"<<endl<<endl;
-	else cout<<"\tThe internal states of the Shuffle order engines 's1' and 's3' coincide (with respect to the operator '!=')"<<endl<<endl;
-	cout.flush();
+	else cout<<"\tThe internal states of the Shuffle order engines 's1' and 's3' coincide (with respect to the operator '!=')"<<endl<<endl;		
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
-	#endif
+	#endif	
 	return EXIT_SUCCESS;
 }
+

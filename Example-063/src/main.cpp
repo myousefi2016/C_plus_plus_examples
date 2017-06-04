@@ -7,19 +7,17 @@
  *
  * main.cpp - the source file, implementing the main function for the 'Example-063' Test.
  **************************************************************************************************/
-
 #include <cstdlib>
 #include <string>
 #include <iostream>
 #include <map>
-#include <algorithm>
-using namespace std;
 #ifndef uint
 	typedef unsigned int uint;
 #endif
 #ifdef _MSC_VER
 	#include <functional>
 #endif
+using namespace std;
 
 /// This function is a custom function for comparing the 'string' keys.
 bool compareStrings(const string& a,const string& b) { return (a<b); }
@@ -79,7 +77,7 @@ int main(void)
 	cout << endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -104,7 +102,7 @@ int main(void)
 	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -143,7 +141,7 @@ int main(void)
 	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -164,7 +162,7 @@ int main(void)
 	else cout << "\tThe existing map 'm1' contains " << m1.size() << " associations between a 'string' and an 'uint' value." << endl << endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 
 	/* TASK #5 - Allocating a new map 'm4' by using the custom function 'compareString()'. */
@@ -201,7 +199,7 @@ int main(void)
 	/* TASK #6 - allocating a new C-like array by using the allocator of the map 'm4' */
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout << "\tAllocating a new C-like array of 6 locations (containing the pairs 'string'/'uint') by using the allocator of the map 'm4' ... ";
 	std::pair<const string, uint>* p = m4->get_allocator().allocate(6);
@@ -229,7 +227,7 @@ int main(void)
 	p = nullptr;
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 
 	/* TASK #7 - Allocating a new map 'm5' by using a custom function for sorting the keys. */
@@ -266,7 +264,7 @@ int main(void)
 	/* TASK 8 - Deallocating all maps, used in this test. */
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout << "\tDeallocating all maps and other auxiliary data structures in this test ... ";
 	m0.clear();
@@ -277,10 +275,8 @@ int main(void)
 	m4 = nullptr;
 	m5.clear();
 	cout << "ok" << endl << endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();

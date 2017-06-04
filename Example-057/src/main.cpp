@@ -3,16 +3,18 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-057' Test.
  **************************************************************************************************/
- 
+
 #include <iostream>
 #include <cfenv>
 #include <cmath>
 #include <cerrno>
 #include <cstdlib>
+#include <climits>
+#include <limits>
 using namespace std;
 #define PI 3.14159265
 #pragma fenv_access (on)
@@ -37,6 +39,20 @@ bool verifyState()
 	return ris;
 }
 
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
+
 /// The main function for the <i>'Example-057'</i> Test.
 int main(void)
 {
@@ -52,21 +68,14 @@ int main(void)
     cin>>param;
     if(!cin)
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID ANGLE (IN DEGREES)!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-    	cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
-    	return EXIT_FAILURE;
-    }
-    
-    /* TASK #2 - compute the sine for the angle of interest. */
+		cin.clear();
+    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID ANGLE (IN DEGREES)!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
+		return EXIT_FAILURE;
+	}
+
+	/* TASK #2 - compute the sine for the angle of interest. */
     cout<<endl;
 	feclearexcept(FE_ALL_EXCEPT);
 	errno=0;
@@ -131,16 +140,7 @@ int main(void)
 	b=verifyState();
 	cout<<endl<<"\t==========================================================================================================================================="<<endl<<endl;
 	cout.flush();
-	
-	/* If we arrive here, all is ok! */
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	cin.clear();
-	cin.ignore(UINT_MAX, '\n');
-	getchar();
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
-    return EXIT_SUCCESS;    
+	pause();
+	return EXIT_SUCCESS;
 }
+

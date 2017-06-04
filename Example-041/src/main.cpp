@@ -3,16 +3,35 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-041' Test.
  **************************************************************************************************/
 
-#include <iostream>
-#include <cstdlib>
+/* #include <iostream>
+
 #include <ctime>
+#include <iomanip> */
+
+#include <cstdlib>
+#include <iostream>
+#include <limits>
 #include <iomanip>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-041'</i> Test.
 int main(void)
@@ -106,33 +125,18 @@ int main(void)
     	cin>>c;
     	if( (!cin) || ( (c!='N') && (c!='n') && (c!='Y') && (c!='y') ) )
     	{
-			cout << endl << "\tPLEASE, YOU MUST INSERT A VALID CHOICE!" << endl << endl;
 			cin.clear();
-			cin.ignore(UINT_MAX, '\n');
-			cout<< "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
-    		cout.flush();
-			cout << "\tPress the RETURN key to finish ... ";
-			cout.flush();
-			cin.ignore(UINT_MAX, '\n');
-			#ifndef _MSC_VER
-				cout << endl;
-				cout.flush();
-			#endif
+			cin.clear();
+			cout << endl << "\tPLEASE, YOU MUST INSERT A VALID CHOICE!" << endl << endl << "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
+    		pause();
     		return EXIT_FAILURE;
     	}
     }	
  	while( (c=='y') || (c=='Y') );
     
     /* If we arrive here, all is ok */
-	cout << endl;
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	cin.clear();
-	cin.ignore(UINT_MAX, '\n');
-	getchar();
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
-    return EXIT_SUCCESS;
+	cout<<endl;
+	pause();
+	return EXIT_SUCCESS;
 }
+

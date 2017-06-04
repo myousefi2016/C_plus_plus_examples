@@ -81,8 +81,7 @@ int main(void)
 	cout << "ok. Found the student '" << itu->first << "', associated with the test mark " << itu->second << "." << endl;
 	cout << endl;
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -123,10 +122,8 @@ int main(void)
 	itu=m1.upper_bound("Student #2");
 	cout<<"ok. Found the student '"<<itu->first<<"', associated with the test mark "<<itu->second<<"."<<endl;
 	cout<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -161,7 +158,7 @@ int main(void)
 	/* TASK #4 - Creating a new multimap 'm3' for performing the swapping operation. */
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout << "\tCreating an empty multimap 'm3' for storing a bunch of associations between the students and their tests marks ... ";
 	multimap<string,uint> m3;
@@ -179,7 +176,7 @@ int main(void)
 	else cout << "\tThe multimap 'm1' contains " << m1.size() << " associations the students and their tests marks." << endl << endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 
 	/* TASK #5 - Allocating a new multimap 'm4' by using the custom function 'compareString()'. */
@@ -217,7 +214,7 @@ int main(void)
 	/* TASK #6 - allocating a new C-like array by using the allocator of the multimap 'm4' */
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout<<"\tAllocating a new C-like array of 6 locations (containing the pairs 'string'/'uint') by using the allocator of the multimap 'm4' ... ";
 	std::pair<const string,uint>* p = m4->get_allocator().allocate(6);
@@ -245,7 +242,7 @@ int main(void)
 	p=nullptr;
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 
 	/* TASK #7 - Allocating a new multimap 'm5' by using a custom function for sorting the keys. */
@@ -282,7 +279,7 @@ int main(void)
 	/* TASK 8 - Deallocating all multimaps, used in this test. */
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout<<"\tDeallocating all multimaps and other auxiliary data structures in this test ... ";
 	m0.clear();
@@ -293,13 +290,12 @@ int main(void)
 	m4=nullptr;
 	m5.clear();
 	cout << "ok" << endl << endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
 	return EXIT_SUCCESS;  
 }
+

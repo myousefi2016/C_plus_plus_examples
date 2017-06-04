@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * myheader.cpp - the source file, implementing the auxiliary function for the 'Example-036' Test.
  ********************************************************************************************************/
@@ -21,3 +21,4 @@ void addThree(int a,int b)
 	cout<<"\tThe final (updated) value for the variable 'b' in the 'addThree()' function is "<<b<<"."<<endl<<endl;
 	cout.flush();
 }
+

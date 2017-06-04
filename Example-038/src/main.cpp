@@ -3,15 +3,30 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-038' Test.
  **************************************************************************************************/
 
 #include <iostream>
 #include <cstdlib>
+#include <limits>
 #include "myheader.h"
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-038'</i> Test.
 int main(void)
@@ -27,53 +42,31 @@ int main(void)
 	cin>>x1>>y1;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x1,y1)'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
-		cout.flush();
+		cin.clear();
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x1,y1)'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* TASK #2 - inserting the integer coordinates for the first 2D point '(x2,y2)'. */
 	cout<<"\tPlease, insert the integer coordinates 'x2' and 'y2' (separated by a space) for the second Euclidean 2D point '(x2,y2)': ";
 	cin>>x2>>y2;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x2,y2)'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
-		cout.flush();
+		cin.clear();
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT TWO INTEGER COORDINATES '(x2,y2)'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
-    /* TASK #3 - applying the auxiliary functions 'getSquaredDistance()' and the 'getDistance()' ! */
+
+	/* TASK #3 - applying the auxiliary functions 'getSquaredDistance()' and the 'getDistance()' ! */
 	cout<<"\tThe first Euclidean 2D point '(x1,y1)' is "<<x1<<" "<<y1<<"."<<endl;
 	cout<<"\tThe second Euclidean 2D point '(x2,y2)' is "<<x2<<" "<<y2<<"."<<endl;
 	cout<<"\tTheir squared (Euclidean) distance is "<<getSquaredDistance(x1,y1,x2,y2)<<"."<<endl;
 	cout<<"\tTheir (Euclidean) distance is "<<getDistance(x1,y1,x2,y2)<<"."<<endl<<endl;
-	cout.flush();
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	cin.clear();
-	cin.ignore(UINT_MAX, '\n');
-	getchar();
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
-    return EXIT_SUCCESS;
+	pause();
+	return EXIT_SUCCESS;
 }
+

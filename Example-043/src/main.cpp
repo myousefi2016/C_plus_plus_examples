@@ -3,18 +3,32 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-043' Test.
  **************************************************************************************************/
- 
+
+#include <cstdlib>
+#include <limits>
 #include <iostream>
 #include <fstream>
 #include <chrono>
 #include <random>
-#include <cstdlib>
-#include <string>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-043'</i> Test.
 int main(void)
@@ -45,20 +59,13 @@ int main(void)
 	getline(cin,str);
 	if(!cin)
 	{
-		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* TASK #3 - if we arrive here, then we can construct a new Mersenne twister engine 'm2' and update the existing Mersenne twister engine 'm1' with the new seed! */
 	cout<<endl<<"\tConstructing another Mersenne twister engine 'm2' (based on the new seed) ... ";
 	cout.flush();
@@ -97,20 +104,15 @@ int main(void)
 	out.open("m1.txt");
 	if(!out)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'm1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		out.clear();
+		out.close();
+		cout<<endl<<"\tCANNOT OPEN THE 'm1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* The 'm1.txt' file is open! */
 	out<<m1;
 	out.close();
@@ -128,20 +130,15 @@ int main(void)
 	in.open("m1.txt");
 	if(!in)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'm1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		in.clear();
+		in.close();
+		cout<<endl<<"\tCANNOT OPEN THE 'm1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* Saving everything from the 'm1.txt' file into the Mersenne twister engine 'm3'. */
 	in>>m3;
 	in.close();
@@ -150,14 +147,13 @@ int main(void)
 	else cout<<"\tThe internal states of the Mersenne twister engines 'm1' and 'm3' do not coincide (with respect to the operator '==')"<<endl;
 	if(m1!=m3) cout<<"\tThe internal states of the Mersenne twister engines 'm1' and 'm3' do not coincide (with respect to the operator '!=')"<<endl<<endl;
 	else cout<<"\tThe internal states of the Mersenne twister engines 'm1' and 'm3' coincide (with respect to the operator '!=')"<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	cin.clear();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
-	#endif
+	#endif	
 	return EXIT_SUCCESS;
 }
+

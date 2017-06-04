@@ -11,7 +11,6 @@
 #include <cstdlib>
 #include <iostream>
 #include <vector>
-#include <cstdio>
 #include "movie.h"
 using namespace std;
 
@@ -49,10 +48,11 @@ int main(void)
 	movies.clear();
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
-    return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
+

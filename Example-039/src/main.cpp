@@ -3,15 +3,17 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-039' Test.
  **************************************************************************************************/
- 
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <limits>
 using namespace std;
+
 
 /// The number to be guessed, and the corresponding jackpot.
 int number=0;
@@ -34,6 +36,20 @@ bool verifyUserBet(int u)
 	}
 }
 
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
+
 /// The main function for the <i>'Example-039'</i> Test.
 int main(void)
 {
@@ -50,40 +66,23 @@ int main(void)
     do
     {
 		/* Please, insert you choice! */
-		cout<<"\tTry to guess this integer number. Please, make your bets: ";
+		cout<<"\tTry to guess this integer number in the range [0,100]. Please, make your bets: ";
 		cin>>unum;
-		cout<<endl;
 		cout.flush();
-		if(!cin)
+		if( (!cin) || (unum<0) || (unum>100) )
 		{
-			cout << "\tPLEASE, YOU MUST INSERT YOUR BET AS AN INTEGER VALUE!" << endl << endl;
-			
-			cout<< "\tTHIS PROGRAM IS CLOSING ... " << endl << endl;
-			cout.flush();
-			cout << "\tPress the RETURN key to finish ... ";
-			cout.flush();
 			cin.clear();
-			cin.ignore(UINT_MAX, '\n');
-			getchar();
-			#ifndef _MSC_VER
-				cout << endl;
-				cout.flush();
-			#endif
+			cin.clear();
+			cout << endl<< "\tPLEASE, YOU MUST INSERT YOUR BET AS AN INTEGER VALUE IN THE RANGE [0,100]!" << endl << endl;
+			pause();
 			return EXIT_FAILURE;
 		}
-    }
-    while( (verifyUserBet(unum)!=true) && (jackpot>0) );
+		else { cout<<endl; }
+	}
+	while( (verifyUserBet(unum)!=true) && (jackpot>0) );
 	if(jackpot>0) { cout<<"\tYou guess the selected number "<<number<<", and win (virtually) "<<jackpot<<" euro!"<<endl<<endl; }
 	else { cout<<"\tThe jackpot is null, and you do not guess the selected number "<<number<<"!"<<endl<<endl; }
-	cout.flush();
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	cin.clear();
-	cin.ignore(UINT_MAX, '\n');
-	getchar();
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
-    return EXIT_SUCCESS;
+	pause();
+	return EXIT_SUCCESS;
 }
+

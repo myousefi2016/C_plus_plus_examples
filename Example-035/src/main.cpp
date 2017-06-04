@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-035' Test.
  **************************************************************************************************/
@@ -11,7 +11,22 @@
 #include "myheader.h"
 #include <cstdlib>
 #include <iostream>
+#include <limits>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-035'</i> Test.
 int main(void)
@@ -27,36 +42,22 @@ int main(void)
 	cin>>a;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE INTEGER VALUE FOR THE VARIABLE 'a'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
-		cout.flush();
+		cin.clear();
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE INTEGER VALUE FOR THE VARIABLE 'a'!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* TASK #2 - inserting the 'integer' value for the variable 'b'. */
 	cout<<"\tPlease, insert the integer value for the variable 'b': ";
 	cin>>b;
 	if(!cin)
 	{
-		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE INTEGER VALUE FOR THE VARIABLE 'b'!."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT THE INTEGER VALUE FOR THE VARIABLE 'b'!."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
 
@@ -66,15 +67,7 @@ int main(void)
 	addThree(a,b);
 	cout<<"\tThe final integer value for the variable 'a' in the 'main()' function is "<<a<<"."<<endl;
 	cout<<"\tThe final integer value for the variable 'b' in the 'main()' function is "<<b<<"."<<endl<<endl;
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	cin.clear();
-	cin.ignore(UINT_MAX, '\n');
-	getchar();
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
+	pause();
 	return EXIT_SUCCESS;
 }
 

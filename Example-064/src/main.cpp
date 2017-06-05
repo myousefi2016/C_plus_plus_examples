@@ -24,7 +24,7 @@ using namespace std;
 /// This function is a custom function for comparing the 'string' keys.
 bool compareStrings(const string& a,const string& b) { return (a<b); }
 
-/// The main function for the <i>'Example-064'< / i> Test.
+/// The main function for the <i>'Example-064'</i> Test.
 int main(void)
 {
 	uint n = 0;

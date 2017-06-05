@@ -3,18 +3,33 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-047' Test.
  **************************************************************************************************/
- 
+
+#include <cstdlib>
+#include <limits>
 #include <iostream>
 #include <fstream>
 #include <chrono>
 #include <random>
-#include <cstdlib>
 #include <string>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The custom alias for modeling a specific <i>'Indepent bits engine'</i>.
 typedef std::independent_bits_engine<std::mt19937,64,std::uint_fast64_t> ind_engine;
@@ -48,20 +63,13 @@ int main(void)
 	getline(cin,str);
 	if(!cin)
 	{
-		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* TASK #3 - if we arrive here, then we can construct a new Independent bits engine 'i2' and update the existing Independent bits engine 'i1' with the new seed! */
 	cout<<endl<<"\tConstructing another Independent bits engine 'i2' (based on the new seed) ... ";
 	cout.flush();
@@ -94,26 +102,21 @@ int main(void)
 	if(i1!=i2) cout<<"\tThe internal states of the Independent bits engines 'i1' and 'i2' do not coincide (with respect to the operator '!=')"<<endl<<endl;
 	else cout<<"\tThe internal states of the Independent bits engines 'i1' and 'i2' coincide (with respect to the operator '!=')"<<endl<<endl;
 	cout.flush();
-	
+
 	/* TASK #5 - we validate the serialization operators! */
 	cout<<"\tExporting the internal state of the Independent bits engine 'i1' on the 'i1.txt' file (with respect to the operator '<<') ... ";
 	out.open("i1.txt");
 	if(!out)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'i1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		out.clear();
+		out.close();
+		cout<<endl<<"\tCANNOT OPEN THE 'i1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* The 'i1.txt' file is open! */
 	out<<i1;
 	out.close();
@@ -131,20 +134,15 @@ int main(void)
 	in.open("i1.txt");
 	if(!in)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'i1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		in.clear();
+		in.close();
+		cout<<endl<<"\tCANNOT OPEN THE 'i1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* Saving everything from the 'i1.txt' file into the Independent bits engine 'i3'. */
 	in>>i3;
 	in.close();
@@ -152,14 +150,14 @@ int main(void)
 	if(i1==i3) cout<<"\tThe internal states of the Independent bits engines 'i1' and 'i3' coincide (with respect to the operator '==')"<<endl;
 	else cout<<"\tThe internal states of the Independent bits engines 'i1' and 'i3' do not coincide (with respect to the operator '==')"<<endl;
 	if(i1!=i3) cout<<"\tThe internal states of the Independent bits engines 'i1' and 'i3' do not coincide (with respect to the operator '!=')"<<endl<<endl;
-	else cout<<"\tThe internal states of the Independent bits engines 'i1' and 'i3' coincide (with respect to the operator '!=')"<<endl<<endl;
-	cout.flush();
+	else cout<<"\tThe internal states of the Independent bits engines 'i1' and 'i3' coincide (with respect to the operator '!=')"<<endl<<endl;		
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
-	#endif
+	#endif	
 	return EXIT_SUCCESS;
 }
+

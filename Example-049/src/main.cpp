@@ -3,15 +3,13 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-049' Test.
  **************************************************************************************************/
- 
+
 #include <iostream>
 #include <string>
-#include <cstdlib>
-#include <ctime>
 using namespace std;
 
 /// This function exports the content of an array (containing several 'int' values) on a generic output stream.
@@ -62,7 +60,7 @@ int main(void)
 	cout<<"ok"<<endl<<endl<<"\tThis array (described by a C-like pointer) contains the following 'int' values: "<<endl<<endl;
 	cout.flush();
 	print(numbers,10,cout);
-	
+
 	/* TASK #2 - generating the array 'seasons', containing the names of all seasons! */
 	cout<<"\tInitializing an array (described by a C-like pointer), containing the names of all seasons ... ";
 	seasons[0] = "Summer";
@@ -81,11 +79,11 @@ int main(void)
     print(weekdays,7);
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	cin.clear();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
 	return EXIT_SUCCESS;
 }
+

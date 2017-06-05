@@ -3,15 +3,30 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-051' Test.
  **************************************************************************************************/
 
-#include <iostream>
-#include <iomanip>
 #include <cstdlib>
+#include <iostream>
+#include <limits>
+#include <iomanip>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-051'</i> Test.
 int main(void)
@@ -21,8 +36,8 @@ int main(void)
 	/* This is the 'Example-051' Test, where the 'if-construct' is tested. */
 	cout<<endl<<"\tThis is the 'Example-051' Test in the C++ language."<<endl<<endl;
     cout.flush();
-    
-    /* TASK #1 - retrieving the price for the item of interest. */
+
+	/* TASK #1 - retrieving the price for the item of interest. */
     cout<<"\tShipping costs for the following ranges of the items prices:"<<endl<<endl;
     cout<<"\t-) up to 25 euro: 15 euro;"<<endl;
     cout<<"\t-) up to 50 euro: 10 euro;"<<endl;
@@ -33,21 +48,14 @@ int main(void)
     cin>>price;
     if( (!cin) || (price<0) )
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID PRICE FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-    	cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-		#endif
-    	return EXIT_FAILURE;
-    }
-    
-    /* TASK #2 - If we arrive here, we can decide! */
+		cin.clear();
+    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID PRICE FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
+		return EXIT_FAILURE;
+	}
+
+	/* TASK #2 - If we arrive here, we can decide! */
     cout<<endl<<"\tThe price for the item of interest is "<<price<<" euro."<<endl;
     cout.flush();
     tot=price;
@@ -70,15 +78,7 @@ int main(void)
     
     /* If we arrive here, the price is completed! */
  	cout<<"\tThe total price is "<<fixed<<setprecision(2)<<tot<<" euro."<<endl<<endl;
- 	cout.flush();
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	cin.clear();
-	cin.ignore(UINT_MAX, '\n');
-	getchar();
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
-	return EXIT_SUCCESS;   
+	pause();
+	return EXIT_SUCCESS;
 }
+

@@ -3,15 +3,30 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-052' Test.
  **************************************************************************************************/
 
-#include <cstdlib>
 #include <iostream>
 #include <iomanip>
+#include <limits>
+#include <cstdlib>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-052'</i> Test.
 int main(void)
@@ -38,20 +53,13 @@ int main(void)
 		cin>>menuChoice;
 		if( (!cin) || (menuChoice < 1) || (menuChoice > 4) )
 		{
-			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID MEMBERSHIP FARE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
-			cout.flush();
-			cout << "\tPress the RETURN key to finish ... ";
-			cout.flush();
 			cin.clear();
-			cin.ignore(UINT_MAX, '\n');
-			getchar();
-			#ifndef _MSC_VER
-				cout << endl;
-				cout.flush();
-			#endif
+			cin.clear();
+			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID MEMBERSHIP FARE!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+			pause();
 			return EXIT_FAILURE;
 		}
-		
+
 		/* If we arrive here, we read a valid menu choice! */
 		if(menuChoice==4) break;
 		else if(menuChoice==1) { cout<<endl<<"\tThe Adult Membership Fare (40 euro/month) is selected."<<endl<<endl<<"\tPlease, insert the number of months (from 1 to 24 months) you prefer it will be valid: "; }
@@ -63,20 +71,13 @@ int main(void)
 		cin>>months;
 		if( (!cin) || (months<1) || (months>24) )
 		{
-			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID NUMBER OF THE MONTHS!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
-			cout.flush();
-			cout << "\tPress the RETURN key to finish ... ";
-			cout.flush();
 			cin.clear();
-			cin.ignore(UINT_MAX, '\n');
-			getchar();
-			#ifndef _MSC_VER
-				cout << endl;
-				cout.flush();
-			#endif
+			cin.clear();
+			cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID NUMBER OF THE MONTHS!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ..."<<endl<<endl;
+			pause();
 			return EXIT_FAILURE;
 		}
-		
+
 		/* Now, we compute the total charge! */
 		switch(menuChoice)
 		{
@@ -108,14 +109,7 @@ int main(void)
 	}
 	while(menuChoice != 4);
 	cout<<endl<<"\tThis program is closing correctly!"<<endl<<endl;
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	cin.clear();
-	cin.ignore(UINT_MAX, '\n');
-	getchar();
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
-	return EXIT_SUCCESS;    
+	pause();
+	return EXIT_SUCCESS;
 }
+

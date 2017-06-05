@@ -3,16 +3,30 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-054' Test.
  **************************************************************************************************/
 
-#include <cstdlib>
 #include <iostream>
-#include <iomanip>
+#include <cstdlib>
+#include <limits>
 #include "myheader.h"
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-054'</i> Test.
 int main(void)
@@ -29,40 +43,26 @@ int main(void)
     cin>>price;
     if( (!cin) || (price<=0.0) )
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID PRICE FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-    	cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
-    	return EXIT_FAILURE;
-    }
-    
-    /* TASK #2 - insert the customer payment. */
+		cin.clear();
+		cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID PRICE FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
+		return EXIT_FAILURE;
+	}
+
+	/* TASK #2 - insert the customer payment. */
     cout<<"\tPlease, insert the (positive) customer payment for the item of interest (in US dollars): ";
     cin>>payment;
     if( (!cin) || (payment<=0.0) || (payment<price) )
     {
-    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CUSTOMER PAYMENT FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-    	cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
-    	return EXIT_FAILURE;
-    }
-    
-    /* TASK #3 - compute the due 'change'. */
+		cin.clear();
+    	cout<<endl<<"\tPLEASE, YOU MUST INSERT A VALID CUSTOMER PAYMENT FOR THE ITEM OF INTEREST!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
+		return EXIT_FAILURE;
+	}
+
+	/* TASK #3 - compute the due 'change'. */
     change = payment - price;
     if(change==0) { cout<<"\tNo change is due to the customer."<<endl<<endl; }
     else
@@ -77,15 +77,7 @@ int main(void)
     }
     
     /* If we arrive here, all is ok! */
-	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	cin.clear();
-	cin.ignore(UINT_MAX, '\n');
-	getchar();
-	#ifndef _MSC_VER
-		cout << endl;
-		cout.flush();
-	#endif
-    cout.flush();
-    return EXIT_SUCCESS;
+	pause();
+	return EXIT_SUCCESS;
 }
+

@@ -3,14 +3,13 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-048' Test.
  **************************************************************************************************/
- 
-#include <iostream>
-#include <string>
+
 #include <cstdlib>
+#include <iostream>
 using namespace std;
 
 /// The main function for the <i>'Example-048'</i> Test.
@@ -23,7 +22,7 @@ int main(void)
     cout<<endl<<"\tThis is the 'Example-048' Test in the C++ language."<<endl<<endl;
     cout.flush();
 
-    /* TASK #1 - allocating a new 'int' value, referred through its C-like pointer. */
+	/* TASK #1 - allocating a new 'int' value, referred through its C-like pointer. */
     cout<<"\tAllocating a new 'int' value, referred through its C-like pointer 'a' ... ";
     cout.flush();
     all=new int();
@@ -39,7 +38,7 @@ int main(void)
     cout<<"\t#bytes, necessary for storing the C-like pointer 'a', is "<<sizeof(all)<<"."<<endl<<endl;
     cout.flush();
     
-    /* TASK #3 - manipulating the content of the C-like pointers. */
+    /* TASK #2 - manipulating the content of the C-like pointers. */
     cout<<"\tSetting another C-like pointer 'a2' as the same as the C-like pointer 'a' ... ";
     all2=all;
     cout<<"ok"<<endl;
@@ -54,7 +53,7 @@ int main(void)
     cout<<"\tThe updated 'int' value, referred by the C-like pointer 'a2', is "<<(*all2)<<"."<<endl<<endl;
     cout.flush();
     
-     /* TASK #4 - manipulating a character by using the C-like pointers! */
+     /* TASK #3 - manipulating a character by using the C-like pointers! */
     letter_ptr=&letter;
     cout<<"\tThe 'char' value, referred by the C-like pointer 'c', is '"<<letter<<"'."<<endl;
     cout<<"\tThe C-like pointer 'c' is "<<letter_ptr<<"."<<endl;
@@ -66,21 +65,21 @@ int main(void)
     cout<<"\tThe 'char' value, referred by the C-like pointer 'c', is '"<<letter<<"'."<<endl;
     cout<<"\tThe C-like pointer 'c' is "<<letter_ptr<<"."<<endl<<endl;
     cout.flush();
-    
-    /* TASK #5 - deallocating the memory, referred by the C-like pointers in this test. */
+
+	 /* TASK #4 - deallocating the memory, referred by the C-like pointers in this test. */
     cout<<"\tDeallocating the memory, referred by the C-like pointers in this test ... ";
     if(all!=nullptr) delete all;
     all=nullptr;
     all2=nullptr;
     cout<<"ok"<<endl<<endl;
-    cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
-	#endif
-    return EXIT_SUCCESS;
+	#endif	
+	return EXIT_SUCCESS;
 }
+
 

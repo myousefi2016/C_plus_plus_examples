@@ -3,18 +3,33 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-046' Test.
  **************************************************************************************************/
- 
+
+#include <cstdlib>
+#include <limits>
 #include <iostream>
 #include <fstream>
 #include <chrono>
 #include <random>
-#include <cstdlib>
 #include <string>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-046'</i> Test.
 int main(void)
@@ -45,20 +60,13 @@ int main(void)
 	getline(cin,str);
 	if(!cin)
 	{
-		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* TASK #3 - if we arrive here, then we can construct a new Discard block engine 'd2' and update the existing Discard block engine 'd1' with the new seed! */
 	cout<<endl<<"\tConstructing another Discard block engine 'd2' (based on the new seed) ... ";
 	cout.flush();
@@ -97,17 +105,12 @@ int main(void)
 	out.open("d1.txt");
 	if(!out)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'd1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		out.clear();
+		out.close();
+		cout<<endl<<"\tCANNOT OPEN THE 'd1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
 	
@@ -128,20 +131,15 @@ int main(void)
 	in.open("d1.txt");
 	if(!in)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'd1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		in.clear();
+		in.close();
+		cout<<endl<<"\tCANNOT OPEN THE 'd1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* Saving everything from the 'd1.txt' file into the Discard block engine 'd3'. */
 	in>>d3;
 	in.close();
@@ -150,13 +148,13 @@ int main(void)
 	else cout<<"\tThe internal states of the Discard block engines 'd1' and 'd3' do not coincide (with respect to the operator '==')"<<endl;
 	if(d1!=d3) cout<<"\tThe internal states of the Discard block engines 'd1' and 'd3' do not coincide (with respect to the operator '!=')"<<endl<<endl;
 	else cout<<"\tThe internal states of the Discard block engines 'd1' and 'd3' coincide (with respect to the operator '!=')"<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
-	#endif
+	#endif	
 	return EXIT_SUCCESS;
 }
+

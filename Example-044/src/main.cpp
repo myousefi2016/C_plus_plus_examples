@@ -3,18 +3,33 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-044' Test.
  **************************************************************************************************/
- 
+
+#include <cstdlib>
+#include <limits>
 #include <iostream>
 #include <fstream>
 #include <chrono>
 #include <random>
-#include <cstdlib>
 #include <string>
 using namespace std;
+
+/// This function simulates a pause while this test runs.
+void pause()
+{
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.clear();
+	cout << "\tPress the RETURN key to finish ... ";
+	cout.flush();
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+}
 
 /// The main function for the <i>'Example-044'</i> Test.
 int main(void)
@@ -27,8 +42,8 @@ int main(void)
 	/* This is the 'Example-044' Test, where the generation of several pseudo-random values through a 'lagged Fibonacci engine' is tested! */
     cout<<endl<<"\tThis is the 'Example-044' Test in the C++ language."<<endl<<endl;
     cout.flush();
-    
-    /* TASK #1 - we construct a lagged Fibonacci engine, such that its seed is automatically generated from the system clock. */
+
+	/* TASK #1 - we construct a lagged Fibonacci engine, such that its seed is automatically generated from the system clock. */
 	cout<<"\tConstructing a lagged Fibonacci engine 'f1', such that its seed is automatically generated from the current system clock ... ";
 	seed1 = (unsigned int)std::chrono::system_clock::now().time_since_epoch().count();
 	std::ranlux24_base f1(seed1);
@@ -45,20 +60,13 @@ int main(void)
 	getline(cin,str);
 	if(!cin)
 	{
-		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		cout<<endl<<"PLEASE, YOU MUST INSERT A VALID STRING TO BE USED AS THE NEW SEED!"<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* TASK #3 - if we arrive here, then we can construct a new lagged Fibonacci engine 'f2' and update the existing lagged Fibonacci engine 'f1' with the new seed! */
 	cout<<endl<<"\tConstructing another lagged Fibonacci engine 'f2' (based on the new seed) ... ";
 	cout.flush();
@@ -91,26 +99,21 @@ int main(void)
 	if(f1!=f2) cout<<"\tThe internal states of the lagged Fibonacci engines 'f1' and 'f2' do not coincide (with respect to the operator '!=')"<<endl<<endl;
 	else cout<<"\tThe internal states of the lagged Fibonacci engines 'f1' and 'f2' coincide (with respect to the operator '!=')"<<endl<<endl;
 	cout.flush();
-	
+
 	/* TASK #5 - we validate the serialization operators! */
 	cout<<"\tExporting the internal state of the lagged Fibonacci engine 'f1' on the 'f1.txt' file (with respect to the operator '<<') ... ";
 	out.open("f1.txt");
 	if(!out)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'f1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		out.clear();
+		out.close();
+		cout<<endl<<"\tCANNOT OPEN THE 'f1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
-	
+
 	/* The 'f1.txt' file is open! */
 	out<<f1;
 	out.close();
@@ -128,17 +131,12 @@ int main(void)
 	in.open("f1.txt");
 	if(!in)
 	{
-		cout<<endl<<"\tCANNOT OPEN THE 'f1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
-		cout.flush();
-		cout << "\tPress the RETURN key to finish ... ";
-		cout.flush();
 		cin.clear();
-		cin.ignore(UINT_MAX, '\n');
-		getchar();
-		#ifndef _MSC_VER
-			cout << endl;
-			cout.flush();
-		#endif
+		cin.clear();
+		out.clear();
+		in.close();
+		cout<<endl<<"\tCANNOT OPEN THE 'f1.txt' FILE."<<endl<<endl<<"\tTHIS PROGRAM IS CLOSING ... "<<endl<<endl;
+		pause();
 		return EXIT_FAILURE;
 	}
 	
@@ -150,13 +148,13 @@ int main(void)
 	else cout<<"\tThe internal states of the lagged Fibonacci engines 'f1' and 'f3' do not coincide (with respect to the operator '==')"<<endl;
 	if(f1!=f3) cout<<"\tThe internal states of the lagged Fibonacci engines 'f1' and 'f3' do not coincide (with respect to the operator '!=')"<<endl<<endl;
 	else cout<<"\tThe internal states of the lagged Fibonacci engines 'f1' and 'f3' coincide (with respect to the operator '!=')"<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
 	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
-	#endif
+	#endif	
 	return EXIT_SUCCESS;
 }
+

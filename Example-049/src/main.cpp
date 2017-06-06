@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
 using namespace std;
 
 /// This function exports the content of an array (containing several 'int' values) on a generic output stream.

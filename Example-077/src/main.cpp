@@ -3,15 +3,13 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-077' Test.
  **************************************************************************************************/
 
-#include <cstdlib>
-#include <vector>
 #include <iostream>
-#include <algorithm>
+#include <cstdlib>
 #include <set>
 using namespace std;
 #ifndef ulong
@@ -34,8 +32,8 @@ int main(void)
 	/* This is the 'Example-077' Test, where the 'multiset' containers are validated. */
 	cout<<endl<<"\tThis is the 'Example-077' Test in the C++ language."<<endl<<endl;
   	cout.flush();
-  	
-  	/* TASK #1 - validating the empty constructor for the multisets. */
+
+	/* TASK #1 - validating the empty constructor for the multisets. */
    	cout<<"\tCreating an empty multiset 's0' of 'ulong' values ... ";
  	cout.flush();
  	multiset<ulong> s0;
@@ -43,9 +41,12 @@ int main(void)
  	cout<<"\t#values in the multiset 's0' is "<<s0.size()<<"."<<endl;
     if(s0.empty()==true) cout<<"\tThe multiset 's0' is empty."<<endl<<endl;
  	else cout<<"\tThe multiset 's0' is not empty."<<endl<<endl;
- 	cout.flush();
-  	
-  	/* TASK #2 - validating the constructor, which takes into the account a range of 'ulong' values. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #2 - validating the constructor, which takes into the account a range of 'ulong' values. */
  	ulong ls[]= {50,30,20,10,40,10,40,10,10};
   	cout<<"\tCreating a multiset 's1' by starting from a range of 'ulong' values ... ";
   	multiset<ulong> s1 (ls,ls+9);
@@ -62,15 +63,18 @@ int main(void)
   	cout<<"."<<endl<<endl<<"\tRetrieving the #duplicated instances of the 'ulong' values in the multiset 's1' as follows:"<<endl<<endl;
   	for(unsigned int k=0;k<9;k++) 
   	{ 
-  		if(k<8) cout<<"\t#duplicated instances of the 'ulong' value "<<ls[k]<<" is "<<s1.count(ls[k])<<";"<<endl;
-  		else cout<<"\t#duplicated instances of the 'ulong' value "<<ls[k]<<" is "<<s1.count(ls[k])<<"."<<endl;
+  		if(k<8) cout<<"\t\t-) #duplicated instances of the 'ulong' value "<<ls[k]<<" is "<<s1.count(ls[k])<<";"<<endl;
+  		else cout<<"\t\t-) #duplicated instances of the 'ulong' value "<<ls[k]<<" is "<<s1.count(ls[k])<<"."<<endl;
   	}
   	
   	/* If we arrive here, all is ok. */
   	cout<<endl;
-  	cout.flush();
-  	
-  	/* TASK #3 - swapping the content of two multisets 's0' and 's1'. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #3 - swapping the content of two multisets 's0' and 's1'. */
   	cout<<"\t#values in the multiset 's0' is "<<s0.size()<<"."<<endl;
     if(s0.empty()==true) cout<<"\tThe multiset 's0' is empty."<<endl;
  	else cout<<"\tThe multiset 's0' is not empty."<<endl;
@@ -86,18 +90,21 @@ int main(void)
  	cout<<"\t#values in the multiset 's1' is "<<s1.size()<<"."<<endl;
     if(s1.empty()==true) cout<<"\tThe multiset 's1' is empty."<<endl;
  	else cout<<"\tThe multiset 's1' is not empty."<<endl;
- 	if(s1<s0) cout<<"\tThe 'ulong' values in the multiset 's1' are 'strictly less than' the 'ulong' values in the multiset 's0' (with respect to the '<' operator)."<<endl;
- 	else cout<<"\tThe 'ulong' values in the multiset 's1' are not 'strictly less than' the 'ulong' values in the multiset 's0' (with respect to the '<' operator)."<<endl;
- 	if(s1>s0) cout<<"\tThe 'ulong' values in the multiset 's1' are 'strictly greater than' the 'ulong' values in the multiset 's0' (with respect to the '>' operator)."<<endl;
- 	else cout<<"\tThe 'ulong' values in the multiset 's1' are not 'strictly greater than' the 'ulong' values in the multiset 's0' (with respect to the '>' operator)."<<endl;
- 	if(s1<=s0) cout<<"\tThe 'ulong' values in the multiset 's1' may be either 'strictly less than', or 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '<=' operator)."<<endl;
- 	else cout<<"\tThe 'ulong' values in the multiset 's1' are not both 'strictly less than', and 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '<=' operator)."<<endl;
- 	if(s1>=s0) cout<<"\tThe 'ulong' values in the multiset 's1' may be either 'strictly greater than', or 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '>=' operator)."<<endl;
- 	else cout<<"\tThe 'ulong' values in the multiset 's1' are not both 'strictly greater than', and 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '>=' operator)."<<endl;
- 	cout<<endl;
- 	cout.flush();
- 	
- 	/* TASK #4 - validating the constructor, which creates a copy of an existing multiset of 'ulong' values. */
+	cout<<endl<<"\tThe 'ulong' values in the multiset 's1':"<<endl<<endl;
+	if(s1<s0) cout<<"\t\t-) are 'strictly less than' the 'ulong' values in the multiset 's0' (with respect to the '<' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly less than' the 'ulong' values in the multiset 's0' (with respect to the '<' operator);"<<endl;
+ 	if(s1>s0) cout<<"\t\t-) are 'strictly greater than' the 'ulong' values in the multiset 's0' (with respect to the '>' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly greater than' the 'ulong' values in the multiset 's0' (with respect to the '>' operator);"<<endl;
+ 	if(s1<=s0) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '<=' operator);"<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '<=' operator);"<<endl;
+ 	if(s1>=s0) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '>=' operator)."<<endl<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly greater than', and 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '>=' operator)."<<endl<<endl;
+ 	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #4 - validating the constructor, which creates a copy of an existing multiset of 'ulong' values. */
   	cout<<"\tCreating a new multiset 's2' as the copy of the multiset 's0' ... ";
   	multiset<ulong> s2=multiset<ulong>(s0);
   	cout<<"ok"<<endl;
@@ -112,9 +119,12 @@ int main(void)
   	cout<<"\tEnumerating the 'ulong' values in the multiset 's2' (in the reverse direction):";
   	for(auto it=s2.rbegin();it!=s2.rend();it++) cout<<" "<<(*it);
   	cout<<"."<<endl<<endl;
-  	cout.flush();
- 	
- 	/* TASK #5 - validating the constructor, which creates a copy of an existing multiset of 'ulong' values. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #5 - validating the constructor, which creates a copy of an existing multiset of 'ulong' values. */
   	cout<<"\tCreating a new multiset 's3' as the copy of the multiset 's2' ... ";
   	multiset<ulong> s3=multiset<ulong>(s2.begin(),s2.end());
   	cout<<"ok"<<endl;
@@ -136,9 +146,12 @@ int main(void)
  	auto it2=s3.equal_range(35);
  	cout<<"\tThe first 'ulong' value of the multiset 's3', which is not considered to go before 35 (see the 'multiset::equal_range()' member function), is "<<(ulong)(*(it2.first))<<"."<<endl;
  	cout<<"\tThe first 'ulong' value of the multiset 's3', which is considered to go after 35 (see the 'multiset::equal_range()' member function), is "<<(ulong)(*(it2.second))<<"."<<endl<<endl;
- 	cout.flush();
- 	
- 	/* TASK #6 - validating the constructor, which creates a new multiset with a custom function. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #6 - validating the constructor, which creates a new multiset with a custom function. */
  	cout<<"\tCreating a new multiset 's4' by using the 'compare_ulong_values()' custom function for sorting the 'ulong' values ... ";
  	multiset<ulong,bool(*)(const ulong&,const ulong&)> s4(compare_ulong_values);
  	cout<<"ok"<<endl;
@@ -183,9 +196,12 @@ int main(void)
   	cout<<"\tEnumerating the 'ulong' values in the multiset 's4' (in the reverse direction):";
   	for(auto it=s4.rbegin();it!=s4.rend();it++) cout<<" "<<(*it);
   	cout<<"."<<endl<<endl;
-  	cout.flush();
-  	
-  	/* TASK #7 - validating the constructor, which creates a new multiset with a custom (struct) function. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #7 - validating the constructor, which creates a new multiset with a custom (struct) function. */
   	cout<<"\tCreating a new multiset 's5' by using the 'CompareUlongValues' custom struct for sorting the 'ulong' values ... ";
   	multiset<ulong,CompareUlongValues> *s5 = new multiset<ulong,CompareUlongValues>();
   	cout<<"ok"<<endl;
@@ -198,9 +214,12 @@ int main(void)
   	cout<<"\tEnumerating the 'ulong' values in the multiset 's5' (in the reverse direction):";
   	for(auto it=s5->rbegin();it!=s5->rend();it++) cout<<" "<<(*it);
   	cout<<"."<<endl<<endl;
-  	cout.flush();
-  	
-  	/* TASK #8 - allocating a new C-like array by using the allocator of the multiset 's5' */
+ 	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #8 - allocating a new C-like array by using the allocator of the multiset 's5' */
  	cout<<"\tAllocating a new C-like array of 7 locations by using the allocator of the multiset 's5' ... ";
  	ulong *p = s5->get_allocator().allocate(7);
  	cout<<"ok"<<endl<<"\tInitializing the locations of the new C-like array ... ";
@@ -214,8 +233,12 @@ int main(void)
  	cout<<"ok"<<endl<<endl;
  	cout.flush();
  	p=nullptr;
- 	
- 	/* TASK #9: deallocating all auxiliary data structures in this test. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #9: deallocating all auxiliary data structures in this test. */
  	cout<<"\tDeallocating all multisets in this test ... ";
  	s0.clear();
 	s1.clear();
@@ -224,6 +247,12 @@ int main(void)
 	s4.clear();
 	if(s5!=nullptr) { s5->clear(); delete s5; s5=nullptr; }
 	cout<<"ok"<<endl<<endl;
-	cout.flush();
+	cout << "\tPress the RETURN key to finish ... ";
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
 	return EXIT_SUCCESS;
 }
+

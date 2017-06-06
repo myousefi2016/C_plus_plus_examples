@@ -32,10 +32,8 @@ int main(void)
 	cout<<"\tThe tuple 't0' has "<<std::tuple_size< decltype(t0) >::value<<" elements of different type."<<endl;
 	cout<<"\tThe 'string' element in the tuple 't0' is '"<<std::get<0>(t0)<<"'."<<endl;
 	cout<<"\tThe 'int' value in the tuple 't0' is "<<std::get<1>(t0)<<"."<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -47,13 +45,10 @@ int main(void)
 	cout<<"\tThe content of the field #1 in the tuple 't1' is "<<std::get<1>(t1)<<"."<<endl;
 	if(t0==t1) cout<<"\tThe tuples 't0' and 't1' coincide element by element (with respect to the '==' operator)."<<endl;
 	else cout<<"\tThe tuples 't0' and 't1' do not coincide element by element (with respect to the '==' operator)."<<endl;
-	if(t0!=t1) cout<<"\tThe tuples 't0' and 't1' do not coincide element by element (with respect to the '!=' operator)."<<endl;
-	else cout<<"\tThe tuples 't0' and 't1' coincide element by element (with respect to the '!=' operator)."<<endl;
-	cout<<endl;
-	cout.flush();
+	if(t0!=t1) cout<<"\tThe tuples 't0' and 't1' do not coincide element by element (with respect to the '!=' operator)."<<endl<<endl;
+	else cout<<"\tThe tuples 't0' and 't1' coincide element by element (with respect to the '!=' operator)."<<endl<<endl;
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -76,10 +71,8 @@ int main(void)
 	if(t1>=t2) cout<<"\tThe tuple 't1' may be either 'strictly greater than', or 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
 	else cout<<"\tThe tuple 't1' is not both 'strictly greater than', and 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
 	cout<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -95,10 +88,8 @@ int main(void)
 	cout<<"\tThe 'int' value in the tuple 't1' is "<<std::get<1>(t1)<<"."<<endl;
 	cout<<"\tThe 'string' element in the tuple 't2' is '"<<std::get<0>(t2)<<"'."<<endl;
 	cout<<"\tThe 'int' value in the tuple 't2' is "<<std::get<1>(t2)<<"."<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -115,10 +106,8 @@ int main(void)
 	cout<<"\t\t-) the field #0 in the tuple 't3' contains "<<t30<<";"<<endl;
 	cout<<"\t\t-) the field #1 in the tuple 't3' contains '"<<t31<<"';"<<endl;
 	cout<<"\t\t-) the field #2 in the tuple 't3' contains "<<t32<<"."<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -145,10 +134,8 @@ int main(void)
 	if(t3!=t4) cout<<"\tThe tuples 't3' and 't4' do not coincide element by element (with respect to the '!=' operator)."<<endl;
 	else cout<<"\tThe tuples 't3' and 't4' coincide element by element (with respect to the '!=' operator)."<<endl;
 	cout<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -172,13 +159,12 @@ int main(void)
 	cout<<"\t\t-) the field #2 in the tuple 't5' contains "<<t52<<";"<<endl;
 	cout<<"\t\t-) the field #3 in the tuple 't5' contains '"<<t53<<"';"<<endl;
 	cout<<"\t\t-) the field #4 in the tuple 't5' contains "<<t54<<"."<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
-	return EXIT_SUCCESS;
+	return EXIT_SUCCESS;  
 }
+

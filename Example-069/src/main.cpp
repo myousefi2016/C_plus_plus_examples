@@ -9,10 +9,8 @@
  **************************************************************************************************/
 
 #include <cstdlib>
-#include <array>
-#include <tuple>
 #include <iostream>
-#include <algorithm>
+#include <array>
 using namespace std;
 
 /// The main function for the <i>Example-069</i> Test.
@@ -38,10 +36,8 @@ int main(void)
 	cout << "\tThe 'int' values in the new array 'a0' are:";
 	for(auto it=a0.crbegin();it!=a0.crend();it++) cout<<" "<<(*it);
 	cout<<"."<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -56,10 +52,8 @@ int main(void)
 	cout<<"."<<endl<<"\tThe 'int' values in the array 'a1' (in the reverse direction) are:";
 	for(auto it=a1.rbegin();it!=a1.rend();it++) cout<<" "<<(*it);
 	cout<<"."<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -75,10 +69,8 @@ int main(void)
 	cout << "\tThe first 'int' value in the array 'a2' is " << a2.front() << "." << endl;
 	cout<<"\tThe 'int' value of the array 'a2' in position #1 is "<<a2.at(1)<<"."<<endl;
 	cout << "\tThe last 'int' value in the array 'a2' is " << a2.back() << "." << endl << endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -93,10 +85,8 @@ int main(void)
 	int* aux=(int*)a3.data();
 	for(int k=0;k<a2.size();k++) cout<<" "<<aux[k];
 	cout<<"."<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
@@ -117,30 +107,27 @@ int main(void)
 	cout<<"."<<endl;
 	if (a2 > a3) cout << "\tThe 'int' values in the array 'a2' are 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator)." << endl << endl;
 	else cout << "\tThe 'int' values in the array 'a2' are not 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator)." << endl << endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	cout << endl;
 	cout.flush();
 
-	/* TASK #6 - accessing elements of the array 'a2' (interpreted as a tuple). */
-	cout << "\tThe 'int' value in the location #0 of the array 'a2' (interpreted as a multidimensional 'tuple', see the 'get()' and the 'tuple_element()' template functions) is ";
+	/* TASK #6 - accessing elements of the array 'a2' (seen as a multidimensional tuple). */
+	cout << "\tThe 'int' value in the location #0 of the array 'a2' (seen as a multidimensional 'tuple', see the 'get()' and the 'tuple_element()' template functions) is ";
 	tuple_element<0,decltype(a3)>::type a=get<0>(a2);
 	cout<<a<<"."<<endl;
-	cout<<"\tThe 'int' value in the location #1 of the array 'a2' (interpreted as a multidimensional 'tuple', see the 'get()' and the 'tuple_element()' template functions) is ";
+	cout<<"\tThe 'int' value in the location #1 of the array 'a2' (seen as a multidimensional 'tuple', see the 'get()' and the 'tuple_element()' template functions) is ";
 	a=get<1>(a2);
 	cout<<a<<"."<<endl;
-	cout<<"\tThe 'int' value in the location #2 of the array 'a2' (interpreted as a multidimensional 'tuple', see the 'get()' and the 'tuple_element()' template functions) is ";
+	cout<<"\tThe 'int' value in the location #2 of the array 'a2' (seen as a multidimensional 'tuple', see the 'get()' and the 'tuple_element()' template functions) is ";
 	a=get<2>(a2);
 	cout<<a<<"."<<endl<<endl;
-	cout.flush();
 	cout << "\tPress the RETURN key to finish ... ";
-	cout.flush();
-	getchar();
+	cin.get();
 	#ifndef _MSC_VER
 		cout << endl;
 		cout.flush();
 	#endif
 	return EXIT_SUCCESS;
 }
+

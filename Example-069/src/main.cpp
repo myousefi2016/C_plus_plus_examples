@@ -23,18 +23,18 @@ int main(void)
 	/* TASK #1 - validating the empty constructor for the 'array' containers. */
 	cout<<"\tCreating a new array 'a0' of 3 'int' values (without an explicit initialization) ... ";
 	cout.flush();
-	array<int,3> a0;
+	array<int,3> *a0 = new array<int,3>();
 	cout<<"ok"<<endl;
-	if (a0.empty() == true) { cout << "\tThe new array 'a0' is empty." << endl; }
+	if (a0->empty() == true) { cout << "\tThe new array 'a0' is empty." << endl; }
 	else cout<<"\tThe new array 'a0' is not empty."<<endl;
 	cout<<"\tThe 'int' values in the new array 'a0' are:";
-	if(a0.size()==0) { cout<<"none."<<endl; }
-	else { for(auto i : a0) cout<<" "<<i; cout<<"."<<endl; }
+	if(a0->size()==0) { cout<<"none."<<endl; }
+	else { for(auto i : *a0) cout<<" "<<i; cout<<"."<<endl; }
 	cout << "\tSetting explicitly '6' as the unique 'int' value for all locations of the array 'a0' ... ";
-	a0.fill(6);
+	a0->fill(6);
 	cout<<"ok"<<endl;
 	cout << "\tThe 'int' values in the new array 'a0' are:";
-	for(auto it=a0.crbegin();it!=a0.crend();it++) cout<<" "<<(*it);
+	for(auto it=a0->crbegin();it!=a0->crend();it++) cout<<" "<<(*it);
 	cout<<"."<<endl<<endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cin.get();
@@ -96,8 +96,15 @@ int main(void)
 	cout<<"."<<endl<<"\tThe 'int' values in the array 'a3' are:";
 	for(auto it=a3.cbegin();it!=a3.cend();it++) cout<<" "<<(*it);
 	cout<<"."<<endl;
-	if(a2<a3) cout<<"\tThe 'int' values in the array 'a2' are 'strictly less than' the 'int' values in the array 'a3' (with respect to the '<' operator)."<<endl;
-	else cout<<"\tThe 'int' values in the array 'a2' are not 'strictly less than' the 'int' values in the array 'a3' (with respect to the '<' operator)."<<endl;
+	cout<<"\tThe 'int' values in the array 'a2': "<<endl<<endl;
+	if(a2<a3) cout<<"\t\t-) are 'strictly less than' the 'int' values in the array 'a3' (with respect to the '<' operator);"<<endl;
+	else cout<<"\t\t-) are not 'strictly less than' the 'int' values in the array 'a3' (with respect to the '<' operator);"<<endl;
+	if(a2>a3) cout<<"\t\t-) are 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator);"<<endl;
+	else cout<<"\t\t-) are not 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator);"<<endl;
+	if(a2<=a3) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'int' values in the array 'a2' (with respect to the '<=' operator);"<<endl;
+	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'int' values in the array 'a2' (with respect to the '<=' operator);"<<endl;
+	if(a2>=a3) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the 'int' values in the array 'a2' (with respect to the '>=' operator)."<<endl<<endl;
+	else cout<<"\t\t-) are not both 'strictly greater than', and 'the same as' the 'int' values in the array 'a2' (with respect to the '>=' operator)."<<endl<<endl;
 	cout<<"\tSwapping the content of the arrays 'a2' and 'a3' ... ";
 	a2.swap(a3);
 	cout<<"ok"<<endl<<"\tThe 'int' values in the new array 'a2' are:";
@@ -105,8 +112,15 @@ int main(void)
 	cout<<"."<<endl<<"\tThe 'int' values in the new array 'a3' are:";
 	for(auto it=a3.cbegin();it!=a3.cend();it++) cout<<" "<<(*it);
 	cout<<"."<<endl;
-	if (a2 > a3) cout << "\tThe 'int' values in the array 'a2' are 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator)." << endl << endl;
-	else cout << "\tThe 'int' values in the array 'a2' are not 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator)." << endl << endl;
+	cout<<"\tThe 'int' values in the array 'a2': "<<endl<<endl;
+	if(a2<a3) cout<<"\t\t-) are 'strictly less than' the 'int' values in the array 'a3' (with respect to the '<' operator);"<<endl;
+	else cout<<"\t\t-) are not 'strictly less than' the 'int' values in the array 'a3' (with respect to the '<' operator);"<<endl;
+	if(a2>a3) cout<<"\t\t-) are 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator);"<<endl;
+	else cout<<"\t\t-) are not 'strictly greater than' the 'int' values in the array 'a3' (with respect to the '>' operator);"<<endl;
+	if(a2<=a3) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'int' values in the array 'a2' (with respect to the '<=' operator);"<<endl;
+	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'int' values in the array 'a2' (with respect to the '<=' operator);"<<endl;
+	if(a2>=a3) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the 'int' values in the array 'a2' (with respect to the '>=' operator)."<<endl<<endl;
+	else cout<<"\t\t-) are not both 'strictly greater than', and 'the same as' the 'int' values in the array 'a2' (with respect to the '>=' operator)."<<endl<<endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cin.get();
 	cout << endl;
@@ -122,6 +136,12 @@ int main(void)
 	cout<<"\tThe 'int' value in the location #2 of the array 'a2' (seen as a multidimensional 'tuple', see the 'get()' and the 'tuple_element()' template functions) is ";
 	a=get<2>(a2);
 	cout<<a<<"."<<endl<<endl;
+	
+	/* TASK #7 - deallocating all arrays in this test! */
+	cout<<"\tDeallocating all arrays in this test ... ";
+	if(a0!=nullptr) delete a0;
+	a0=nullptr;
+	cout<<"ok"<<endl<<endl;
 	cout << "\tPress the RETURN key to finish ... ";
 	cin.get();
 	#ifndef _MSC_VER
@@ -130,4 +150,3 @@ int main(void)
 	#endif
 	return EXIT_SUCCESS;
 }
-

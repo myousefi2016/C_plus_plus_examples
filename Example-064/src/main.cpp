@@ -281,7 +281,7 @@ int main(void)
 	cout.flush();
 	cin.get();
 	cout << endl;
-	cout<<"\tDeallocating all multimaps and other auxiliary data structures in this test ... ";
+	cout<<"\tDeallocating all multimaps in this test ... ";
 	m0.clear();
 	m1.clear();
 	m2.clear();

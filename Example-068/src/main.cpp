@@ -27,11 +27,11 @@ int main(void)
 
 	/* TASK #1 - Creating a new tuple 't0', containing a 'string' and an 'int' value. */
 	cout<<"\tCreate a new tuple 't0', containing a 'string' and an 'int' value ... ";
-	tuple<string,int> t0("John",18);
+	tuple<string,int> *t0 = new tuple<string,int>("John",18);
 	cout<<"ok"<<endl;
-	cout<<"\tThe tuple 't0' has "<<std::tuple_size< decltype(t0) >::value<<" elements of different type."<<endl;
-	cout<<"\tThe 'string' element in the tuple 't0' is '"<<std::get<0>(t0)<<"'."<<endl;
-	cout<<"\tThe 'int' value in the tuple 't0' is "<<std::get<1>(t0)<<"."<<endl<<endl;
+	cout<<"\tThe tuple 't0' has "<<std::tuple_size< decltype( (tuple<string,int>)(*t0) ) >::value<<" elements of different type."<<endl;
+	cout<<"\tThe 'string' element in the tuple 't0' is '"<<std::get<0>(*t0)<<"'."<<endl;
+	cout<<"\tThe 'int' value in the tuple 't0' is "<<std::get<1>(*t0)<<"."<<endl<<endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cin.get();
 	cout << endl;
@@ -39,13 +39,13 @@ int main(void)
 
 	/* TASK #2 - Creating a copy 't1' of the tuple 't0'. */
 	cout<<"\tCreating a new tuple 't1' as a copy of the existing tuple 't0' ... ";
-	auto t1=t0;
+	auto t1=*t0;
 	cout<<"ok"<<endl;
 	cout<<"\tThe content of the field #0 in the tuple 't1' is '"<<std::get<0>(t1)<<"'."<<endl;
 	cout<<"\tThe content of the field #1 in the tuple 't1' is "<<std::get<1>(t1)<<"."<<endl;
-	if(t0==t1) cout<<"\tThe tuples 't0' and 't1' coincide element by element (with respect to the '==' operator)."<<endl;
+	if(*t0==t1) cout<<"\tThe tuples 't0' and 't1' coincide element by element (with respect to the '==' operator)."<<endl;
 	else cout<<"\tThe tuples 't0' and 't1' do not coincide element by element (with respect to the '==' operator)."<<endl;
-	if(t0!=t1) cout<<"\tThe tuples 't0' and 't1' do not coincide element by element (with respect to the '!=' operator)."<<endl<<endl;
+	if(*t0!=t1) cout<<"\tThe tuples 't0' and 't1' do not coincide element by element (with respect to the '!=' operator)."<<endl<<endl;
 	else cout<<"\tThe tuples 't0' and 't1' coincide element by element (with respect to the '!=' operator)."<<endl<<endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cin.get();
@@ -60,17 +60,8 @@ int main(void)
 	cout<<"\tThe 'int' value in the tuple 't2' is "<<std::get<1>(t2)<<"."<<endl;
 	if(t1==t2) cout<<"\tThe tuples 't1' and 't2' coincide element by element (with respect to the '==' operator)."<<endl;
 	else cout<<"\tThe tuples 't1' and 't2' do not coincide element by element (with respect to the '==' operator)."<<endl;
-	if(t1!=t2) cout<<"\tThe tuples 't1' and 't2' do not coincide element by element (with respect to the '!=' operator)."<<endl;
-	else cout<<"\tThe tuples 't1' and 't2' coincide element by element (with respect to the '!=' operator)."<<endl;
-	if(t1<t2) cout<<"\tThe tuple 't1' is 'strictly less than' the tuple 't2' (with respect to the '<' operator)."<<endl;
-	else cout<<"\tThe tuple 't1' is not 'strictly less than' the tuple 't2' (with respect to the '<' operator)."<<endl;
-	if(t1>t2) cout<<"\tThe tuple 't1' is 'strictly greater than' the tuple 't2' (with respect to the '>' operator)."<<endl;
-	else cout<<"\tThe tuple 't1' is not 'strictly greater than' the tuple 't2' (with respect to the '>' operator)."<<endl;
-	if(t1<=t2) cout<<"\tThe tuple 't1' may be either 'strictly less than', or 'the same as' the tuple 't2' (with respect to the '<=' operator)."<<endl;
-	else cout<<"\tThe tuple 't1' is not both 'strictly less than', and 'the same as' the tuple 't2' (with respect to the '<=' operator)."<<endl;
-	if(t1>=t2) cout<<"\tThe tuple 't1' may be either 'strictly greater than', or 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
-	else cout<<"\tThe tuple 't1' is not both 'strictly greater than', and 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
-	cout<<endl;
+	if(t1!=t2) cout<<"\tThe tuples 't1' and 't2' do not coincide element by element (with respect to the '!=' operator)."<<endl<<endl;
+	else cout<<"\tThe tuples 't1' and 't2' coincide element by element (with respect to the '!=' operator)."<<endl<<endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cin.get();
 	cout << endl;
@@ -81,13 +72,33 @@ int main(void)
 	cout<<"\tThe 'int' value in the tuple 't1' is "<<std::get<1>(t1)<<"."<<endl;
 	cout<<"\tThe 'string' element in the tuple 't2' is '"<<std::get<0>(t2)<<"'."<<endl;
 	cout<<"\tThe 'int' value in the tuple 't2' is "<<std::get<1>(t2)<<"."<<endl;
+	cout<<"\tThe tuple 't1':"<<endl<<endl;
+	if(t1<t2) cout<<"\t\t-) is 'strictly less than' the tuple 't2' (with respect to the '<' operator);"<<endl;
+	else cout<<"\t\t-) is not 'strictly less than' the tuple 't2' (with respect to the '<' operator);"<<endl;
+	if(t1>t2) cout<<"\t\t-) is 'strictly greater than' the tuple 't2' (with respect to the '>' operator);"<<endl;
+	else cout<<"\t\t-) is not 'strictly greater than' the tuple 't2' (with respect to the '>' operator);"<<endl;
+	if(t1<=t2) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the tuple 't2' (with respect to the '<=' operator);"<<endl;
+	else cout<<"\t\t-) is not both 'strictly less than', and 'the same as' the tuple 't2' (with respect to the '<=' operator);"<<endl;
+	if(t1>=t2) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
+	else cout<<"\t\t-) is not both 'strictly greater than', and 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
+	cout<<endl;
 	cout<<"\tSwapping the content of the tuples 't1' and 't2' ... ";
 	t1.swap(t2);
 	cout<<"ok"<<endl;
 	cout<<"\tThe 'string' element in the tuple 't1' is '"<<std::get<0>(t1)<<"'."<<endl;
 	cout<<"\tThe 'int' value in the tuple 't1' is "<<std::get<1>(t1)<<"."<<endl;
 	cout<<"\tThe 'string' element in the tuple 't2' is '"<<std::get<0>(t2)<<"'."<<endl;
-	cout<<"\tThe 'int' value in the tuple 't2' is "<<std::get<1>(t2)<<"."<<endl<<endl;
+	cout<<"\tThe 'int' value in the tuple 't2' is "<<std::get<1>(t2)<<"."<<endl;
+	cout<<"\tThe tuple 't1':"<<endl<<endl;
+	if(t1<t2) cout<<"\t\t-) is 'strictly less than' the tuple 't2' (with respect to the '<' operator);"<<endl;
+	else cout<<"\t\t-) is not 'strictly less than' the tuple 't2' (with respect to the '<' operator);"<<endl;
+	if(t1>t2) cout<<"\t\t-) is 'strictly greater than' the tuple 't2' (with respect to the '>' operator);"<<endl;
+	else cout<<"\t\t-) is not 'strictly greater than' the tuple 't2' (with respect to the '>' operator);"<<endl;
+	if(t1<=t2) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the tuple 't2' (with respect to the '<=' operator);"<<endl;
+	else cout<<"\t\t-) is not both 'strictly less than', and 'the same as' the tuple 't2' (with respect to the '<=' operator);"<<endl;
+	if(t1>=t2) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
+	else cout<<"\t\t-) is not both 'strictly greater than', and 'the same as' the tuple 't2' (with respect to the '>=' operator)."<<endl;
+	cout<<endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cin.get();
 	cout << endl;
@@ -128,7 +139,7 @@ int main(void)
 	cout<<"\tRetrieving the field #1 in the tuple 't4' (and ignoring the remaining fields)  ... ";
 	std::tie(std::ignore, s, std::ignore) = t4;
 	cout<<"ok"<<endl;
-	cout<<"\tThe field #1 in the tuple 't4' is '"<<s<<"'."<<endl<<endl;
+	cout<<"\tThe field #1 in the tuple 't4' is '"<<s<<"'."<<endl;
 	if(t3==t4) cout<<"\tThe tuples 't3' and 't4' coincide element by element (with respect to the '==' operator)."<<endl;
 	else cout<<"\tThe tuples 't3' and 't4' do not coincide element by element (with respect to the '==' operator)."<<endl;
 	if(t3!=t4) cout<<"\tThe tuples 't3' and 't4' do not coincide element by element (with respect to the '!=' operator)."<<endl;
@@ -159,6 +170,16 @@ int main(void)
 	cout<<"\t\t-) the field #2 in the tuple 't5' contains "<<t52<<";"<<endl;
 	cout<<"\t\t-) the field #3 in the tuple 't5' contains '"<<t53<<"';"<<endl;
 	cout<<"\t\t-) the field #4 in the tuple 't5' contains "<<t54<<"."<<endl<<endl;
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+	
+	/* TASK #8 - deallocating all tuples in this test! */
+	cout<<"\tDeallocating all tuples in this test ... ";
+	if(t0!=nullptr) delete t0;
+	t0=nullptr;
+	cout<<"ok"<<endl<<endl;
 	cout << "\tPress the RETURN key to finish ... ";
 	cin.get();
 	#ifndef _MSC_VER

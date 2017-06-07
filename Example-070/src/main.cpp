@@ -3,13 +3,13 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-070' Test.
  **************************************************************************************************/
 
-#include <vector>
 #include <iostream>
+#include <vector>
 #include <cstdlib>
 using namespace std;
 
@@ -43,7 +43,10 @@ int main(void)
  	cout<<"\tThe 'int' values in the vector 'v0' are:";
  	for(auto it=v0.cbegin();it!=v0.cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl<<endl;
- 	cout.flush();
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
 	
 	/* TASK #2 - creating a new vector by giving a valid initialization. */
  	cout<<"\tCreating a vector 'v1' with 4 'int values, initialized to '37' ... ";
@@ -55,7 +58,10 @@ int main(void)
  	cout<<"."<<endl;
  	if(v1.empty()==true) cout<<"\tThe vector 'v1' is empty."<<endl<<endl;
  	else cout<<"\tThe vector 'v1' is not empty."<<endl<<endl;
-    cout.flush();
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
 	
 	/* TASK #3 - creating a new vector as the copy of another vector. */
  	cout<<"\tCreating a vector 'v2' as the copy of the vector 'v1' ... ";
@@ -69,7 +75,10 @@ int main(void)
  	else cout<<"\tThe vector 'v2' is not empty."<<endl;
  	if(v1==v2) cout<<"\tThe vectors 'v1' and 'v2' coincide position by position (with respect to the '==' operator)."<<endl<<endl;
  	else cout<<"\tThe vectors 'v1' and 'v2' do not coincide position by position (with respect to the '==' operator)."<<endl<<endl;
- 	cout.flush();
+ 	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
  	
  	/* TASK #4 - creating a new vector as the copy of another vector. */
  	cout<<"\tCreating a vector 'v3' as the copy of the vector 'v2' ... ";
@@ -83,9 +92,12 @@ int main(void)
  	else cout<<"\tThe vector 'v3' is not empty."<<endl;
  	if(v2!=v3) cout<<"\tThe vectors 'v2' and 'v3' do not coincide position by position (with respect to the '!=' operator)."<<endl<<endl;
  	else cout<<"\tThe vectors 'v2' and 'v3' coincide position by position (with respect to the '!=' operator)."<<endl<<endl;
- 	cout.flush();
- 	
- 	/* TASK #5 - creating a new vector from a C-like array. */
+ 	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+	
+	/* TASK #5 - creating a new vector from a C-like array. */
  	int arr[] = { 34, 21, 1, 0, 5 };
  	cout<<"\tCreating a vector 'v4' from a C-like array ... ";
  	vector<int> v4 = vector<int>(arr, arr + sizeof(arr) / sizeof(int) );
@@ -98,9 +110,12 @@ int main(void)
  	cout<<"."<<endl;
  	cout<<"\tThe first 'int' value of the vector 'v4' (in the forward direction) is "<<v4.front()<<"."<<endl;
  	cout<<"\tThe last 'int' value of the vector 'v4' (in the forward direction) is "<<v4.back()<<"."<<endl<<endl;
- 	cout.flush();
- 	
- 	/* TASK #6 - analysis of the vector 'v4' */
+ 	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+	
+	/* TASK #6 - analysis of the vector 'v4' */
  	cout<<"\t#values in the vector 'v4' is "<<v4.size()<<"."<<endl;
  	cout<<"\tThe capacity of the vector 'v4' is "<<v4.capacity()<<"."<<endl;
  	cout<<"\tThe maximum size of the vector 'v4' is "<<v4.max_size()<<"."<<endl;
@@ -124,8 +139,11 @@ int main(void)
  	cout<<"ok"<<endl;
  	cout<<"\t#values in the vector 'v4' is "<<v4.size()<<"."<<endl;
  	cout<<"\tThe capacity of the vector 'v4' is "<<v4.capacity()<<"."<<endl<<endl;
- 	cout.flush();
- 	
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+	
 	/* TASK #7 - allocating a new vector 'v5' and modifying its 'int' values. */
  	cout<<"\tAllocating a new vector 'v5' ... ";
  	vector<int> *v5=nullptr;
@@ -151,9 +169,12 @@ int main(void)
  	cout<<"\tThe 'int' values in the vector 'v5' are:";
  	for(auto it=v5->begin();it!=v5->end();++it) cout<<" "<<(*it);
  	cout<<"."<<endl<<endl;
- 	cout.flush();
- 	
- 	/* TASK #8 - operating on the 'int' values in the vector 'v5'. */
+ 	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+	
+	/* TASK #8 - operating on the 'int' values in the vector 'v5'. */
  	cout<<"\tThe last 'int' value of the vector 'v5' is "<<v5->back()<<"."<<endl;
  	cout<<"\tRemoving the last 'int' value from the vector 'v5' ... ";
  	v5->pop_back();
@@ -204,7 +225,10 @@ int main(void)
  	cout<<"\tThe 'int' values in the vector 'v5' are:";
  	for(auto it=v5->cbegin();it!=v5->cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl<<endl;
- 	cout.flush();
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
 	
 	/* TASK #9 - swapping the content of two vectors 'v2' and 'v5'. */
  	cout<<"\tThe 'int' values in the vector 'v2' are:";
@@ -213,10 +237,15 @@ int main(void)
  	cout<<"\tThe 'int' values in the vector 'v5' are:";
  	for(auto it=v5->cbegin();it!=v5->cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl;
- 	if(v2<(*v5)) cout<<"\tThe 'int' values in the vector 'v2' are 'strictly less than' the 'int' values in the vector 'v5' (with respect to the '<' operator)"<<endl;
- 	else cout<<"\tThe 'int' values in the vector 'v2' are not 'strictly less than' the 'int' values in the vector 'v5' (with respect to the '<' operator)"<<endl;
- 	if(v2<=(*v5)) cout<<"\tThe 'int' values in the vector 'v2' may be either 'strictly less than', or 'the same as' the 'int' values in the vector 'v5' (with respect to the '<=' operator)"<<endl;
- 	else cout<<"\tThe 'int' values in the vector 'v2' are not both 'strictly less than', and 'the same as' the 'int' values in the vector 'v5' (with respect to the '<=' operator)"<<endl;
+ 	cout<<"\tThe 'int' values in the vector 'v2':"<<endl<<endl;
+ 	if(v2<(*v5)) cout<<"\t\t-) are 'strictly less than' the 'int' values in the vector 'v5' (with respect to the '<' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly less than' the 'int' values in the vector 'v5' (with respect to the '<' operator);"<<endl;
+ 	if(v2<=(*v5)) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'int' values in the vector 'v5' (with respect to the '<=' operator);"<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'int' values in the vector 'v5' (with respect to the '<=' operator);"<<endl;
+ 	if(v2>(*v5)) cout<<"\t\t-) are 'strictly greater than' the 'int' values in the vector 'v5' (with respect to the '>' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly greater than' the 'int' values in the vector 'v5' (with respect to the '>' operator);"<<endl;
+ 	if(v2>=(*v5)) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the 'int' values in the vector 'v5' (with respect to the '>=' operator)."<<endl<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly greater than', and 'the same as' the 'int' values in the vector 'v5' (with respect to the '>=' operator)."<<endl<<endl;
  	cout<<"\tSwapping the content of the vectors 'v2' and 'v5' ... ";
  	v2.swap(*v5);
  	cout<<"ok"<<endl;
@@ -226,10 +255,19 @@ int main(void)
  	cout<<"\tThe 'int' values in the vector 'v5' are:";
  	for(auto it=v5->cbegin();it!=v5->cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl;
- 	if(v2>(*v5)) cout<<"\tThe 'int' values in the vector 'v2' may be either 'strictly greater than', or 'the same as' the 'int' values in the vector 'v5' (with respect to the '>=' operator)"<<endl;
- 	else cout<<"\tThe 'int' values in the vector 'v2' are not both 'strictly greater than', and 'the same as' the 'int' values in the vector 'v5' (with respect to the '>=' operator)"<<endl;
- 	cout<<endl;
- 	cout.flush();
+ 	cout<<"\tThe 'int' values in the vector 'v2':"<<endl<<endl;
+ 	if(v2<(*v5)) cout<<"\t\t-) are 'strictly less than' the 'int' values in the vector 'v5' (with respect to the '<' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly less than' the 'int' values in the vector 'v5' (with respect to the '<' operator);"<<endl;
+ 	if(v2<=(*v5)) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'int' values in the vector 'v5' (with respect to the '<=' operator);"<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'int' values in the vector 'v5' (with respect to the '<=' operator);"<<endl;
+ 	if(v2>(*v5)) cout<<"\t\t-) are 'strictly greater than' the 'int' values in the vector 'v5' (with respect to the '>' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly greater than' the 'int' values in the vector 'v5' (with respect to the '>' operator);"<<endl;
+ 	if(v2>=(*v5)) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the 'int' values in the vector 'v5' (with respect to the '>=' operator)."<<endl<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly greater than', and 'the same as' the 'int' values in the vector 'v5' (with respect to the '>=' operator)."<<endl<<endl;
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
 	
 	/* TASK #10 - allocating a new C-like array by using the allocator of the vector 'v5' */
  	cout<<"\tAllocating a new C-like array of 7 locations by using the allocator of the vector 'v5' ... ";
@@ -242,11 +280,15 @@ int main(void)
  	cout<<"\tDeallocating the new C-like array ... ";
  	for(int i=0;i<7;i++) v5->get_allocator().destroy(&p[i]);
  	v5->get_allocator().deallocate(p,7);
- 	cout<<"ok"<<endl;
+ 	cout<<"ok"<<endl<<endl;
  	p=nullptr;
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
 	
 	/* TASK #11 - deallocating all vectors */
-    cout<<endl<<"\tDeallocating the content of all vectors ... ";
+    cout<<"\tDeallocating all vectors in this test ... ";
     v0.clear();
     v1.clear();
     v2.clear();
@@ -255,5 +297,11 @@ int main(void)
     if(v5!=nullptr) delete v5;
     v5=nullptr;
     cout<<"ok"<<endl<<endl;
-    return EXIT_SUCCESS;
+	cout << "\tPress the RETURN key to finish ... ";
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+	return EXIT_SUCCESS;
 }

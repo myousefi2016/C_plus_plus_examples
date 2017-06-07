@@ -266,7 +266,7 @@ int main(void)
 	cout.flush();
 	cin.get();
 	cout << endl;
-	cout << "\tDeallocating all maps and other auxiliary data structures in this test ... ";
+	cout << "\tDeallocating all maps in this test ... ";
 	m0.clear();
 	m1.clear();
 	m2.clear();

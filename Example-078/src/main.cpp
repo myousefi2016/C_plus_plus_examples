@@ -202,8 +202,11 @@ int main(void)
  	for(auto u : f0) cout<<" "<<u;
  	cout<<"."<<endl<<"\tThe 'uint' values in the single-linked (forward) list 'f4' (enumerated in the forward direction) are: ";
  	for(auto u : *f4) cout<<" "<<u;
- 	cout<<"."<<endl<<endl;
- 	cout.flush();
+ 	cout<<"."<<endl;
+ 	if(f0==*f4) cout<<"\tThe single-linked (forward) lists 'f0' and 'f4' contain the same 'uint' values position by position (with respect to the '==' operator)."<<endl;
+ 	else cout<<"\tThe single-linked (forward) lists 'f0' and 'f4' do not contain the same 'uint' values position by position (with respect to the '==' operator)."<<endl;
+ 	if(f0!=*f4) cout<<"\tThe single-linked (forward) lists 'f0' and 'f4' do not contain the same 'uint' values position by position (with respect to the '!=' operator)."<<endl<<endl;
+ 	else cout<<"\tThe single-linked (forward) lists 'f0' and 'f4' contain the same 'uint' values position by position (with respect to the '==' operator)."<<endl<<endl;
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
 	cin.get();
@@ -211,10 +214,28 @@ int main(void)
 	cout.flush();
 
 	/* TASK #7 - comparing the content of the single-linked (forward) lists. */
- 	if(f0==*f4) cout<<"\tThe single-linked (forward) lists 'f0' and 'f4' contain the same 'uint' values position by position (with respect to the '==' operator)."<<endl;
- 	else cout<<"\tThe single-linked (forward) lists 'f0' and 'f4' do not contain the same 'uint' values position by position (with respect to the '==' operator)."<<endl;
- 	if(f0!=*f4) cout<<"\tThe single-linked (forward) lists 'f0' and 'f4' do not contain the same 'uint' values position by position (with respect to the '!=' operator)."<<endl;
- 	else cout<<"\tThe single-linked (forward) lists 'f0' and 'f4' contain the same 'uint' values position by position (with respect to the '==' operator)."<<endl;
+	cout<<"\tThe 'uint' values in the single-linked (forward) list 'f3' (enumerated in the forward direction) are:";
+ 	for(auto u=f3.begin();u!=f3.end();u++) cout<<" "<<(*u);
+ 	cout<<"."<<endl<<"\tThe 'uint' values in the single-linked (forward) list 'f4' (enumerated in the forward direction) are: ";
+ 	for(auto u=f4->cbegin();u!=f4->cend();u++) cout<<" "<<(*u);
+ 	cout<<"."<<endl;
+ 	cout<<"\tThe 'uint' values in the single-linked (forward) list 'f0':"<<endl<<endl;
+	if(f0<*f4) cout<<"\t\t-) are 'strictly less than' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '<' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly less than' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '<' operator);"<<endl;
+	if(f0>*f4) cout<<"\t\t-) are 'strictly larger than' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '>' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly larger than' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '>' operator);"<<endl;
+	if(f0<=*f4) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '<=' operator);"<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '<=' operator);"<<endl;
+ 	if(f0>=*f4) cout<<"\t\t-) may be either 'strictly larger than', or 'the same as' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '>=' operator)."<<endl<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly larger than', and 'the same as' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '>=' operator)."<<endl<<endl;
+ 	cout<<"\tSwapping the content of the single-linked (forward) lists 'f3' and 'f4' ... ";
+ 	f3.swap(*f4);
+ 	cout<<"ok"<<endl;
+ 	cout<<"\tThe 'uint' values in the single-linked (forward) list 'f3' (enumerated in the forward direction) are: ";
+ 	for(auto u=f3.begin();u!=f3.end();u++) cout<<" "<<(*u);
+ 	cout<<"."<<endl<<"\tThe 'uint' values in the single-linked (forward) list 'f4' (enumerated in the forward direction) are: ";
+ 	for(auto u=f4->cbegin();u!=f4->cend();u++) cout<<" "<<(*u);
+ 	cout<<"."<<endl;
 	cout<<"\tThe 'uint' values in the single-linked (forward) list 'f0':"<<endl<<endl;
 	if(f0<*f4) cout<<"\t\t-) are 'strictly less than' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '<' operator);"<<endl;
  	else cout<<"\t\t-) are not 'strictly less than' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '<' operator);"<<endl;
@@ -224,44 +245,13 @@ int main(void)
  	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '<=' operator);"<<endl;
  	if(f0>=*f4) cout<<"\t\t-) may be either 'strictly larger than', or 'the same as' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '>=' operator)."<<endl<<endl;
  	else cout<<"\t\t-) are not both 'strictly larger than', and 'the same as' the 'uint' values in the single-linked (forward) list 'f4' (with respect to the '>=' operator)."<<endl<<endl;
-	cout<<"\tThe 'uint' values in the single-linked (forward) list 'f4':"<<endl<<endl;
-	if(*f4<f0) cout<<"\t\t-) are 'strictly less than' the 'uint' values in the single-linked (forward) list 'f0' (with respect to the '<' operator);"<<endl;
- 	else cout<<"\t\t-) are not 'strictly less than' the 'uint' values in the single-linked (forward) list 'f0' (with respect to the '<' operator);"<<endl;	
-	if(*f4>f0) cout<<"\t\t-) are 'strictly larger than' the 'uint' values in the single-linked (forward) list 'f0' (with respect to the '>' operator);"<<endl;
- 	else cout<<"\t\t-) are not 'strictly larger than' the 'uint' values in the single-linked (forward) list 'f0' (with respect to the '>' operator);"<<endl;
-	if(*f4<=f0) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'uint' values in the single-linked (forward) list 'f0' (with respect to the '<=' operator);"<<endl;
- 	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'uint' values in the single-linked (forward) list 'f0' (with respect to the '<=' operator);"<<endl;
-	if(*f4>=f0) cout<<"\t\t-) may be either 'strictly larger than', or 'the same as' the 'uint' values in the single-linked (forward) list 'f0' (with respect to the '>=' operator)."<<endl;
- 	else cout<<"\t\t-) are not both 'strictly larger than', and 'the same as' the 'uint' values in the single-linked (forward) list 'f0' (with respect to the '>=' operator)."<<endl;
- 	cout<<endl;
- 	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
 	cin.get();
 	cout << endl;
 	cout.flush();
 
-	/* TASK #8 - swapping the content of the single-linked (forward) lists 'f4' and 'f3'. */
- 	cout<<"\tThe 'uint' values in the single-linked (forward) list 'f3' (enumerated in the forward direction) are:";
- 	for(auto u=f3.begin();u!=f3.end();u++) cout<<" "<<(*u);
- 	cout<<"."<<endl<<"\tThe 'uint' values in the single-linked (forward) list 'f4' (enumerated in the forward direction) are: ";
- 	for(auto u=f4->cbegin();u!=f4->cend();u++) cout<<" "<<(*u);
- 	cout<<"."<<endl<<"\tSwapping the content of the single-linked (forward) lists 'f3' and 'f4' ... ";
- 	f3.swap(*f4);
- 	cout<<"ok"<<endl;
- 	cout<<"\tThe 'uint' values in the single-linked (forward) list 'f3' (enumerated in the forward direction) are: ";
- 	for(auto u=f3.begin();u!=f3.end();u++) cout<<" "<<(*u);
- 	cout<<"."<<endl<<"\tThe 'uint' values in the single-linked (forward) list 'f4' (enumerated in the forward direction) are: ";
- 	for(auto u=f4->cbegin();u!=f4->cend();u++) cout<<" "<<(*u);
- 	cout<<"."<<endl<<endl;
- 	cout.flush();
-	cout << "\tPress the RETURN key to continue ... ";
-	cout.flush();
-	cin.get();
-	cout << endl;
-	cout.flush();
-
-	/* TASK #9 - merging the content of several single-linked (forward) lists.*/
+	/* TASK #8 - merging the content of several single-linked (forward) lists.*/
  	cout<<"\tSorting the 'uint' values in the single-linked (forward) list 'f3' (with respect to the comparison operator '<') ... ";
  	f3.sort();
  	cout<<"ok"<<endl<<"\tSorting the 'uint' values in the single-linked (forward) list 'f4' (with respect to the comparison operator '<') ... ";
@@ -280,14 +270,13 @@ int main(void)
  	cout<<"ok"<<endl;
  	if(f5.empty()) cout<<"\tThe single-linked (forward) list 'f5' is empty."<<endl<<endl;
  	else cout<<"\tThe single-linked (forward) list 'f5' is not empty."<<endl<<endl;
- 	cout.flush();
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
 	cin.get();
 	cout << endl;
 	cout.flush();
 
-	/* TASK #10 - allocating a new C-like array by using the allocator of the single-linked (forward) list 'f4'. */
+	/* TASK #9 - allocating a new C-like array by using the allocator of the single-linked (forward) list 'f4'. */
  	cout<<"\tAllocating a new C-like array of 9 locations by using the allocator of the single-linked (forward) list 'f4' ... ";
  	uint *p = f4->get_allocator().allocate(9);
  	cout<<"ok"<<endl<<"\tInitializing the locations of the new C-like array ... ";
@@ -301,8 +290,13 @@ int main(void)
  	cout<<"ok"<<endl<<endl;
  	cout.flush();
  	p=nullptr;
+ 	cout << "\tPress the RETURN key to continue ... ";
+	cout.flush();
+	cin.get();
+	cout << endl;
+	cout.flush();
 	
-	/* TASK #11 - deallocating all auxiliary data structures in this test. */
+	/* TASK #10 - deallocating all auxiliary data structures in this test. */
     cout<<"\tDeallocating all single-linked (forward) lists in this test ... ";
     f0.clear();
     f1.clear();
@@ -319,4 +313,3 @@ int main(void)
 	#endif
 	return EXIT_SUCCESS;
 }
-

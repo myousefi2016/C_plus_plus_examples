@@ -81,6 +81,15 @@ int main(void)
  	cout<<"\t#values in the multiset 's1' is "<<s1.size()<<"."<<endl;
     if(s1.empty()==true) cout<<"\tThe multiset 's1' is empty."<<endl;
  	else cout<<"\tThe multiset 's1' is not empty."<<endl;
+ 	cout<<endl<<"\tThe 'ulong' values in the multiset 's1':"<<endl<<endl;
+	if(s1<s0) cout<<"\t\t-) are 'strictly less than' the 'ulong' values in the multiset 's0' (with respect to the '<' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly less than' the 'ulong' values in the multiset 's0' (with respect to the '<' operator);"<<endl;
+ 	if(s1>s0) cout<<"\t\t-) are 'strictly greater than' the 'ulong' values in the multiset 's0' (with respect to the '>' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly greater than' the 'ulong' values in the multiset 's0' (with respect to the '>' operator);"<<endl;
+ 	if(s1<=s0) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '<=' operator);"<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '<=' operator);"<<endl;
+ 	if(s1>=s0) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '>=' operator)."<<endl<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly greater than', and 'the same as' the 'ulong' values in the multiset 's0' (with respect to the '>=' operator)."<<endl<<endl;
  	cout<<"\tSwapping the content of the multisets 's0' and 's1' ... ";
  	s1.swap(s0);
  	cout<<"ok"<<endl;

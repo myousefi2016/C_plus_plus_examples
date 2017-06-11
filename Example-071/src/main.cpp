@@ -3,16 +3,16 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), April 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-071' Test.
  **************************************************************************************************/
 
+#include <iostream>
 #include <cstdlib>
 #include <deque>
-#include <iostream>
-#include <algorithm>
 using namespace std;
+
 
 /// The main function for the <i>'Example-071'</i> Test.
 int main(void)
@@ -20,7 +20,7 @@ int main(void)
 	/* This is the 'Example-071' Test, where the 'deque' containers are validated. */
     cout<<endl<<"\tThis is the 'Example-071' Test in the C++ language."<<endl<<endl;
 	cout.flush();
-	
+
 	/* TASK #1 - validating the empty constructor for the deques. */
     cout<<"\tCreating an empty deque 'd0' of 'int' values ... ";
  	cout.flush();
@@ -57,9 +57,12 @@ int main(void)
  	cout<<"\tThe 'int' values in the deque 'd0' are:";
  	for(auto it=d0.cbegin();it!=d0.cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl<<endl;
- 	cout.flush();
- 	
- 	/* TASK #2 - creating a new deque by giving a valid initialization. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #2 - creating a new deque by giving a valid initialization. */
  	cout<<"\tCreating a deque 'd1' with 4 'int values, initialized to '37' ... ";
  	deque<int> d1 (4,37);
  	cout<<"ok"<<endl;
@@ -69,9 +72,12 @@ int main(void)
  	cout<<"."<<endl;
  	if(d1.empty()==true) cout<<"\tThe deque 'd1' is empty."<<endl<<endl;
  	else cout<<"\tThe deque 'd1' is not empty."<<endl<<endl;
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
 	cout.flush();
- 	
- 	/* TASK #3 - creating a new deque as the copy of another deque. */
+
+	/* TASK #3 - creating a new deque as the copy of another deque. */
  	cout<<"\tCreating a deque 'd2' as the copy of the deque 'd1' ... ";
  	deque<int> d2 (d1.begin(),d1.end());
  	cout<<"ok"<<endl;
@@ -82,10 +88,13 @@ int main(void)
  	if(d2.empty()==true) cout<<"\tThe deque 'd2' is empty."<<endl;
  	else cout<<"\tThe deque 'd2' is not empty."<<endl;
  	if(d1==d2) cout<<"\tThe deques 'd1' and 'd2' coincide position by position (with respect to the '==' operator)."<<endl<<endl;
- 	else cout<<"\tThe deques 'd1' and 'd2' do not coincide position by position (with respect to the '==' operator)."<<endl<<endl;
- 	cout.flush();
- 	
- 	/* TASK #4 - creating a new deque as the copy of another deque. */
+	else cout<<"\tThe deques 'd1' and 'd2' do not coincide position by position (with respect to the '==' operator)."<<endl<<endl;
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #4 - creating a new deque as the copy of another deque. */
  	cout<<"\tCreating a deque 'd3' as the copy of the deque 'd2' ... ";
  	deque<int> d3(d2);
  	cout<<"ok"<<endl;
@@ -97,9 +106,12 @@ int main(void)
  	else cout<<"\tThe deque 'd3' is not empty."<<endl;
  	if(d2!=d3) cout<<"\tThe deques 'd2' and 'd3' do not coincide position by position (with respect to the '!=' operator)."<<endl<<endl;
  	else cout<<"\tThe deques 'd2' and 'd3' coincide position by position (with respect to the '!=' operator)."<<endl<<endl;
- 	cout.flush();
- 	
- 	/* TASK #5 - creating a new deque from a C-like array. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #5 - creating a new deque from a C-like array. */
  	int arr[] = { 34, 21, 1, 0, 5 };
  	cout<<"\tCreating a deque 'd4' from a C-like array ... ";
  	deque<int> d4 = deque<int>(arr, arr + sizeof(arr) / sizeof(int) );
@@ -120,10 +132,13 @@ int main(void)
  	cout<<"ok"<<endl;
  	cout<<"\tThe 'int' values in the deque 'd4' (in the forward direction) are:";
  	for(unsigned int k=0;k<d4.size();k++) cout<<" "<<d4.at(k);
- 	cout<<"."<<endl;
+ 	cout<<"."<<endl<<endl;
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
 	cout.flush();
- 	
- 	/* TASK #6 - analysis of the deque 'd4' */
+
+	/* TASK #6 - analysis of the deque 'd4' */
  	cout<<"\t#values in the deque 'd4' is "<<d4.size()<<"."<<endl;
  	cout<<"\tThe maximum size of the deque 'd4' is "<<d4.max_size()<<"."<<endl;
  	cout<<"\tResizing the size of the deque 'd4' with the default value 56 ... ";
@@ -148,9 +163,12 @@ int main(void)
  	d4.shrink_to_fit();
  	cout<<"ok"<<endl;
  	cout<<"\t#values in the deque 'd4' is "<<d4.size()<<"."<<endl<<endl;
- 	cout.flush();
- 	
- 	/* TASK #7 - allocating a new deque 'd5' and modifying its 'int' values. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #7 - allocating a new deque 'd5' and modifying its 'int' values. */
     cout<<"\tAllocating a new deque 'd5' ... ";
  	deque<int> *d5=nullptr;
  	d5 = new deque<int>(7);
@@ -225,51 +243,68 @@ int main(void)
  	cout<<"\tThe 'int' values in the deque 'd5' are:";
  	for(auto it=d5->cbegin();it!=d5->cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl<<endl;
- 	cout.flush();
- 	
- 	/* TASK #8 - swapping the content of two deques 'd2' and 'd5'. */
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #8 - swapping the content of two deques 'd2' and 'd5'. */
  	cout<<"\tThe 'int' values in the deque 'd2' are:";
  	for(auto it=d2.cbegin();it!=d2.cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl;
  	cout<<"\tThe 'int' values in the deque 'd5' are:";
  	for(auto it=d5->cbegin();it!=d5->cend();++it) cout<<" "<<(*it);
- 	cout<<"."<<endl;
- 	if(d2<*d5) cout<<"\tThe 'int' values in the deque 'd2' are 'strictly less than' the 'int' values in the deque 'd5' (see the '<' operator)."<<endl;
- 	else cout<<"\tThe 'int' values in the deque 'd2' are not 'strictly less than' the 'int' values in the deque 'd5' (see the '<' operator)."<<endl;
- 	if(d2<=*d5) cout<<"\tThe 'int' values in the deque 'd2' may be either 'strictly less than', or 'the same as' the 'int' values in the deque 'd5' (see the '<=' operator)."<<endl;
- 	else cout<<"\tThe 'int' values in the deque 'd2' are not both 'strictly less than', and 'the same as' the 'int' values in the deque 'd5' (see the '<=' operator)."<<endl;
- 	cout<<"\tSwapping the content of the deques 'd2' and 'd5' ... ";
+ 	cout<<"."<<endl<<"\tThe 'int' values in the deque 'd2':"<<endl<<endl;
+	if(d2<*d5) cout<<"\t\t-) are 'strictly less than' the 'int' values in the deque 'd5' (see the '<' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly less than' the 'int' values in the deque 'd5' (see the '<' operator);"<<endl;
+	if(d2>=*d5) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'int' values in the deque 'd5' (see the '<=' operator);"<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'int' values in the deque 'd5' (see the '<=' operator);"<<endl;
+	if(d2>*d5) cout<<"\t\t-) are 'strictly greater than' the 'int' values in the deque 'd5' (see the '<' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly greater than' the 'int' values in the deque 'd5' (see the '<' operator);"<<endl;
+	if(d2>=*d5) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the 'int' values in the deque 'd5' (see the '>=' operator)."<<endl<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly greater than', and 'the same as' the 'int' values in the deque 'd5' (see the '>=' operator)."<<endl<<endl;
+	cout<<"\tSwapping the content of the deques 'd2' and 'd5' ... ";
  	d2.swap(*d5);
  	cout<<"ok"<<endl;
- 	cout<<"\tThe 'int' values in the deque 'd2' are:";
+	cout<<"\tThe 'int' values in the deque 'd2' are:";
  	for(auto it=d2.cbegin();it!=d2.cend();++it) cout<<" "<<(*it);
  	cout<<"."<<endl;
  	cout<<"\tThe 'int' values in the deque 'd5' are:";
  	for(auto it=d5->cbegin();it!=d5->cend();++it) cout<<" "<<(*it);
- 	cout<<"."<<endl;
- 	if(d2>*d5) cout<<"\tThe 'int' values in the deque 'd2' are 'strictly greater than' the 'int' values in the deque 'd5' (see the '>' operator)."<<endl;
- 	else cout<<"\tThe 'int' values in the deque 'd2' are not 'strictly greater than' the 'int' values in the deque 'd5' (see the '>' operator)."<<endl;
- 	if(d2>=*d5) cout<<"\tThe 'int' values in the deque 'd2' may be either 'strictly greater than', or 'the same as' the 'int' values in the deque 'd5' (see the '>=' operator)."<<endl;
- 	else cout<<"\tThe 'int' values in the deque 'd2' are not both 'strictly greater than', and 'the same as' the 'int' values in the deque 'd5' (see the '>=' operator)."<<endl;
- 	cout<<endl;
- 	cout.flush();
- 	
- 	/* TASK #9 - allocating a new C-like array by using the allocator of the deque 'd5' */
+ 	cout<<"."<<endl<<"\tThe 'int' values in the deque 'd2':"<<endl<<endl;
+	if(d2<*d5) cout<<"\t\t-) are 'strictly less than' the 'int' values in the deque 'd5' (see the '<' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly less than' the 'int' values in the deque 'd5' (see the '<' operator);"<<endl;
+	if(d2>=*d5) cout<<"\t\t-) may be either 'strictly less than', or 'the same as' the 'int' values in the deque 'd5' (see the '<=' operator);"<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly less than', and 'the same as' the 'int' values in the deque 'd5' (see the '<=' operator);"<<endl;
+	if(d2>*d5) cout<<"\t\t-) are 'strictly greater than' the 'int' values in the deque 'd5' (see the '<' operator);"<<endl;
+ 	else cout<<"\t\t-) are not 'strictly greater than' the 'int' values in the deque 'd5' (see the '<' operator);"<<endl;
+	if(d2>=*d5) cout<<"\t\t-) may be either 'strictly greater than', or 'the same as' the 'int' values in the deque 'd5' (see the '>=' operator)."<<endl<<endl;
+ 	else cout<<"\t\t-) are not both 'strictly greater than', and 'the same as' the 'int' values in the deque 'd5' (see the '>=' operator)."<<endl<<endl;
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #9 - allocating a new C-like array by using the allocator of the deque 'd5' */
  	cout<<"\tAllocating a new C-like array of 7 locations by using the allocator of the deque 'd5' ... ";
  	int *p = d5->get_allocator().allocate(7);
  	cout<<"ok"<<endl<<"\tInitializing the locations of the new C-like array ... ";
  	for(int i=0;i<7;i++) d5->get_allocator().construct(&p[i],i);
  	cout<<"ok"<<endl<<"\tThe 'int' values in the new allocated array are:";
  	for(int i=0;i<7;i++) cout<<" "<<*(p+i);
- 	cout<<endl;
+ 	cout<<"."<<endl;
  	cout<<"\tDeallocating the new C-like array ... ";
  	for(int i=0;i<7;i++) d5->get_allocator().destroy(&p[i]);
  	d5->get_allocator().deallocate(p,7);
- 	cout<<"ok"<<endl;
+ 	cout<<"ok"<<endl<<endl;
  	p=nullptr;
- 	
- 	/* TASK #10 - deallocating all deques */
-    cout<<endl<<"\tDeallocating the content of all deques ... ";
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
+
+	/* TASK #10 - deallocating all deques */
+    cout<<"\tDeallocating all deques in this test ... ";
     d0.clear();
     d1.clear();
     d2.clear();
@@ -278,5 +313,12 @@ int main(void)
     if(d5!=nullptr) delete d5;
     d5=nullptr;
     cout<<"ok"<<endl<<endl;
-    return EXIT_SUCCESS;
+	cout << "\tPress the RETURN key to finish ... ";
+	cin.get();
+	#ifndef _MSC_VER
+		cout << endl;
+		cout.flush();
+	#endif
+	return EXIT_SUCCESS;
 }
+

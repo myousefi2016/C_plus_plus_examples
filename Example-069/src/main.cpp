@@ -136,6 +136,10 @@ int main(void)
 	cout<<"\tThe 'int' value in the location #2 of the array 'a2' (seen as a multidimensional 'tuple', see the 'get()' and the 'tuple_element()' template functions) is ";
 	a=get<2>(a2);
 	cout<<a<<"."<<endl<<endl;
+	cout << "\tPress the RETURN key to continue ... ";
+	cin.get();
+	cout << endl;
+	cout.flush();
 	
 	/* TASK #7 - deallocating all arrays in this test! */
 	cout<<"\tDeallocating all arrays in this test ... ";

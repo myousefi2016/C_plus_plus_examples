@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), May 2017
+ * Created by David Canino (canino.david@gmail.com), June 2017
  *
  * house.h - the header file, defining the 'House' class for the 'Example-081' Test.
  **************************************************************************************************/
@@ -63,7 +63,7 @@
 			os<<"\t-) the color for the house is '"<<h.getCColor()<<"';"<<endl;
 			os<<"\t-) #bathrooms/restrooms for the house is '"<<h.getCNumberOfBathRooms()<<"';"<<endl;
 			os<<"\t-) #rooms (except the bathrooms) for the house is '"<<h.getCNumberOfRooms()<<"';"<<endl;
-			os<<"\t-) the square meters for the house are '"<<h.getCSquareMeters()<<"'"<<endl<<endl;
+			os<<"\t-) the square meters for the house are '"<<h.getCSquareMeters()<<"'."<<endl<<endl;
 			os.flush();
 			return os;
 		}

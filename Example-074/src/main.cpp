@@ -12,6 +12,7 @@
 #include <queue>
 #include <iostream>
 #include <vector>
+#include <functional>
 using namespace std;
 
 /// The custom priority to be used in the priority deques.

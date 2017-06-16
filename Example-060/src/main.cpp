@@ -17,6 +17,7 @@ using namespace std;
 int main(void)
 {
 	int a=0,b=0;
+	bool err = false;
 
 	/* This is the 'Example-060' Test, where the 'assertions' are validated. */
 	cout<<endl<<"\tThis is the 'Example-060' Test in the C++ language."<<endl<<endl;
@@ -27,14 +28,32 @@ int main(void)
 	cout.flush();
 	cin>>a;
 	assert(cin);
-	cout<<"\tPassed the assertion (check) on the standard input stream validity."<<endl;
+	cout<<"\tEvaluated the assertion (check) on the standard input stream validity."<<endl;
+	if (!cin)
+	{
+		cout << endl << "\t\tWARNING: here, your program is built in the release mode, and the assertions are not activated. Your input is wrong, and the results will not be correct." << endl << endl;
+		cin.clear();
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		err = true;
+	}
+
+	/* Now, we evaluated the second assertion. */
 	cout.flush();
 	assert(a>0); 
-	cout<<"\tPassed the assertion (check) on the positive and not null value 'a'="<<a<<"."<<endl<<endl;
+	cout<<"\tEvaluated the assertion (check) on the positive and not null value 'a'="<<a<<"."<<endl;
 	cout.flush();
-	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	cin.clear();
-	cin.clear();
+	if(a<=0) 
+	{ 
+		cout << endl<< "\t\tWARNING: here, your program is built in the release mode, and the assertions are not activated. Your input is wrong, and the results will not be correct." << endl<<endl;
+		if (!err) { cin.clear(); cin.clear(); cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); }
+	}
+	if ((cin) && (a > 0))
+	{
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		cin.clear();
+		cin.clear();
+		cout << endl;
+	}
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
 	cin.get();
@@ -42,27 +61,46 @@ int main(void)
 	cout.flush();
 	
 	/* TASK #2 - we read the 'int' value 'b' from the standard input stream. */
-	cout<<"\tPlease, insert the 'int' value 'b' (it must be positive and not null): ";
+	cout << "\tPlease, insert the 'int' value 'b' (it must be positive and not null): ";
 	cout.flush();
-	cin>>b;
+	cin >> b;
 	assert(cin);
-	cout<<"\tPassed the assertion (check) on the standard input stream validity."<<endl;
+	cout << "\tEvaluated the assertion (check) on the standard input stream validity." << endl;
+	if (!cin)
+	{
+		cout << endl << "\t\tWARNING: here, your program is built in the release mode, and the assertions are not activated. Your input is wrong, and the results will not be correct." << endl << endl;
+		cin.clear();
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		err = true;
+	}
+
+	/* Now, we evaluated the second assertion. */
 	cout.flush();
-	assert(b>0); 
-	cout<<"\tPassed the assertion (check) on the positive and not null value 'b'="<<b<<"."<<endl<<endl;
+	assert(b>0);
+	cout << "\tEvaluated the assertion (check) on the positive and not null value 'b'=" << b << "." << endl;
 	cout.flush();
-	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	cin.clear();
-	cin.clear();
+	if (b <= 0)
+	{
+		cout << endl << "\t\tWARNING: here, your program is built in the release mode, and the assertions are not activated. Your input is wrong, and the results will not be correct." << endl << endl;
+		if (!err) { cin.clear(); cin.clear(); cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); }
+	}
+	if ((cin) && (b > 0))
+	{
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		cin.clear();
+		cin.clear();
+		cout << endl;
+	}
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
 	cin.get();
 	cout << endl;
 	cout.flush();
-	
+
 	/* TASK #3 - computing an expression, involving the parameters 'a' and 'b'. */
 	cout<<"\tThe value of the parameter 'a' is "<<a<<"."<<endl;
 	cout<<"\tThe value of the parameter 'b' is "<<b<<"."<<endl;
+	if( (a==0) || (b==0)) cout << endl << "\t\tWARNING: here, your program is built in the release mode, and the assertions are not activated. Your input is wrong, and the results will not be correct." << endl << endl;
 	cout<<"\tThe value of the expression 'a+b' is "<<(a+b)<<endl;
 	cout<<"\tThe value of the expression 'a-b' is "<<(a-b)<<endl;
 	cout<<"\tThe value of the expression 'a*b' is "<<(a*b)<<endl;

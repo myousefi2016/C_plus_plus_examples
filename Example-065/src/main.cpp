@@ -181,7 +181,7 @@ int main(void)
 	if (m1 == m2) cout << "\tThe unordered maps 'm1' and 'm2' contain exactly the same associations between a 'string' and an 'uint' value (with respect to the '==' operator)." << endl<<endl;
 	else cout << "\tThe unordered maps 'm1' and 'm2' do not contain exactly the same associations between a 'string' and an 'uint' value (with respect to the '==' operator)." << endl<<endl;
 	cout<<"\tThe current load factor for the unordered map 'm2' is "<<m2.load_factor()<<"."<<endl;
-	cout<<"\tRequesting to rehashing the associations in the unordered map 'm2' in order to have at least 5 buckets (if possible) ... ";
+	cout<<"\tRequesting to rehash the associations in the unordered map 'm2' in order to have at least 5 buckets (if possible) ... ";
 	m2.rehash(5);
 	cout<<"ok"<<endl;
 	cout<<"\tThe unordered map 'm2' contains "<<m2.bucket_count()<<" buckets, and the following " << m2.size() << " associations between a 'string' and an 'uint' value:" << endl << endl;
@@ -308,7 +308,7 @@ int main(void)
 	cin.get();
 	cout << endl;
 
-	/* TASK 8 - Deallocating all unordered maps, used in this test. */
+	/* TASK #8 - Deallocating all unordered maps, used in this test. */
 	cout << "\tDeallocating all unordered maps in this test ... ";
 	m0.clear();
 	m1.clear();

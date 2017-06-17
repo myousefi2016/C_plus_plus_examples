@@ -150,7 +150,7 @@ int main(void)
 		if (n == 0) cout << "\tThe multimap 'm2' contains no association, involving the student 'Student #1'." << endl;
 		else if(n==1) cout << "\tThe multimap 'm2' contains only one association, involving the student 'Student #1'." << endl;
 		else cout << "\tThe multimap 'm2' contains "<<n<<" associations, involving the student 'Student #1'." << endl;
-		cout << "\tThe multimap 'm2' contains " << m2.size() << " associations between the students and their tests marks." << endl << endl;
+		cout << "\tThe multimap 'm2' contains " << m2.size() << " associations between the students and their tests marks." << endl;
 		if (m1 == m2) cout << "\tThe multimaps 'm1' and 'm2' contain exactly the same associations between the students and their tests marks (with respect to the '==' operator)." << endl << endl;
 		else cout << "\tThe multimaps 'm1' and 'm2' do not contain exactly the same associations between the students and their tests marks (with respect to the '==' operator)." << endl << endl;
 	}
@@ -276,7 +276,7 @@ int main(void)
 		cout.flush();
 	}
 
-	/* TASK 8 - Deallocating all multimaps, used in this test. */
+	/* TASK #8 - Deallocating all multimaps, used in this test. */
 	cout << "\tPress the RETURN key to continue ... ";
 	cout.flush();
 	cin.get();

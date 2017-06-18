@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <cassert>
 #include <iostream>
+#include <limits>
 using namespace std;
 
 /// The main function for the <i>'Example-060'</i> Test.

@@ -191,7 +191,7 @@ int main(void)
 	cout<<endl<<"\tRequesting to rehash the associations in the unordered multimap 'm2' in order to have at least 5 buckets (if possible) ... ";
 	m2.rehash(5);
 	cout<<"ok"<<endl;
-	cout<<"\tThe unordered multimap 'm2' contains "<<m2.bucket_count()<<" buckets, and the following " << m2.size() << " associations between between the students and their tests marks:" << endl << endl;
+	cout<<"\tThe unordered multimap 'm2' contains "<<m2.bucket_count()<<" buckets, and the following " << m2.size() << " associations between the students and their tests marks:" << endl << endl;
 	for(uint k=0;k<m2.bucket_count();k++)
 	{
 		cout<<"\t\t-) the bucket #"<<k<<" contains ";
@@ -234,7 +234,7 @@ int main(void)
 	cout << "\tSwapping the content of the unordered multimaps 'm1' and 'm3' ... ";
 	m1.swap(m3);
 	cout<<"ok"<<endl;
-		if (m3.empty() == true) cout << "\tThe new unordered multimap 'm3' contains no association between the students and their tests marks." << endl;
+	if (m3.empty() == true) cout << "\tThe new unordered multimap 'm3' contains no association between the students and their tests marks." << endl;
 	else cout<<"\tThe new unordered multimap 'm3' contains "<<m3.size()<<" associations between the students and their tests marks."<<endl;
 	if(m1.empty()==true) cout<<"\tThe existing unordered multimap 'm1' contains no association between the students and their tests marks."<<endl<<endl;
 	else cout<<"\tThe existing unordered multimap 'm1' contains "<<m1.size()<<" associations between the students and their tests marks."<<endl<<endl;

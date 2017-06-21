@@ -3,7 +3,7 @@
 <H3>The 'Example-061' Test</H3>
 
 This basic test about the use of the C++ programming language validates the member functions, offered by the <i>'std::unordered_set'</i> template class (defined in the <i>'< unordered_set >'</i> header file, and proposed for the first time by the C++11 standard). This latter describes a container, which stores unique elements in no particular order, and which allows for the fast retrieval of individual elements, based on their value. In an unordered set, the value <code><i>'k'</i></code> of an element is at the same time its key <code><i>'k'</i></code>, which identifies it uniquely.
-For the sake of the efficiency, the associations of interest are grouped and saved into a collection of <i>'buckets'</i>, depending on their hash values to allow for fast access.<p>
+For the sake of the efficiency, the values of interest are grouped and saved into a collection of <i>'buckets'</i>, depending on their hash values to allow for fast access.<p>
 
 In particular, this test consists of the <i>'Example-061'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <i><code>'src'</code></i> folder) without using other dependencies.<p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
 <li>the <i><code>'cmake'</code></i> folder contains the project file for the <i><A href="http://cmake.org">CMake Building Tool</A></i>;</li>

@@ -13,6 +13,9 @@
 #include <string>
 #include <cstring>
 #include <limits>
+#ifdef _MSC_VER
+	#include <algorithm>
+#endif
 using namespace std;
 
 /// This function simulates a pause while this test runs.

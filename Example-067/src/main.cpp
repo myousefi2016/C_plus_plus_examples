@@ -12,6 +12,7 @@
 #include <cstdlib>
 #include <string>
 #include <cstring>
+#include <limits>
 using namespace std;
 
 /// This function simulates a pause while this test runs.

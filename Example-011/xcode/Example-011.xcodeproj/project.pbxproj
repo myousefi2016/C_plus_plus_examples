@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		630562C01DF5C507003C0D94 /* Example-011 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example-011"; sourceTree = BUILT_PRODUCTS_DIR; };
-		633E495B1DF5C54B00005F9D /* myclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myclass.h; path = ../include/myclass.h; sourceTree = "<group>"; };
+		632744D71F044FEF0088C969 /* myclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myclass.h; path = ../include/myclass.h; sourceTree = "<group>"; };
 		633E495C1DF5C55D00005F9D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,8 +42,8 @@
 		630562B71DF5C506003C0D94 = {
 			isa = PBXGroup;
 			children = (
+				632744D71F044FEF0088C969 /* myclass.h */,
 				633E495C1DF5C55D00005F9D /* main.cpp */,
-				633E495B1DF5C54B00005F9D /* myclass.h */,
 				630562C21DF5C507003C0D94 /* Example-011 */,
 				630562C11DF5C507003C0D94 /* Products */,
 			);
@@ -220,6 +220,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -228,6 +229,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

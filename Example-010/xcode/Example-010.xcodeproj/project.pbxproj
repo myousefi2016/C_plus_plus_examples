@@ -25,9 +25,9 @@
 
 /* Begin PBXFileReference section */
 		6379F05E1DF6C74F007B065B /* Example-010 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example-010"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63B88F791DF6C7B9009C561B /* myvariadic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myvariadic.h; path = ../include/myvariadic.h; sourceTree = "<group>"; };
 		63B88F7A1DF6C7C9009C561B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = "<group>"; };
 		63B88F7B1DF6C7C9009C561B /* myvariadic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = myvariadic.cpp; path = ../src/myvariadic.cpp; sourceTree = "<group>"; };
+		63CC35C61F04584500FEF4DB /* myvariadic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myvariadic.h; path = ../include/myvariadic.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +44,9 @@
 		6379F0551DF6C74F007B065B = {
 			isa = PBXGroup;
 			children = (
+				63CC35C61F04584500FEF4DB /* myvariadic.h */,
 				63B88F7A1DF6C7C9009C561B /* main.cpp */,
 				63B88F7B1DF6C7C9009C561B /* myvariadic.cpp */,
-				63B88F791DF6C7B9009C561B /* myvariadic.h */,
 				6379F0601DF6C74F007B065B /* Example-010 */,
 				6379F05F1DF6C74F007B065B /* Products */,
 			);
@@ -224,6 +224,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -232,6 +233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

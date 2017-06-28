@@ -25,9 +25,9 @@
 
 /* Begin PBXFileReference section */
 		630296C51E1ECE3900529E82 /* Example-080 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example-080"; sourceTree = BUILT_PRODUCTS_DIR; };
-		630296CF1E1ECF2C00529E82 /* movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = movie.h; path = ../include/movie.h; sourceTree = "<group>"; };
 		630296D01E1ECF3900529E82 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = "<group>"; };
 		630296D11E1ECF3900529E82 /* movie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = movie.cpp; path = ../src/movie.cpp; sourceTree = "<group>"; };
+		632A40851F0452B100CD9899 /* movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = movie.h; path = ../include/movie.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +44,9 @@
 		630296BC1E1ECE3900529E82 = {
 			isa = PBXGroup;
 			children = (
+				632A40851F0452B100CD9899 /* movie.h */,
 				630296D01E1ECF3900529E82 /* main.cpp */,
 				630296D11E1ECF3900529E82 /* movie.cpp */,
-				630296CF1E1ECF2C00529E82 /* movie.h */,
 				630296C71E1ECE3900529E82 /* Example-080 */,
 				630296C61E1ECE3900529E82 /* Products */,
 			);
@@ -224,6 +224,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -232,6 +233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

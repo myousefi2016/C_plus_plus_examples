@@ -25,9 +25,9 @@
 
 /* Begin PBXFileReference section */
 		635EE3181E1F070600517193 /* Example-081 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example-081"; sourceTree = BUILT_PRODUCTS_DIR; };
-		635EE3221E1F073400517193 /* house.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = house.h; path = ../include/house.h; sourceTree = "<group>"; };
 		635EE3231E1F074000517193 /* house.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = house.cpp; path = ../src/house.cpp; sourceTree = "<group>"; };
 		635EE3241E1F074000517193 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = "<group>"; };
+		63B3DFBF1F04518E00EE113A /* house.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = house.h; path = ../include/house.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +44,9 @@
 		635EE30F1E1F070600517193 = {
 			isa = PBXGroup;
 			children = (
+				63B3DFBF1F04518E00EE113A /* house.h */,
 				635EE3231E1F074000517193 /* house.cpp */,
 				635EE3241E1F074000517193 /* main.cpp */,
-				635EE3221E1F073400517193 /* house.h */,
 				635EE31A1E1F070600517193 /* Example-081 */,
 				635EE3191E1F070600517193 /* Products */,
 			);
@@ -224,6 +224,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -232,6 +233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -24,10 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6353AC711F04565B0099CD83 /* recursive_factorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = recursive_factorial.h; path = ../include/recursive_factorial.h; sourceTree = "<group>"; };
 		63813B841DF43527009980F9 /* Example-007 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example-007"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BB5A131DF43587009A2CD4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = "<group>"; };
 		63BB5A141DF43587009A2CD4 /* recursive_factorial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = recursive_factorial.cpp; path = ../src/recursive_factorial.cpp; sourceTree = "<group>"; };
-		63BB5A171DF43592009A2CD4 /* recursive_factorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = recursive_factorial.h; path = ../include/recursive_factorial.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		63813B7B1DF43527009980F9 = {
 			isa = PBXGroup;
 			children = (
-				63BB5A171DF43592009A2CD4 /* recursive_factorial.h */,
+				6353AC711F04565B0099CD83 /* recursive_factorial.h */,
 				63BB5A131DF43587009A2CD4 /* main.cpp */,
 				63BB5A141DF43587009A2CD4 /* recursive_factorial.cpp */,
 				63813B861DF43527009980F9 /* Example-007 */,
@@ -224,6 +224,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -232,6 +233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

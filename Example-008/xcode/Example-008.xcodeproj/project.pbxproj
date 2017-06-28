@@ -25,9 +25,9 @@
 
 /* Begin PBXFileReference section */
 		636F98341DF4BF7900E02BE0 /* Example-008 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example-008"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63B942A41DF4BFFD002BA046 /* myfunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myfunctions.h; path = ../include/myfunctions.h; sourceTree = "<group>"; };
 		63B942A51DF4C011002BA046 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = "<group>"; };
 		63B942A61DF4C011002BA046 /* myfunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = myfunctions.cpp; path = ../src/myfunctions.cpp; sourceTree = "<group>"; };
+		63F1632D1F0460C000363844 /* myfunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myfunctions.h; path = ../include/myfunctions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +44,9 @@
 		636F982B1DF4BF7900E02BE0 = {
 			isa = PBXGroup;
 			children = (
+				63F1632D1F0460C000363844 /* myfunctions.h */,
 				63B942A51DF4C011002BA046 /* main.cpp */,
 				63B942A61DF4C011002BA046 /* myfunctions.cpp */,
-				63B942A41DF4BFFD002BA046 /* myfunctions.h */,
 				636F98361DF4BF7900E02BE0 /* Example-008 */,
 				636F98351DF4BF7900E02BE0 /* Products */,
 			);
@@ -224,6 +224,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -232,6 +233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WFRBN668F6;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../include/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

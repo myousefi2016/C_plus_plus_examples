@@ -75,16 +75,3 @@ int main(void)
 	#endif
 	return EXIT_SUCCESS;
 }
-
-
-		
-	
-		
-		/// This operator computes the difference between the current rational and another rational.
-//		Rational operator - ( const Rational & r) const;
-		
-		/// This operator computes the product between the current rational and another rational.
-//		Rational operator * ( const Rational & r) const;
-		
-		/// This operator computes the ratio between the current rational and another rational.
-//		Rational operator / ( const Rational & r) const;

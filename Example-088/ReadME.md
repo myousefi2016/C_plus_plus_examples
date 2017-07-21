@@ -2,21 +2,22 @@
 
 <H3>The 'Example-088' Test</H3>
 
-This basic test about the use of the C++ programming language validates the <i>'Curiously Recurring Template Pattern (CRTP)'</i> technique. This latter is an idiom in the C++ language, where a class <code><i>'X'</i></code> derives from a class template instantiation using <code><i>'X'</i></code> itself as template argument. More generally, it is known as the <i>'F-bound polymorphism'</i>, and it is a form of the <code><i><A href="https://en.wikipedia.org/wiki/Bounded_quantification#F-bounded_quantification">F-bounded quantification</A></i></code>. It exploit the following schema:<p><code>
-
+This basic test about the use of the C++ programming language validates the <i>'Curiously Recurring Template Pattern (CRTP)'</i> technique. This latter is an idiom in the C++ language, where a class <code><i>'X'</i></code> derives from a class template instantiation using <code><i>'X'</i></code> itself as template argument. More generally, it is known as the <i>'F-bound polymorphism'</i>, and it is a form of the <i><A href="https://en.wikipedia.org/wiki/Bounded_quantification#F-bounded_quantification">F-bounded quantification</A></i>. It exploit the following schema:<p><pre>
 // The CRTP base (template) class.
 template<class T> class Base
 {
-    // methods within Base can use template to access members of Derived
-	void foo() { static_cast<T*>(this)->foo(); }
+&nbsp; &nbsp; // Any member function within the Base class can use template to access members of the Derived class.
+&nbsp; &nbsp; void foo() { static_cast<T*>(this)->foo(); }
 };
 
 // The CRTP derived class.
 class Derived : public Base<Derived>
 {
-    // ...
-	void foo() { ... }
-};</code><p>Typically, we will take advantage of the fact that the member function bodies (definitions) are not instantiated until long after their declarations, and will use members of the <i>'CRTP derived class'</i> within its own member functions, via the use of the (static) cast (as shown above). Thus, it is clear that the <i>'CRTP'</i> technique can be exploited for achieving a similar effect to the use of the <i>'virtual functions'</i> without the costs of the <i>'dynamic polymorphism'</i>.<p>Several capabilities, offered by the C++11 standard, are also exploited in this test.<p>In particular, this test consists of the <i>'Example-088'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <code><i>'src'</i></code> folder) without using other dependencies.<p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
+&nbsp; &nbsp; // ...
+&nbsp; &nbsp; void foo() { ... }
+};</pre><p>
+
+Typically, we will take advantage of the fact that the member function bodies (definitions) are not instantiated until long after their declarations, and will use members of the <i>'CRTP derived class'</i> within its own member functions, via the use of the (static) cast (as shown above). Thus, it is clear that the <i>'CRTP'</i> technique can be exploited for achieving a similar effect to the use of the <i>'virtual functions'</i> without the costs of the <i>'dynamic polymorphism'</i>.<p>Several capabilities, offered by the C++11 standard, are also exploited in this test.<p>In particular, this test consists of the <i>'Example-088'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <code><i>'src'</i></code> folder) without using other dependencies.<p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
 <li>the <i><code>'cmake'</code></i> folder contains the project file for the <i><A href="http://cmake.org">CMake Building Tool</A></i>;</li>
 <li>the <i><code>'vstudio'</code></i> folder contains the solution file for the <i><A href="http://www.visualstudio.com/">Microsoft Visual Studio (Community Edition 2015)</A></i> [IN PROGRESS];</li>
 <li>the <i><code>'xcode'</code></i> folder contains the project file for the <i><A href="http://developer.apple.com/xcode/">Apple XCode</A></i>.</li></ul>

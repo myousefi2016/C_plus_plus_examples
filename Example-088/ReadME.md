@@ -2,7 +2,7 @@
 
 <H3>The 'Example-088' Test</H3>
 
-This basic test about the use of the C++ programming language validates the <i>'Curiously Recurring Template Pattern (CRTP)'</i> technique. This latter is an idiom in the C++ language, where a class <code><i>'X'</i></code> derives from a class template instantiation using <code><i>'X'</i></code> itself as template argument. More generally, it is known as the <i>'F-bound polymorphism'</i>, and it is a form of the <i><A href="https://en.wikipedia.org/wiki/Bounded_quantification#F-bounded_quantification">F-bounded quantification</A></i>. It exploit the following schema:<p><pre>
+This basic test about the use of the C++ programming language validates the <i>'Curiously Recurring Template Pattern (CRTP)'</i> technique. This latter is an idiom in the C++ language, where a class <code><i>'X'</i></code> derives from a class template instantiation using <code><i>'X'</i></code> itself as template argument. More generally, it is known as the <i>'F-bound polymorphism'</i>, and it is a form of the <i><A href="https://en.wikipedia.org/wiki/Bounded_quantification#F-bounded_quantification">F-bounded quantification</A></i>. It is based on the following schema:<p><pre>
 // The CRTP base (template) class.
 template<class T> class Base
 {

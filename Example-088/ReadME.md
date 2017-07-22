@@ -19,7 +19,7 @@ class Derived : public Base\<Derived\>
 Typically, we will take advantage of the fact that the member function bodies (definitions) are not instantiated until long after their declarations, and will use members of the <i>'CRTP derived class'</i> within its own member functions, via the use of the (static) cast (as shown above). Thus, it is clear that the <i>'CRTP'</i> technique can be exploited for achieving a similar effect to the use of the <A href="https://en.wikipedia.org/wiki/Virtual_function"><i>'virtual functions'</i></A> without the costs of the <A href="https://en.wikipedia.org/wiki/Name_binding"><i>'dynamic polymorphism'</i></A>.<p>Several capabilities, offered by the C++11 standard, are also exploited in this test.<p>In particular, this test consists of the <i>'Example-088'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <code><i>'src'</i></code> folder) without using other dependencies.<p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
 <li>the <i><code>'cmake'</code></i> folder contains the project file for the <i><A href="http://cmake.org">CMake Building Tool</A></i>;</li>
 <li>the <i><code>'vstudio'</code></i> folder contains the solution file for the <i><A href="http://www.visualstudio.com/">Microsoft Visual Studio (Community Edition 2015)</A></i> [IN PROGRESS];</li>
-<li>the <i><code>'xcode'</code></i> folder contains the project file for the <i><A href="http://developer.apple.com/xcode/">Apple XCode</A></i> [IN PROGRESS].</li></ul>
+<li>the <i><code>'xcode'</code></i> folder contains the project file for the <i><A href="http://developer.apple.com/xcode/">Apple XCode</A></i>.</li></ul>
 
 <p><table border=1 width=100%><tr><td><p><b>VERY IMPORTANT:</b><p>It is clear that this test can be built and run ONLY if your C++ compiler is a C++11-compliant compiler. The most recent versions of the compilers in the current literature are C++11-compliant.<p></td></tr></table><p><hr><p>
 
@@ -40,7 +40,7 @@ This test is also built by using the <A href="http://www.visualstudio.com/"><i>M
 
 Note that this solution file is independently created from scratch, and is different from the solution file, which may be generated automatically by the <i><A href="http://cmake.org">CMake Building Tool</A></i>.<p>An interested user finds more details in the Official Documentation of the <i><A href="http://www.visualstudio.com/">Microsoft Visual Studio (Community Edition 2015)</A></i>.<p><hr><p>
 
-<h4>Instructions for building this test with the <i><A href="http://developer.apple.com/xcode/">Apple XCode</A></i> [IN PROGRESS]</h4>
+<h4>Instructions for building this test with the <i><A href="http://developer.apple.com/xcode/">Apple XCode</A></i></h4>
 
 This test is also built by using the <A href="http://developer.apple.com/xcode/"><i>Apple XCode</i></A> (based on the <A href="http://clang.llvm.org/"><i>CLANG</i> compiler</A>) under the MacOsX 11.* El-Capitan (and higher). In particular, the <i><code>'xcode'</code></i> folder contains the <i>'Example-088.xcodeproj'</i> project file, which can be open and built without being modified. It can be built by clicking on the <i>'Build & Run'</i> command. The resulting <i>'Example-088'</i> executable file is stored in the <i><code>'Build/Products/Debug/'</code></i> folder, if the debugging symbols are included, or in the <i><code>'Build/Products/Release/'</code></i> folder, otherwise.<p>
 

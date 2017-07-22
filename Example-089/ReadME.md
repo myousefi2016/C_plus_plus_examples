@@ -25,10 +25,8 @@ template <typename T> class CounterObject
 
 &nbsp; &nbsp; // The created instances number for the class of interest.
 &nbsp; &nbsp; static int objects_created;
-
 &nbsp; &nbsp; // The instances number, that are still alive, for the class of interest.
 &nbsp; &nbsp; static int objects_alive;
-
 &nbsp; &nbsp; ...  
 };
 

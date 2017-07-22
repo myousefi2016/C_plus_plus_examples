@@ -91,7 +91,7 @@ int main(void)
 		c5=nullptr;
 	}
     
-    /* TASK ? - now, we deallocate all instances of the 'MyClass' class in this test. */
+    /* TASK 8 - now, we deallocate all instances of the 'MyClass' class in this test. */
     cout<<"\tDeallocating all instances of the 'MyClass' class in this test ... ";
     if(c0!=nullptr) { delete c0; c0=nullptr; }
     if(c1!=nullptr) { delete c1; c1=nullptr; }

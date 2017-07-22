@@ -3,7 +3,7 @@
  *
  * GitHub repository: http://github.com/davidcanino/C_plus_plus_examples
  *
- * Created by David Canino (canino.david@gmail.com), June 2017
+ * Created by David Canino (canino.david@gmail.com), July 2017
  *
  * main.cpp - the source file, implementing the main function for the 'Example-082' Test.
  ****************************************************************************************************************************/
@@ -58,7 +58,7 @@ int main(void)
     cout<<"ok"<<endl<<"\tThe new rational 'f=a/b' is "<<*f<<"."<<endl<<endl;
     cout.flush();
     
-    /* TASK #? - deallocating all existing rationals in this test! */
+    /* TASK #7 - deallocating all existing rationals in this test! */
     cout<<"\tDeallocating all rationals in this test ... ";
     if(a!=nullptr) { delete a; a=nullptr; }
     if(c!=nullptr) { delete c; c=nullptr; }

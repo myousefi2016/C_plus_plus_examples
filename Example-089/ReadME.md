@@ -4,14 +4,14 @@
 
 This basic test about the use of the C++ programming language validates the <i>'Curiously Recurring Template Pattern (CRTP)'</i> technique, and, broadly speaking, the <i>'template-based'</i> techniques. This latter is an idiom in the C++ language, where a class <code><i>'X'</i></code> derives from a class template instantiation using <code><i>'X'</i></code> itself as template argument. More generally, it is known as the <i>'F-bound polymorphism'</i>, and it is a form of the <i><A href="https://en.wikipedia.org/wiki/Bounded_quantification#F-bounded_quantification">F-bounded quantification</A></i>. It is based on the following schema:<p><pre>
 // The CRTP base (template) class.
-template<class T> class Base
+template\<class T\> class Base
 {
 &nbsp; &nbsp; // Any member function within the Base class can use template to access members of the Derived class.
-&nbsp; &nbsp; void foo() { static_cast<T*>(this)->foo(); }
+&nbsp; &nbsp; void foo() { static_cast\<T*\>(this)->foo(); }
 };
 
 // The CRTP derived class.
-class Derived : public Base<Derived>
+class Derived : public Base\<Derived\>
 {
 &nbsp; &nbsp; // ...
 &nbsp; &nbsp; void foo() { ... }
@@ -30,11 +30,11 @@ template \<typename T\> class CounterObject
 };
 
 // Initializing the internal state of the 'CounterObject' template class.
-template <typename T> int CounterObject<T>::objects_created(0);
-template <typename T> int CounterObject<T>::objects_alive(0);
+template \<typename T\> int CounterObject\<T\>::objects_created(0);
+template \<typename T\> int CounterObject\<T\>::objects_alive(0);
 
 // The class, such that its instances must be traced.
-class X : public CounterObject<X> { &nbsp; ... &nbsp; };</pre><p>
+class X : public CounterObject\<X\> { &nbsp; ... &nbsp; };</pre><p>
 
 Several capabilities, offered by the C++11 standard, are also exploited in this test.<p>In particular, this test consists of the <i>'Example-089'</i> executable file, starting uniquely from the <i>'main.cpp'</i> C++ source file (in the <code><i>'src'</i></code> folder) without using other dependencies.<p>Several methods for building this test are provided, and their building infrastructure is saved in the following folders:<p><ul>
 <li>the <i><code>'cmake'</code></i> folder contains the project file for the <i><A href="http://cmake.org">CMake Building Tool</A></i>;</li>

@@ -21,12 +21,11 @@ Typically, we will take advantage of the fact that the member function bodies (d
 // The CRTP base (template) class, modeling the object counter.
 template <typename T> class CounterObject 
 { 
-&nbsp; &nbsp; protected:
-
+&nbsp; &nbsp; protected:<p>
 &nbsp; &nbsp; // The created instances number for the class of interest.
-&nbsp; &nbsp; static int objects_created;
+&nbsp; &nbsp; static int objects_created;<p>
 &nbsp; &nbsp; // The instances number, that are still alive, for the class of interest.
-&nbsp; &nbsp; static int objects_alive;
+&nbsp; &nbsp; static int objects_alive;<p>
 &nbsp; &nbsp; ...  
 };
 

@@ -19,14 +19,14 @@ class Derived : public Base<Derived>
 
 Typically, we will take advantage of the fact that the member function bodies (definitions) are not instantiated until long after their declarations, and will use members of the <i>'CRTP derived class'</i> within its own member functions, via the use of the (static) cast (as shown above). Thus, it is clear that the <i>'CRTP'</i> technique can be exploited for achieving a similar effect to the use of the <A href="https://en.wikipedia.org/wiki/Virtual_function"><i>'virtual functions'</i></A> without the costs of the <A href="https://en.wikipedia.org/wiki/Name_binding"><i>'dynamic polymorphism'</i></A>.<p>In this test, we exploit this technique for modeling a component, tracing the number of instances of a given class <code><i>'X'</i></code>, that have been created, and are still alive in a program (not deallocated). The key idea consists of modeling this object counter as a generic class, defined on the template class <code><i>'T'</i></code>. This latter will be instantiated in the subclasses of interest. In other words, our solution is based on the following schema:<p><pre>
 // The CRTP base (template) class, modeling the object counter.
-template <typename T> class CounterObject 
+template \<typename T\> class CounterObject 
 { 
 &nbsp; &nbsp; protected:<p>
 &nbsp; &nbsp; // The created instances number for the class of interest.
-&nbsp; &nbsp; static int objects_created;<p>
+&nbsp; &nbsp; static int objects_created;<br>
 &nbsp; &nbsp; // The instances number, that are still alive, for the class of interest.
-&nbsp; &nbsp; static int objects_alive;<p>
-&nbsp; &nbsp; ...  
+&nbsp; &nbsp; static int objects_alive;<br>
+&nbsp; &nbsp; ...
 };
 
 // Initializing the internal state of the 'CounterObject' template class.

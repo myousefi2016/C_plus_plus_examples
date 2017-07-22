@@ -6,7 +6,7 @@ This basic test about the use of the C++ programming language validates the <i>'
 // The CRTP base (template) class.
 template \<typename T\> class Base
 {
-&nbsp; &nbsp; // Any member function within the Base class can use template to access members of the Derived class.
+&nbsp; &nbsp; // Any member function within the 'Base' class can use template to access members of the 'Derived' class.
 &nbsp; &nbsp; void foo() { static_cast\<T*\>(this)->foo(); }
 };<br>
 // The CRTP derived class.

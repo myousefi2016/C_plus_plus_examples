@@ -27,9 +27,12 @@ template <typename T> class CounterObject
 &nbsp; &nbsp; static int objects_created;
 
 &nbsp; &nbsp; // The instances number, that are still alive, for the class of interest.
-&nbsp; &nbsp; static int objects_alive; 
+&nbsp; &nbsp; static int objects_alive;
+
+&nbsp; &nbsp; ...  
 };
 
+// Initializing the internal state of the 'CounterObject' template class.
 template <typename T> int CounterObject<T>::objects_created(0);
 template <typename T> int CounterObject<T>::objects_alive(0);
 

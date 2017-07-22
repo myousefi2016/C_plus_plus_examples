@@ -22,7 +22,7 @@
 using namespace std;
 
 /// This template function tries to demangle the name for the type of a given variable. */
-template <class T> string demangle(const T&t)
+template <typename T> string demangle(const T&t)
 {
 	/* We are using the GCC/G++ ? */
 	#ifdef __GNUG__
@@ -42,7 +42,7 @@ template <class T> string demangle(const T&t)
 }
 
 /// This is the <i>'base (template) class'</i> in the context of the <i>'Curiously Recurring Template Pattern (CRTP)'</i>.
-template <class T> class CRTPBaseClass
+template <typename T> class CRTPBaseClass
 {
 	public:
 
